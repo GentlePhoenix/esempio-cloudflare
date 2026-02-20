@@ -11,12 +11,6 @@
 	"assets": {
 		"directory": "./dist/client",
 		"not_found_handling": "single-page-application"
-	},
-	"d1_databases": [
-		{
-			"binding": "DB",
-			"database_name": "quiz-app-db",
-			"database_id": "e677f742-f79a-4cca-a16b-f9618a6c76d9"
-		}
-	]
+	}
+	
 }
