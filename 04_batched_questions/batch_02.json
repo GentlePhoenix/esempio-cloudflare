@@ -1,0 +1,1438 @@
+[
+  {
+    "id": "GUIDAZZOLI_devices_drivers_easy_004",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Driver firmati digitalmente",
+    "clusters": [
+      "Device Drivers",
+      "Firma digitale",
+      "Sicurezza"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Devices and Drivers.ppt",
+      "source_file_page_number": 28,
+      "topics": [
+        "driver firmati",
+        "firma digitale",
+        "Sigverif.exe",
+        "sicurezza driver",
+        "64-bit"
+      ]
+    },
+    "question_prompt": "Quale strumento di Windows si usa per verificare la presenza di driver non firmati digitalmente?",
+    "choices": [
+      {
+        "text": "Regedit.exe",
+        "is_correct": false
+      },
+      {
+        "text": "Defrag.exe",
+        "is_correct": false
+      },
+      {
+        "text": "Diskpart.exe",
+        "is_correct": false
+      },
+      {
+        "text": "Sigverif.exe",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Sigverif.exe",
+        "rationale": "Il materiale indica: 'Use Sigverif.exe to check for unsigned device drivers'. Questo strumento verifica se i driver installati hanno una firma digitale Microsoft valida.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Devices and Drivers.ppt",
+          "page": 28
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Defrag.exe",
+          "interpretation": "Strumento di deframmentazione disco",
+          "why_wrong": "Defrag.exe e' lo strumento di deframmentazione del disco, non verifica la firma dei driver."
+        },
+        {
+          "answer_text": "Diskpart.exe",
+          "interpretation": "Strumento di gestione partizioni da riga di comando",
+          "why_wrong": "Diskpart.exe gestisce le partizioni del disco, non verifica i driver firmati."
+        },
+        {
+          "answer_text": "Regedit.exe",
+          "interpretation": "Editor del registro di sistema",
+          "why_wrong": "Regedit.exe e' l'editor del registro di Windows, non ha funzionalita' di verifica firma driver."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_devices_drivers_very_easy_001",
+      "GUIDAZZOLI_devices_drivers_medium_003"
+    ],
+    "distractor_strategy": "related_domain"
+  },
+  {
+    "id": "FORONI_2_Fondamenti_easy_002",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Attacchi di rete - classificazione",
+    "clusters": [
+      "backdoor",
+      "port scanning",
+      "sniffing",
+      "spoofing",
+      "DoS",
+      "DDoS"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/2.Fondamenti Cybersecurity .pdf",
+      "source_file_page_number": 9,
+      "topics": [
+        "backdoor",
+        "port scanning",
+        "sniffing",
+        "keylogging",
+        "spoofing",
+        "DoS",
+        "DDoS"
+      ]
+    },
+    "question_prompt": "Quali attacchi sfruttano le connessioni di rete e le porte TCP per accedere al sistema o intervenire sul traffico?",
+    "choices": [
+      {
+        "text": "Hardening, Sandbox e Content filtering",
+        "is_correct": false
+      },
+      {
+        "text": "Malware, Trojan Horse, Virus e Ransomware",
+        "is_correct": false
+      },
+      {
+        "text": "Exploit, Shell code e Buffer overflow",
+        "is_correct": false
+      },
+      {
+        "text": "Backdoor, Port scanning, Sniffing, Keylogging, Spoofing, DoS e DDoS",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Backdoor, Port scanning, Sniffing, Keylogging, Spoofing, DoS e DDoS",
+        "rationale": "Il materiale classifica Backdoor, Port Scanning, Sniffing, Keylogging, Spoofing, DoS e DDoS tra gli attacchi in grado di sfruttare connessioni di rete e porte TCP di accesso al sistema o intervenire sul traffico di rete.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/2.Fondamenti Cybersecurity .pdf",
+          "page": 9
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Malware, Trojan Horse, Virus e Ransomware",
+          "interpretation": "Confonde gli attacchi di rete con gli attacchi basati su software malevolo",
+          "why_wrong": "Questi sono attacchi condotti con software malevolo, una categoria distinta dagli attacchi che sfruttano connessioni di rete."
+        },
+        {
+          "answer_text": "Exploit, Shell code e Buffer overflow",
+          "interpretation": "Confonde gli attacchi di rete con gli attacchi che sfruttano debolezze software",
+          "why_wrong": "Questi sono attacchi che sfruttano debolezze di un software, non connessioni di rete."
+        },
+        {
+          "answer_text": "Hardening, Sandbox e Content filtering",
+          "interpretation": "Confonde gli attacchi con le misure di difesa",
+          "why_wrong": "Hardening, sandbox e content filtering sono misure di sicurezza difensive, non tipi di attacco."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_2_Fondamenti_easy_001"
+    ],
+    "distractor_strategy": "category_confusion"
+  },
+  {
+    "id": "FORONI_3_Crittografia_very_easy_003",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "RSA - creatori",
+    "clusters": [
+      "RSA",
+      "Rivest",
+      "Shamir",
+      "Adleman"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/3.CRITTOGRAFIA.pdf",
+      "source_file_page_number": 20,
+      "topics": [
+        "RSA",
+        "creatori",
+        "1978"
+      ]
+    },
+    "question_prompt": "L'algoritmo RSA prende il nome dai suoi creatori. Chi sono e in che anno e' stato proposto?",
+    "choices": [
+      {
+        "text": "Rijndael, Shamir e Anderson, nel 1978",
+        "is_correct": false
+      },
+      {
+        "text": "Rivest, Shannon e Adleman, nel 1982",
+        "is_correct": false
+      },
+      {
+        "text": "Diffie, Hellman e Merkle, nel 1976",
+        "is_correct": false
+      },
+      {
+        "text": "Rivest, Shamir e Adleman, nel 1978",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Rivest, Shamir e Adleman, nel 1978",
+        "rationale": "La slide 20 indica chiaramente: 'RSA 1978 - Prende il nome dai suoi creatori Rivest, Shamir e Adleman'.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/3.CRITTOGRAFIA.pdf",
+          "page": 20
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Diffie, Hellman e Merkle, nel 1976",
+          "interpretation": "Confonde RSA con lo scambio di chiavi Diffie-Hellman",
+          "why_wrong": "Diffie e Hellman sono noti per il protocollo di scambio chiavi, non per RSA."
+        },
+        {
+          "answer_text": "Rivest, Shannon e Adleman, nel 1982",
+          "interpretation": "Confonde Shamir con Shannon e sbaglia l'anno",
+          "why_wrong": "Il secondo autore e' Shamir (non Shannon) e l'anno e' il 1978 (non il 1982). Shannon e' noto per la teoria dell'informazione."
+        },
+        {
+          "answer_text": "Rijndael, Shamir e Anderson, nel 1978",
+          "interpretation": "Confonde l'acronimo RSA con nomi errati",
+          "why_wrong": "Rijndael e' il nome dell'algoritmo alla base di AES, non un autore di RSA. La R sta per Rivest e la A per Adleman."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "similar_sounding"
+  },
+  {
+    "id": "BONONI_intro_reti2025B_very_easy_003",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Funzione del protocollo DHCP",
+    "clusters": [
+      "Protocolli di supporto"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_RdC_intro_reti2025Bnew.pdf",
+      "source_file_page_number": 25,
+      "topics": [
+        "DHCP",
+        "IP dinamico",
+        "assegnazione indirizzi"
+      ]
+    },
+    "question_prompt": "Qual e' la funzione principale del protocollo DHCP (Dynamic Host Configuration Protocol)?",
+    "choices": [
+      {
+        "text": "Convertire i nomi di dominio in indirizzi IP",
+        "is_correct": false
+      },
+      {
+        "text": "Criptare i dati trasmessi sulla rete per garantire la privacy",
+        "is_correct": false
+      },
+      {
+        "text": "Assegnare automaticamente un indirizzo IP ai dispositivi che si connettono alla rete",
+        "is_correct": true
+      },
+      {
+        "text": "Verificare la connessione tra due host tramite messaggi echo",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Assegnare automaticamente un indirizzo IP ai dispositivi che si connettono alla rete",
+        "rationale": "Il server DHCP dispone di un blocco di host number liberi per la sua rete e li associa automaticamente agli indirizzi MAC dei dispositivi che ne fanno richiesta, realizzando un networking 'plug and play'.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_RdC_intro_reti2025Bnew.pdf",
+          "page": 25
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Criptare i dati trasmessi sulla rete per garantire la privacy",
+          "interpretation": "Confonde DHCP con protocolli di sicurezza",
+          "why_wrong": "La crittografia dei dati non e' compito del DHCP ma di protocolli di sicurezza come TLS o IPSec."
+        },
+        {
+          "answer_text": "Convertire i nomi di dominio in indirizzi IP",
+          "interpretation": "Confonde DHCP con il servizio DNS",
+          "why_wrong": "La risoluzione dei nomi di dominio e' compito del DNS (Domain Name System), non del DHCP."
+        },
+        {
+          "answer_text": "Verificare la connessione tra due host tramite messaggi echo",
+          "interpretation": "Confonde DHCP con PING/ICMP",
+          "why_wrong": "La verifica della connessione tramite echo e' funzione dell'applicazione PING basata su ICMP."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "related_concept"
+  },
+  {
+    "id": "BERNABEI_04_GestireGruppi_easy_003",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Role Groups e Rule Groups",
+    "clusters": [
+      "Gestione Gruppi",
+      "Best Practices"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "difficulty_doc": "values: very_easy / easy / medium / hard",
+      "cognitive_level": "understand",
+      "cognitive_level_doc": "values: remember | understand | apply | analyze",
+      "question_type": "concept",
+      "question_type_doc": "values: definition | concept | scenario | comparison | troubleshooting | best_practice",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+      "source_file_doc": "relative path to original document",
+      "source_file_page_number": 9,
+      "source_file_page_number_doc": "page number of content used; 0 if holistic",
+      "topics": [
+        "Role Groups",
+        "Rule Groups",
+        "Global Groups",
+        "Domain Local Groups"
+      ],
+      "topics_doc": "list of topics"
+    },
+    "question_prompt": "Nel modello a due tipologie di gruppo, quale scope e consigliato per i Role Groups e quale per i Rule Groups?",
+    "question_prompt_doc": "10-25 words, Italian, English tech terms",
+    "choices": [
+      {
+        "text": "Role Groups = Universal Groups; Rule Groups = Local Groups",
+        "is_correct": false
+      },
+      {
+        "text": "Role Groups = Global Groups; Rule Groups = Domain Local Groups",
+        "is_correct": true
+      },
+      {
+        "text": "Role Groups = Domain Local Groups; Rule Groups = Global Groups",
+        "is_correct": false
+      },
+      {
+        "text": "Entrambi utilizzano esclusivamente gruppi Universal",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Role Groups = Global Groups; Rule Groups = Domain Local Groups",
+        "rationale": "Le slide 14 e 15 indicano che i Domain Local Groups sono consigliati come Rule Groups (gestione regole di accesso) e i Global Groups come Role Groups (gestione dei ruoli).",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+          "page": 15
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Role Groups = Domain Local Groups; Rule Groups = Global Groups",
+          "interpretation": "Inversione dei ruoli tra DLG e GG",
+          "why_wrong": "E l'esatto contrario: i Global Groups servono per i ruoli (Role Groups) e i Domain Local Groups per le regole di accesso (Rule Groups)."
+        },
+        {
+          "answer_text": "Role Groups = Universal Groups; Rule Groups = Local Groups",
+          "interpretation": "Utilizzo di Universal e Local per ruoli e regole",
+          "why_wrong": "I Universal Groups hanno un uso specifico in ambienti multidominio. La best practice standard prevede Global per i ruoli e Domain Local per le regole."
+        },
+        {
+          "answer_text": "Entrambi utilizzano esclusivamente gruppi Universal",
+          "interpretation": "Uso esclusivo di Universal Groups",
+          "why_wrong": "I gruppi Universal non sono il tipo consigliato per nessuna delle due funzioni; sono raccomandati solo in scenari multidominio specifici."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_04_GestireGruppi_very_easy_003",
+      "BERNABEI_04_GestireGruppi_medium_002"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  },
+  {
+    "id": "BONONI_intro_reti2025A_easy_007",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Prestazioni di rete: bandwidth e latenza",
+    "clusters": [
+      "Fondamenti di reti"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "conceptual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_intro_reti2025Anew.pdf",
+      "source_file_page_number": 8,
+      "topics": [
+        "capacita' di trasmissione",
+        "ritardo",
+        "latenza",
+        "prestazioni"
+      ]
+    },
+    "question_prompt": "Quali sono i due principali indici di prestazione di una rete di calcolatori per l'utente?",
+    "choices": [
+      {
+        "text": "La dimensione fisica dei cavi e il peso delle schede di rete",
+        "is_correct": false
+      },
+      {
+        "text": "La capacita' di trasmissione (bit/sec) e il ritardo del collegamento (latenza)",
+        "is_correct": true
+      },
+      {
+        "text": "Il numero di protocolli supportati e la versione del sistema operativo",
+        "is_correct": false
+      },
+      {
+        "text": "Il numero di dispositivi connessi e il costo dell'abbonamento",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "La capacita' di trasmissione (bit/sec) e il ritardo del collegamento (latenza)",
+        "rationale": "L'utente e' principalmente interessato a due indici: la capacita' di trasmissione (quantita' di dati trasmissibili in un secondo, misurata in bit/sec o byte/sec) e il ritardo del collegamento (tempo necessario ai dati per transitare dal mittente al destinatario, detto anche latenza).",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_intro_reti2025Anew.pdf",
+          "page": 8
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Il numero di dispositivi connessi e il costo dell'abbonamento",
+          "interpretation": "Questa risposta indica fattori commerciali e di scala, non prestazioni tecniche",
+          "why_wrong": "Questi sono fattori di dimensionamento e costo, non indici tecnici di prestazione della rete."
+        },
+        {
+          "answer_text": "La dimensione fisica dei cavi e il peso delle schede di rete",
+          "interpretation": "Questa risposta indica caratteristiche fisiche irrilevanti per le prestazioni",
+          "why_wrong": "Le dimensioni e il peso dell'hardware non misurano le prestazioni di comunicazione della rete."
+        },
+        {
+          "answer_text": "Il numero di protocolli supportati e la versione del sistema operativo",
+          "interpretation": "Questa risposta indica caratteristiche software non direttamente legate alle prestazioni",
+          "why_wrong": "Il numero di protocolli e la versione del SO sono aspetti di compatibilita', non indici di prestazione della rete."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_06_GroupPolicy_very_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Valori delle Policy Settings",
+    "clusters": [
+      "Group Policy",
+      "Policy Settings"
+    ],
+    "metadata": {
+      "difficulty": "very_easy",
+      "difficulty_doc": "values: very_easy / easy / medium / hard",
+      "cognitive_level": "remember",
+      "cognitive_level_doc": "values: remember | understand | apply | analyze",
+      "question_type": "definition",
+      "question_type_doc": "values: definition | concept | scenario | comparison | troubleshooting | best_practice",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/06.Implementare le Group Policy.pptx",
+      "source_file_doc": "relative path to original document",
+      "source_file_page_number": 6,
+      "source_file_page_number_doc": "page number of content used; 0 if holistic",
+      "topics": [
+        "policy settings",
+        "not configured",
+        "enabled",
+        "disabled"
+      ],
+      "topics_doc": "list of topics"
+    },
+    "question_prompt": "Quali sono i tre possibili valori di una singola policy setting in una GPO?",
+    "question_prompt_doc": "10-25 words, Italian, English tech terms",
+    "choices": [
+      {
+        "text": "Active, Inactive, Pending",
+        "is_correct": false
+      },
+      {
+        "text": "Not configured, Enabled, Disabled",
+        "is_correct": true
+      },
+      {
+        "text": "Allow, Deny, Inherit",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Not configured, Enabled, Disabled",
+        "rationale": "La slide 6 elenca esplicitamente i tre valori possibili per una policy setting: Not configured (default), Enabled, Disabled.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/06.Implementare le Group Policy.pptx",
+          "page": 6
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Active, Inactive, Pending",
+          "interpretation": "Stati generici di attivazione",
+          "why_wrong": "Questi termini non corrispondono ai valori delle policy settings. I valori corretti sono Not configured, Enabled e Disabled."
+        },
+        {
+          "answer_text": "Allow, Deny, Inherit",
+          "interpretation": "Terminologia dei permessi NTFS/ACL",
+          "why_wrong": "Allow, Deny e Inherit sono termini legati ai permessi delle ACL, non ai valori configurabili nelle policy settings."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_06_GroupPolicy_very_easy_001",
+      "BERNABEI_06_GroupPolicy_easy_003"
+    ],
+    "distractor_strategy": "related_concept"
+  },
+  {
+    "id": "ANZALONE_3a_vnet_easy_007",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Link Aggregation (LAG)",
+    "clusters": [
+      "Networking Virtuale"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3a_vnet.pdf",
+      "source_file_page_number": 112,
+      "topics": [
+        "LAG",
+        "link aggregation",
+        "bandwidth",
+        "ridondanza"
+      ]
+    },
+    "question_prompt": "Qual è lo scopo principale della Link Aggregation (LAG) in una rete?",
+    "choices": [
+      {
+        "text": "Creare reti virtuali private (VPN) cifrate tra switch fisici distanti",
+        "is_correct": false
+      },
+      {
+        "text": "Aumentare la capacità di rete aggregando più link fisici senza cambiare hardware, con ridondanza in caso di guasto",
+        "is_correct": true
+      },
+      {
+        "text": "Comprimere i pacchetti di rete per ridurre l'utilizzo della banda disponibile",
+        "is_correct": false
+      },
+      {
+        "text": "Convertire automaticamente il traffico IPv4 in IPv6 per compatibilità futura",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Aumentare la capacità di rete aggregando più link fisici senza cambiare hardware, con ridondanza in caso di guasto",
+        "rationale": "La Link Aggregation è una tecnica per aumentare la capacità di rete aggregando più link fisici. Riduce i costi perché non richiede cambio di hardware. Inoltre garantisce continuità del servizio anche in caso di guasto di un link, e supporta il load balancing.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3a_vnet.pdf",
+          "page": 112
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Creare reti virtuali private (VPN) cifrate tra switch fisici distanti",
+          "interpretation": "Confonde LAG con funzionalità VPN",
+          "why_wrong": "La Link Aggregation non crea VPN né cifratura. Il suo scopo è aggregare link fisici per maggiore banda e ridondanza."
+        },
+        {
+          "answer_text": "Convertire automaticamente il traffico IPv4 in IPv6 per compatibilità futura",
+          "interpretation": "Confonde LAG con conversione di protocollo",
+          "why_wrong": "LAG non ha alcuna relazione con la conversione tra protocolli IP. Opera a livello di link fisici per aggregazione di banda."
+        },
+        {
+          "answer_text": "Comprimere i pacchetti di rete per ridurre l'utilizzo della banda disponibile",
+          "interpretation": "Confonde aggregazione con compressione",
+          "why_wrong": "LAG non comprime pacchetti. Aumenta la banda disponibile combinando più link fisici in un unico link logico."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_3a_vnet_medium_005"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "FORONI_06_EthicalHacking_very_easy_001",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Definizione di ethical hacking",
+    "clusters": [
+      "ethical hacking",
+      "permesso",
+      "sicurezza informatica"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/6.Introduction to Ethical Hacking, Ethics, and Legality.pdf",
+      "source_file_page_number": 2,
+      "topics": [
+        "ethical hacking",
+        "permesso",
+        "professionalita'"
+      ]
+    },
+    "question_prompt": "Qual e' il primo requisito fondamentale dell'ethical hacking secondo la sua definizione?",
+    "choices": [
+      {
+        "text": "Essere in possesso di una certificazione universitaria in informatica",
+        "is_correct": false
+      },
+      {
+        "text": "Lavorare in modo anonimo per evitare conflitti di interesse",
+        "is_correct": false
+      },
+      {
+        "text": "Utilizzare esclusivamente strumenti open source per i test",
+        "is_correct": false
+      },
+      {
+        "text": "Ottenere sempre il permesso dal proprietario dei dati prima di accedere al sistema",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Ottenere sempre il permesso dal proprietario dei dati prima di accedere al sistema",
+        "rationale": "Il materiale indica esplicitamente che il primo punto della definizione di ethical hacking e' 'Ottenere sempre il permesso dal proprietario dei dati prima di accedere al sistema informatico'.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/6.Introduction to Ethical Hacking, Ethics, and Legality.pdf",
+          "page": 2
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Essere in possesso di una certificazione universitaria in informatica",
+          "interpretation": "Confonde requisiti formali con il principio etico fondamentale",
+          "why_wrong": "Non e' richiesta una certificazione universitaria. Il requisito fondamentale e' il permesso del proprietario, non un titolo accademico."
+        },
+        {
+          "answer_text": "Utilizzare esclusivamente strumenti open source per i test",
+          "interpretation": "Confonde la scelta degli strumenti con i principi etici dell'hacking",
+          "why_wrong": "L'ethical hacking non pone vincoli sugli strumenti utilizzati. Il principio chiave e' il consenso del proprietario del sistema."
+        },
+        {
+          "answer_text": "Lavorare in modo anonimo per evitare conflitti di interesse",
+          "interpretation": "Associa erroneamente l'anonimato all'etica professionale",
+          "why_wrong": "Un hacker etico agisce in modo professionale e trasparente, non anonimo. L'obiettivo e' guadagnare la fiducia del cliente, non nascondersi."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "GUIDAZZOLI_file_access_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Ereditarieta' dei permessi NTFS",
+    "clusters": [
+      "NTFS",
+      "Permessi file",
+      "Ereditarieta'"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/File Access and Printers.ppt",
+      "source_file_page_number": 10,
+      "topics": [
+        "permission inheritance",
+        "NTFS",
+        "cartelle",
+        "permessi ereditati"
+      ]
+    },
+    "question_prompt": "Cosa succede ai permessi di un file quando viene copiato in una cartella su una partizione NTFS diversa?",
+    "choices": [
+      {
+        "text": "Il file eredita i permessi della cartella di destinazione",
+        "is_correct": true
+      },
+      {
+        "text": "Il file mantiene sempre i permessi originali senza modifiche",
+        "is_correct": false
+      },
+      {
+        "text": "Il file perde tutti i permessi e diventa accessibile a chiunque",
+        "is_correct": false
+      },
+      {
+        "text": "Il file viene automaticamente crittografato durante la copia",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Il file eredita i permessi della cartella di destinazione",
+        "rationale": "Il materiale specifica: 'When you copy or move a file or folder to a different NTFS partition... The file or folder inherits permissions from the destination folder'.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/File Access and Printers.ppt",
+          "page": 13
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Il file mantiene sempre i permessi originali senza modifiche",
+          "interpretation": "Confonde con il comportamento dello spostamento all'interno della stessa partizione",
+          "why_wrong": "Quando si copia su una partizione diversa, i permessi vengono ereditati dalla destinazione, non mantenuti."
+        },
+        {
+          "answer_text": "Il file perde tutti i permessi e diventa accessibile a chiunque",
+          "interpretation": "Assume erroneamente che la copia elimini tutti i permessi",
+          "why_wrong": "Il file non perde i permessi: ne eredita di nuovi dalla cartella di destinazione."
+        },
+        {
+          "answer_text": "Il file viene automaticamente crittografato durante la copia",
+          "interpretation": "Confonde i permessi NTFS con la crittografia",
+          "why_wrong": "La copia non attiva automaticamente la crittografia. L'ereditarieta' riguarda i permessi, non la cifratura."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_file_access_very_easy_002",
+      "GUIDAZZOLI_file_access_medium_001"
+    ],
+    "distractor_strategy": "common_misconception"
+  },
+  {
+    "id": "BERNABEI_07_SicurezzaGPO_very_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Restricted Groups",
+    "clusters": [
+      "Group Policy",
+      "Restricted Groups",
+      "Gestione Gruppi"
+    ],
+    "metadata": {
+      "difficulty": "very_easy",
+      "cognitive_level": "remember",
+      "question_type": "definition",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/07.Gestire la sicurezza e le configurazioni tramite le Group Policy Settings.pptx",
+      "source_file_page_number": 4,
+      "topics": [
+        "Restricted Groups",
+        "Group Policy",
+        "membri"
+      ]
+    },
+    "question_prompt": "Qual e lo scopo principale della funzionalita Restricted Groups nelle Group Policy?",
+    "choices": [
+      {
+        "text": "Impedire agli utenti di creare gruppi di distribuzione in Exchange",
+        "is_correct": false
+      },
+      {
+        "text": "Limitare il numero massimo di gruppi che possono essere creati in Active Directory",
+        "is_correct": false
+      },
+      {
+        "text": "Controllare centralmente la membership dei gruppi locali e di dominio tramite GPO",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Controllare centralmente la membership dei gruppi locali e di dominio tramite GPO",
+        "rationale": "Le slide 4-6 spiegano che Restricted Groups consente di gestire centralmente chi e membro di un gruppo e di quali gruppi un determinato gruppo e membro, tramite Group Policy.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/07.Gestire la sicurezza e le configurazioni tramite le Group Policy Settings.pptx",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Limitare il numero massimo di gruppi che possono essere creati in Active Directory",
+          "interpretation": "Restricted Groups come limite numerico sui gruppi",
+          "why_wrong": "Restricted Groups non limita il numero di gruppi. La funzionalita gestisce la composizione (membership) dei gruppi, non la loro quantita."
+        },
+        {
+          "answer_text": "Impedire agli utenti di creare gruppi di distribuzione in Exchange",
+          "interpretation": "Restrizione sulla creazione di gruppi email",
+          "why_wrong": "Restricted Groups non e correlato a Exchange o ai gruppi di distribuzione. E una funzionalita GPO per controllare i membri dei gruppi di sicurezza."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_07_SicurezzaGPO_very_easy_002",
+      "BERNABEI_07_SicurezzaGPO_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "GUIDAZZOLI_network_easy_003",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Ipconfig e opzioni principali",
+    "clusters": [
+      "Troubleshooting rete",
+      "IPConfig",
+      "DHCP"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Network Connectivity.ppt",
+      "source_file_page_number": 29,
+      "topics": [
+        "ipconfig",
+        "ipconfig /all",
+        "ipconfig /release",
+        "ipconfig /renew",
+        "flushdns"
+      ]
+    },
+    "question_prompt": "Quale parametro di ipconfig mostra tutte le informazioni di configurazione IP?",
+    "choices": [
+      {
+        "text": "ipconfig /flushdns",
+        "is_correct": false
+      },
+      {
+        "text": "ipconfig /all",
+        "is_correct": true
+      },
+      {
+        "text": "ipconfig /release",
+        "is_correct": false
+      },
+      {
+        "text": "ipconfig /renew",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "ipconfig /all",
+        "rationale": "Il materiale indica: '/all - Displays all IP address configuration information'. Mostra indirizzo IP, subnet mask, default gateway, DNS server e molto altro.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Network Connectivity.ppt",
+          "page": 29
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "ipconfig /release",
+          "interpretation": "Confonde la visualizzazione con il rilascio dell'indirizzo",
+          "why_wrong": "Il parametro /release rilascia il lease DHCP dell'indirizzo IPv4, non visualizza le informazioni."
+        },
+        {
+          "answer_text": "ipconfig /flushdns",
+          "interpretation": "Confonde la visualizzazione con la pulizia della cache DNS",
+          "why_wrong": "Il parametro /flushdns svuota la cache del resolver DNS, non mostra la configurazione IP."
+        },
+        {
+          "answer_text": "ipconfig /renew",
+          "interpretation": "Confonde la visualizzazione con il rinnovo dell'indirizzo",
+          "why_wrong": "Il parametro /renew rinnova il lease DHCP, non visualizza le informazioni di configurazione."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_network_very_easy_002",
+      "GUIDAZZOLI_network_medium_002"
+    ],
+    "distractor_strategy": "related_domain"
+  },
+  {
+    "id": "BONONI_NetworkSecurity_easy_002",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Crittografia simmetrica - DES",
+    "clusters": [
+      "Crittografia simmetrica"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+      "source_file_page_number": 12,
+      "topics": [
+        "DES",
+        "chiave simmetrica",
+        "56-bit",
+        "64-bit"
+      ]
+    },
+    "question_prompt": "Qual e' la lunghezza della chiave utilizzata dall'algoritmo DES (Data Encryption Standard)?",
+    "choices": [
+      {
+        "text": "128 bit",
+        "is_correct": false
+      },
+      {
+        "text": "56 bit",
+        "is_correct": true
+      },
+      {
+        "text": "256 bit",
+        "is_correct": false
+      },
+      {
+        "text": "64 bit",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "56 bit",
+        "rationale": "Il DES utilizza una chiave simmetrica di 56 bit e opera su blocchi di plaintext di 64 bit. La chiave di 56 bit e' stata ritenuta insufficiente gia' negli anni '90, portando allo sviluppo di 3-DES e successivamente di AES.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+          "page": 12
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "128 bit",
+          "interpretation": "Lo studente confonde DES con AES",
+          "why_wrong": "128 bit e' la dimensione minima della chiave di AES, non di DES."
+        },
+        {
+          "answer_text": "64 bit",
+          "interpretation": "Lo studente confonde la dimensione della chiave con quella del blocco",
+          "why_wrong": "64 bit e' la dimensione del blocco di plaintext in input, non della chiave."
+        },
+        {
+          "answer_text": "256 bit",
+          "interpretation": "Lo studente confonde DES con AES-256",
+          "why_wrong": "256 bit e' la lunghezza massima della chiave di AES, non di DES."
+        }
+      ]
+    },
+    "related_questions": [
+      "BONONI_NetworkSecurity_easy_003"
+    ],
+    "distractor_strategy": "parameter_confusion"
+  },
+  {
+    "id": "ANZALONE_4a_storage_very_easy_003",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "NAS - concetto base",
+    "clusters": [
+      "Storage",
+      "NAS"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/4a_storage.pdf",
+      "source_file_page_number": 28,
+      "topics": [
+        "NAS",
+        "network attached storage",
+        "file sharing"
+      ]
+    },
+    "question_prompt": "Qual e' la funzione principale di un dispositivo NAS (Network Attached Storage)?",
+    "choices": [
+      {
+        "text": "Fornire potenza di calcolo aggiuntiva per elaborazioni scientifiche",
+        "is_correct": false
+      },
+      {
+        "text": "Condividere file in rete, dedicandosi esclusivamente al file sharing",
+        "is_correct": true
+      },
+      {
+        "text": "Proteggere la rete aziendale filtrando il traffico come un firewall",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Condividere file in rete, dedicandosi esclusivamente al file sharing",
+        "rationale": "Un NAS e' un server dedicato esclusivamente alla condivisione di file. Non richiede monitor, tastiera o mouse, e generalmente esegue un sistema operativo embedded ottimizzato per il file sharing.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/4a_storage.pdf",
+          "page": 28
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Fornire potenza di calcolo aggiuntiva per elaborazioni scientifiche",
+          "interpretation": "Confonde un NAS con un cluster di calcolo HPC",
+          "why_wrong": "Un NAS non fornisce potenza di calcolo. E' dedicato esclusivamente alla condivisione di file in rete."
+        },
+        {
+          "answer_text": "Proteggere la rete aziendale filtrando il traffico come un firewall",
+          "interpretation": "Confonde un NAS con un dispositivo di sicurezza di rete",
+          "why_wrong": "Un NAS non e' un dispositivo di sicurezza. La sua unica funzione e' la condivisione di file in rete."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "ANZALONE_2b_ft_bc_easy_006",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "VMware Site Recovery Manager",
+    "clusters": [
+      "Business Continuity e Disaster Recovery",
+      "Infrastruttura VMware vSphere"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2b_ft_bc.pdf",
+      "source_file_page_number": 49,
+      "topics": [
+        "SRM",
+        "Site Recovery Manager",
+        "automated failover",
+        "disaster recovery"
+      ]
+    },
+    "question_prompt": "Qual è la funzione principale di VMware Site Recovery Manager (SRM)?",
+    "choices": [
+      {
+        "text": "Monitoraggio delle prestazioni delle CPU nei server fisici del data center",
+        "is_correct": false
+      },
+      {
+        "text": "Automazione di failover, failback e test non distruttivi per il disaster recovery",
+        "is_correct": true
+      },
+      {
+        "text": "Gestione centralizzata dei ticket di assistenza tecnica per il supporto clienti",
+        "is_correct": false
+      },
+      {
+        "text": "Distribuzione automatica degli aggiornamenti Windows su tutti i client aziendali",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Automazione di failover, failback e test non distruttivi per il disaster recovery",
+        "rationale": "VMware Site Recovery Manager è un software di automazione che integra tecnologie di replica per offrire gestione basata su policy, test non distruttivi e orchestrazione automatizzata dei piani di recovery, riducendo i tempi di ripristino a pochi minuti tramite workflow automatizzati di failover e failback.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2b_ft_bc.pdf",
+          "page": 49
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Gestione centralizzata dei ticket di assistenza tecnica per il supporto clienti",
+          "interpretation": "Software di help desk",
+          "why_wrong": "SRM non è un sistema di ticketing ma uno strumento di automazione del disaster recovery per ambienti VMware."
+        },
+        {
+          "answer_text": "Monitoraggio delle prestazioni delle CPU nei server fisici del data center",
+          "interpretation": "Tool di monitoring hardware",
+          "why_wrong": "Il monitoraggio hardware non è la funzione di SRM, che si concentra sull'orchestrazione del disaster recovery tra siti."
+        },
+        {
+          "answer_text": "Distribuzione automatica degli aggiornamenti Windows su tutti i client aziendali",
+          "interpretation": "Patch management",
+          "why_wrong": "La distribuzione degli aggiornamenti è compito di strumenti come WSUS, non di SRM che gestisce la recovery tra siti VMware."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_2b_ft_bc_easy_005"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_02_SicurezzaAdmin_easy_004",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Registrazione snap-in Schema AD",
+    "clusters": [
+      "Amministrazione Active Directory",
+      "Strumenti di gestione Windows"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+      "source_file_page_number": 8,
+      "topics": [
+        "regsvr32",
+        "schmmgmt.dll",
+        "Schema",
+        "MMC personalizzata"
+      ]
+    },
+    "question_prompt": "Quale comando si utilizza per registrare lo snap-in dello Schema di Active Directory prima di poterlo aggiungere a una console MMC personalizzata?",
+    "choices": [
+      {
+        "text": "install-adschema -enable",
+        "is_correct": false
+      },
+      {
+        "text": "regsvr32 schmmgmt.dll",
+        "is_correct": true
+      },
+      {
+        "text": "netsh schema register",
+        "is_correct": false
+      },
+      {
+        "text": "register schema.msc",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "regsvr32 schmmgmt.dll",
+        "rationale": "Per rendere disponibile lo snap-in dello Schema di Active Directory nella console MMC, è necessario prima registrarlo con il comando regsvr32 schmmgmt.dll. Solo dopo questa registrazione lo snap-in apparirà nell'elenco degli snap-in disponibili.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+          "page": 8
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "register schema.msc",
+          "interpretation": "Comando fittizio di registrazione",
+          "why_wrong": "'register' non è un comando Windows valido. Il comando corretto per registrare DLL COM/OLE è regsvr32, e il file da registrare è schmmgmt.dll."
+        },
+        {
+          "answer_text": "install-adschema -enable",
+          "interpretation": "Cmdlet PowerShell inesistente",
+          "why_wrong": "Non esiste un cmdlet PowerShell chiamato install-adschema. La registrazione dello snap-in Schema avviene tramite il comando regsvr32 schmmgmt.dll."
+        },
+        {
+          "answer_text": "netsh schema register",
+          "interpretation": "Comando netsh inesistente",
+          "why_wrong": "netsh è utilizzato per la configurazione di rete, non per la registrazione di snap-in della console MMC. Il comando corretto è regsvr32 schmmgmt.dll."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_02_SicurezzaAdmin_very_easy_001"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  },
+  {
+    "id": "FORONI_08_NormativeSicurezza_easy_002",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Il GDPR come tipo di atto normativo",
+    "clusters": [
+      "GDPR",
+      "regolamento UE",
+      "normativa"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/8.Informativa normative sulla sicurezza dei dati.pdf",
+      "source_file_page_number": 13,
+      "topics": [
+        "GDPR",
+        "regolamento",
+        "direttiva",
+        "normativa UE"
+      ]
+    },
+    "question_prompt": "Il GDPR e' un regolamento dell'Unione Europea. Quale implicazione ha questo sulla sua applicabilita' negli Stati membri?",
+    "choices": [
+      {
+        "text": "E' direttamente applicabile in tutti gli Stati membri senza necessita' di recepimento nazionale",
+        "is_correct": true
+      },
+      {
+        "text": "Ha valore di raccomandazione e non e' vincolante per gli Stati membri",
+        "is_correct": false
+      },
+      {
+        "text": "Ogni Stato membro deve recepirlo con una legge nazionale specifica entro due anni",
+        "is_correct": false
+      },
+      {
+        "text": "Si applica solo agli Stati che lo ratificano volontariamente",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "E' direttamente applicabile in tutti gli Stati membri senza necessita' di recepimento nazionale",
+        "rationale": "A differenza di una direttiva, un regolamento UE e' direttamente applicabile in tutti gli Stati membri senza necessita' di atti di recepimento nazionale. Questo garantisce uniformita' nella protezione dei dati in tutta l'UE.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/8.Informativa normative sulla sicurezza dei dati.pdf",
+          "page": 13
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Ogni Stato membro deve recepirlo con una legge nazionale specifica entro due anni",
+          "interpretation": "Confonde regolamento con direttiva UE",
+          "why_wrong": "Questa caratteristica e' propria delle direttive, non dei regolamenti. Il GDPR e' un regolamento e si applica direttamente."
+        },
+        {
+          "answer_text": "Si applica solo agli Stati che lo ratificano volontariamente",
+          "interpretation": "Confonde regolamento UE con trattato internazionale",
+          "why_wrong": "I regolamenti UE non richiedono ratifica; sono automaticamente vincolanti per tutti gli Stati membri."
+        },
+        {
+          "answer_text": "Ha valore di raccomandazione e non e' vincolante per gli Stati membri",
+          "interpretation": "Confonde regolamento con raccomandazione UE",
+          "why_wrong": "Le raccomandazioni non sono vincolanti, ma i regolamenti lo sono pienamente e sono direttamente applicabili."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_08_NormativeSicurezza_very_easy_001"
+    ],
+    "distractor_strategy": "eu_legal_instrument_confusion"
+  },
+  {
+    "id": "BERNABEI_01_IntrodAD_very_easy_003",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Domain Controller",
+    "clusters": [
+      "Active Directory Domain Services",
+      "Infrastruttura di dominio"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+      "source_file_page_number": 28,
+      "topics": [
+        "Domain Controller",
+        "AD DS",
+        "ntds.dit"
+      ]
+    },
+    "question_prompt": "Qual e il ruolo principale di un Domain Controller in Active Directory?",
+    "choices": [
+      {
+        "text": "Dispositivo NAS per l'archiviazione dei file aziendali",
+        "is_correct": false
+      },
+      {
+        "text": "Server che gestisce i servizi AD DS e detiene il database ntds.dit",
+        "is_correct": true
+      },
+      {
+        "text": "Client che si connette al dominio per navigare in Internet",
+        "is_correct": false
+      },
+      {
+        "text": "Router che instrada il traffico di rete tra le VLAN",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Server che gestisce i servizi AD DS e detiene il database ntds.dit",
+        "rationale": "La slide 28 descrive i Domain Controllers come server che gestiscono i servizi AD DS, detengono il database di Active Directory (ntds.dit) e la cartella SYSVOL.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+          "page": 28
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Client che si connette al dominio per navigare in Internet",
+          "interpretation": "Confusione tra server e client di dominio",
+          "why_wrong": "Un Domain Controller e un server, non un client; fornisce servizi di autenticazione, non navigazione."
+        },
+        {
+          "answer_text": "Router che instrada il traffico di rete tra le VLAN",
+          "interpretation": "Confusione tra ruolo server AD e apparato di rete",
+          "why_wrong": "Il Domain Controller non svolge funzioni di routing; e un server dedicato ai servizi di directory."
+        },
+        {
+          "answer_text": "Dispositivo NAS per l'archiviazione dei file aziendali",
+          "interpretation": "Confusione tra DC e storage di rete",
+          "why_wrong": "Il DC contiene il database AD, non e un dispositivo di archiviazione file generico."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_01_IntrodAD_easy_004",
+      "BERNABEI_01_IntrodAD_medium_003"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BONONI_2b_netmask_very_easy_001",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Operazione AND per calcolo sottorete",
+    "clusters": [
+      "Netmask e subnetting"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_2b_esempio_netmask.pdf",
+      "source_file_page_number": 2,
+      "topics": [
+        "AND",
+        "netmask",
+        "sottorete"
+      ]
+    },
+    "question_prompt": "Quale operazione logica si utilizza tra un indirizzo IP e la netmask per determinare l'indirizzo della sottorete?",
+    "choices": [
+      {
+        "text": "Operazione AND bit a bit",
+        "is_correct": true
+      },
+      {
+        "text": "Divisione intera per 256",
+        "is_correct": false
+      },
+      {
+        "text": "Somma aritmetica dei byte",
+        "is_correct": false
+      },
+      {
+        "text": "Operazione OR bit a bit",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Operazione AND bit a bit",
+        "rationale": "Per determinare a quale sottorete appartiene un host, si esegue l'operazione AND bit a bit tra l'indirizzo IP dell'host e la netmask. I bit della netmask a 1 selezionano la parte di sottorete, quelli a 0 mascherano la parte di host.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_2b_esempio_netmask.pdf",
+          "page": 2
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Operazione OR bit a bit",
+          "interpretation": "Confonde AND con OR",
+          "why_wrong": "L'operazione OR non maschererebbe correttamente i bit di host. L'AND preserva i bit di sottorete e azzera quelli di host."
+        },
+        {
+          "answer_text": "Somma aritmetica dei byte",
+          "interpretation": "Propone un'operazione aritmetica anziche' logica",
+          "why_wrong": "La somma aritmetica produrrebbe valori fuori dal range degli indirizzi IP. Serve un'operazione logica bit a bit."
+        },
+        {
+          "answer_text": "Divisione intera per 256",
+          "interpretation": "Propone un'operazione aritmetica inappropriata",
+          "why_wrong": "La divisione per 256 non ha relazione con la netmask. L'indirizzo di sottorete si ottiene con l'AND bit a bit."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "ANZALONE_1a_virtualIntro_easy_002",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Hypervisor di tipo 1 vs tipo 2",
+    "clusters": [
+      "Virtualizzazione e Hypervisor"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+      "source_file_page_number": 91,
+      "topics": [
+        "hypervisor tipo 1",
+        "hypervisor tipo 2",
+        "bare-metal",
+        "hosted",
+        "ESXi"
+      ]
+    },
+    "question_prompt": "Quale tra i seguenti e' un esempio di hypervisor di tipo 1 (bare-metal)?",
+    "choices": [
+      {
+        "text": "Microsoft Office 365",
+        "is_correct": false
+      },
+      {
+        "text": "VMware ESXi",
+        "is_correct": true
+      },
+      {
+        "text": "Google Chrome",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "VMware ESXi",
+        "rationale": "VMware ESXi e' un hypervisor di tipo 1 bare-metal che gira direttamente sull'hardware del sistema senza bisogno di un sistema operativo host. Altri esempi di tipo 1 sono Microsoft Hyper-V e Citrix XenServer.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+          "page": 91
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Microsoft Office 365",
+          "interpretation": "Questa risposta indica una suite di produttivita' cloud",
+          "why_wrong": "Office 365 e' una suite di applicazioni di produttivita', non un hypervisor o software di virtualizzazione."
+        },
+        {
+          "answer_text": "Google Chrome",
+          "interpretation": "Questa risposta indica un browser web",
+          "why_wrong": "Google Chrome e' un browser web, non ha alcuna relazione con la virtualizzazione a livello di hypervisor."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  }
+]

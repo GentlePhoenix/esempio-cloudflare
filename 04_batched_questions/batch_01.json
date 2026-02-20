@@ -1,0 +1,1443 @@
+[
+  {
+    "id": "ANZALONE_4a_storage_easy_005",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "VMFS - VMware Virtual Machine File System",
+    "clusters": [
+      "Storage",
+      "VMware vSphere"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/4a_storage.pdf",
+      "source_file_page_number": 39,
+      "topics": [
+        "VMFS",
+        "file system",
+        "VMware",
+        "datastore",
+        "accesso concorrente"
+      ]
+    },
+    "question_prompt": "Qual e' una caratteristica fondamentale del file system VMFS in ambiente VMware?",
+    "choices": [
+      {
+        "text": "Supporta esclusivamente dischi di dimensione inferiore a 500 GB",
+        "is_correct": false
+      },
+      {
+        "text": "Permette a piu' host ESXi di accedere contemporaneamente allo stesso datastore",
+        "is_correct": true
+      },
+      {
+        "text": "Viene installato obbligatoriamente su ogni macchina virtuale creata",
+        "is_correct": false
+      },
+      {
+        "text": "Puo' essere utilizzato solo su dischi locali e non su storage di rete",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Permette a piu' host ESXi di accedere contemporaneamente allo stesso datastore",
+        "rationale": "VMFS (VMware Virtual Machine File System) e' progettato per consentire a piu' istanze di ESXi di accedere simultaneamente allo stesso storage virtuale, abilitando funzionalita' come vMotion, DRS e HA.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/4a_storage.pdf",
+          "page": 41
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Puo' essere utilizzato solo su dischi locali e non su storage di rete",
+          "interpretation": "Limita erroneamente VMFS allo storage locale",
+          "why_wrong": "VMFS puo' essere creato sia su dischi locali che su storage di rete (SAN). Anzi, il suo uso principale e' proprio su storage condiviso in rete."
+        },
+        {
+          "answer_text": "Viene installato obbligatoriamente su ogni macchina virtuale creata",
+          "interpretation": "Confonde il file system del datastore con il file system del guest OS",
+          "why_wrong": "VMFS non e' un file system installato nelle VM. E' il file system del datastore sull'host ESXi. Inoltre non e' obbligatorio: le VM possono usare anche datastore NFS o RDM."
+        },
+        {
+          "answer_text": "Supporta esclusivamente dischi di dimensione inferiore a 500 GB",
+          "interpretation": "Inventa un limite di dimensione inesistente",
+          "why_wrong": "VMFS non ha un limite di 500 GB. Le versioni moderne di VMFS supportano volumi e dischi virtuali di dimensioni molto superiori."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "common_misconception"
+  },
+  {
+    "id": "FORONI_2_Fondamenti_easy_001",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Tipi di attacco informatico - malware",
+    "clusters": [
+      "malware",
+      "trojan horse",
+      "virus",
+      "spyware",
+      "ransomware"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/2.Fondamenti Cybersecurity .pdf",
+      "source_file_page_number": 9,
+      "topics": [
+        "malware",
+        "trojan horse",
+        "virus",
+        "spyware",
+        "ransomware"
+      ]
+    },
+    "question_prompt": "Quali dei seguenti sono esempi di attacchi condotti con software malevolo (malware)?",
+    "choices": [
+      {
+        "text": "Malware, Trojan Horse, Virus, Spyware, Ransomware",
+        "is_correct": true
+      },
+      {
+        "text": "Port scanning, Sniffing, Spoofing, DoS",
+        "is_correct": false
+      },
+      {
+        "text": "Exploit, Shell code, Buffer overflow, Cracking",
+        "is_correct": false
+      },
+      {
+        "text": "Phishing, Vishing, Dumpster diving, Tailgating",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Malware, Trojan Horse, Virus, Spyware, Ransomware",
+        "rationale": "Il materiale classifica Malware, Trojan Horse, Virus, Spyware e Ransomware nella categoria degli attacchi condotti con l'utilizzo di un software malevolo.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/2.Fondamenti Cybersecurity .pdf",
+          "page": 9
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Port scanning, Sniffing, Spoofing, DoS",
+          "interpretation": "Confonde gli attacchi malware con gli attacchi di rete",
+          "why_wrong": "Questi sono attacchi che sfruttano connessioni di rete e porte TCP (backdoor, port scanning, sniffing, spoofing, DoS/DDoS), non software malevolo."
+        },
+        {
+          "answer_text": "Exploit, Shell code, Buffer overflow, Cracking",
+          "interpretation": "Confonde gli attacchi malware con gli attacchi che sfruttano debolezze software",
+          "why_wrong": "Exploit, shell code, buffer overflow e cracking sono classificati come attacchi che sfruttano debolezze di un software, non come software malevolo."
+        },
+        {
+          "answer_text": "Phishing, Vishing, Dumpster diving, Tailgating",
+          "interpretation": "Confonde gli attacchi malware con il social engineering",
+          "why_wrong": "Queste sono tecniche di social engineering, una categoria distinta di attacco che sfrutta l'ingegneria sociale e non software malevolo."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_2_Fondamenti_easy_002",
+      "FORONI_2_Fondamenti_medium_001"
+    ],
+    "distractor_strategy": "category_confusion"
+  },
+  {
+    "id": "GUIDAZZOLI_file_access_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Differenza tra autenticazione e autorizzazione",
+    "clusters": [
+      "Autenticazione",
+      "Autorizzazione",
+      "Sicurezza accessi"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/File Access and Printers.ppt",
+      "source_file_page_number": 4,
+      "topics": [
+        "autenticazione",
+        "autorizzazione",
+        "authentication",
+        "authorization",
+        "permessi"
+      ]
+    },
+    "question_prompt": "Qual e' la differenza tra autenticazione e autorizzazione in Windows?",
+    "choices": [
+      {
+        "text": "L'autenticazione verifica l'identita', l'autorizzazione determina i permessi di accesso",
+        "is_correct": true
+      },
+      {
+        "text": "L'autenticazione riguarda i file, l'autorizzazione riguarda le stampanti",
+        "is_correct": false
+      },
+      {
+        "text": "L'autorizzazione avviene prima dell'autenticazione nel processo di login",
+        "is_correct": false
+      },
+      {
+        "text": "Sono sinonimi: entrambe verificano la password dell'utente",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "L'autenticazione verifica l'identita', l'autorizzazione determina i permessi di accesso",
+        "rationale": "Il materiale distingue chiaramente: Authentication risponde a 'Who are you?' (verifica identita'), Authorization risponde a 'Are you on the list?' (verifica permessi), e Access determina 'What does the list say you can do?'.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/File Access and Printers.ppt",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Sono sinonimi: entrambe verificano la password dell'utente",
+          "interpretation": "Non distingue tra i due concetti fondamentali",
+          "why_wrong": "Non sono sinonimi. L'autenticazione verifica chi sei, l'autorizzazione determina cosa puoi fare."
+        },
+        {
+          "answer_text": "L'autenticazione riguarda i file, l'autorizzazione riguarda le stampanti",
+          "interpretation": "Divide erroneamente i concetti per tipo di risorsa",
+          "why_wrong": "Entrambi i concetti si applicano a qualsiasi risorsa (file, stampanti, servizi). Non sono divisi per tipo."
+        },
+        {
+          "answer_text": "L'autorizzazione avviene prima dell'autenticazione nel processo di login",
+          "interpretation": "Inverte l'ordine del processo",
+          "why_wrong": "L'autenticazione avviene sempre prima: prima si verifica chi sei, poi si determinano i tuoi permessi."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_file_access_very_easy_001",
+      "GUIDAZZOLI_file_access_easy_004"
+    ],
+    "distractor_strategy": "common_misconception"
+  },
+  {
+    "id": "FORONI_06_EthicalHacking_very_easy_002",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Quattro elementi della sicurezza",
+    "clusters": [
+      "sicurezza informatica",
+      "CIA",
+      "autenticita'"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/6.Introduction to Ethical Hacking, Ethics, and Legality.pdf",
+      "source_file_page_number": 8,
+      "topics": [
+        "riservatezza",
+        "integrita'",
+        "disponibilita'",
+        "autenticita'"
+      ]
+    },
+    "question_prompt": "Quali sono i quattro elementi di base della sicurezza informatica?",
+    "choices": [
+      {
+        "text": "Firewall, antivirus, crittografia e backup",
+        "is_correct": false
+      },
+      {
+        "text": "Velocita', affidabilita', scalabilita' e ridondanza",
+        "is_correct": false
+      },
+      {
+        "text": "Riservatezza, integrita', disponibilita' e autenticita'",
+        "is_correct": true
+      },
+      {
+        "text": "Prevenzione, rilevamento, risposta e ripristino",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Riservatezza, integrita', disponibilita' e autenticita'",
+        "rationale": "Il materiale elenca esplicitamente a pagina 8 i quattro elementi di base della sicurezza: riservatezza, integrita', disponibilita' e autenticita'.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/6.Introduction to Ethical Hacking, Ethics, and Legality.pdf",
+          "page": 8
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Velocita', affidabilita', scalabilita' e ridondanza",
+          "interpretation": "Confonde proprieta' di performance e architettura con i pilastri della sicurezza",
+          "why_wrong": "Queste sono proprieta' desiderabili di un sistema informatico, ma non rappresentano gli elementi fondamentali della sicurezza."
+        },
+        {
+          "answer_text": "Firewall, antivirus, crittografia e backup",
+          "interpretation": "Confonde gli strumenti di sicurezza con i principi fondamentali",
+          "why_wrong": "Firewall, antivirus, crittografia e backup sono strumenti e contromisure, non i principi di base della sicurezza."
+        },
+        {
+          "answer_text": "Prevenzione, rilevamento, risposta e ripristino",
+          "interpretation": "Confonde le fasi di gestione degli incidenti con gli elementi della sicurezza",
+          "why_wrong": "Queste sono fasi del ciclo di gestione degli incidenti, non i quattro elementi di base della sicurezza informatica."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "category_confusion"
+  },
+  {
+    "id": "BERNABEI_06_GroupPolicy_very_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Configuration Management",
+    "clusters": [
+      "Group Policy",
+      "Active Directory"
+    ],
+    "metadata": {
+      "difficulty": "very_easy",
+      "difficulty_doc": "values: very_easy / easy / medium / hard",
+      "cognitive_level": "remember",
+      "cognitive_level_doc": "values: remember | understand | apply | analyze",
+      "question_type": "definition",
+      "question_type_doc": "values: definition | concept | scenario | comparison | troubleshooting | best_practice",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/06.Implementare le Group Policy.pptx",
+      "source_file_doc": "relative path to original document",
+      "source_file_page_number": 5,
+      "source_file_page_number_doc": "page number of content used; 0 if holistic",
+      "topics": [
+        "configuration management",
+        "setting",
+        "scope",
+        "application"
+      ],
+      "topics_doc": "list of topics"
+    },
+    "question_prompt": "Nel contesto del Configuration Management, cosa si intende per 'Setting'?",
+    "question_prompt_doc": "10-25 words, Italian, English tech terms",
+    "choices": [
+      {
+        "text": "La definizione di una singola modifica o impostazione da applicare",
+        "is_correct": true
+      },
+      {
+        "text": "Il processo di riavvio automatico dei client",
+        "is_correct": false
+      },
+      {
+        "text": "L'insieme di tutti i domain controller del dominio",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "La definizione di una singola modifica o impostazione da applicare",
+        "rationale": "La slide 5 definisce il Setting come la 'definizione di una singola modifica, o impostazione' nell'ambito del Configuration Management.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/06.Implementare le Group Policy.pptx",
+          "page": 5
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "L'insieme di tutti i domain controller del dominio",
+          "interpretation": "Il Setting come infrastruttura server",
+          "why_wrong": "I domain controller sono componenti infrastrutturali di AD DS, non hanno relazione con il concetto di Setting nel Configuration Management."
+        },
+        {
+          "answer_text": "Il processo di riavvio automatico dei client",
+          "interpretation": "Il Setting come processo operativo",
+          "why_wrong": "Il riavvio e un'operazione di sistema, non una definizione di impostazione. Il Setting e la definizione granulare di una configurazione."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_06_GroupPolicy_easy_001",
+      "BERNABEI_06_GroupPolicy_easy_002"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "ANZALONE_1a_virtualIntro_easy_008",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "VDI - Virtual Desktop Infrastructure",
+    "clusters": [
+      "Virtualizzazione e Hypervisor"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+      "source_file_page_number": 72,
+      "topics": [
+        "VDI",
+        "Virtual Desktop Infrastructure",
+        "desktop virtualization",
+        "thin client",
+        "RDP"
+      ]
+    },
+    "question_prompt": "Cosa si intende per VDI (Virtual Desktop Infrastructure) e come accedono gli utenti ai desktop virtuali?",
+    "choices": [
+      {
+        "text": "Un'infrastruttura di rete che collega desktop fisici tramite cavi dedicati ad alta velocita'",
+        "is_correct": false
+      },
+      {
+        "text": "Un software antivirus installato su ogni desktop per la protezione centralizzata dei dati",
+        "is_correct": false
+      },
+      {
+        "text": "Desktop virtualizzati su server centralizzati nel data center, accessibili tramite thin client e protocolli come RDP",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Desktop virtualizzati su server centralizzati nel data center, accessibili tramite thin client e protocolli come RDP",
+        "rationale": "La VDI (Virtual Desktop Infrastructure) consiste nella virtualizzazione dei desktop su server centralizzati nel data center. Gli utenti accedono ai desktop virtuali tramite dispositivi rich o thin client che supportano applicazioni di desktop remoto come Microsoft RDP, con supporto per desktop personali o condivisi (pooled).",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+          "page": 72
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Un'infrastruttura di rete che collega desktop fisici tramite cavi dedicati ad alta velocita'",
+          "interpretation": "Questa risposta confonde VDI con un'infrastruttura di rete fisica",
+          "why_wrong": "La VDI non riguarda il cablaggio fisico dei desktop ma la virtualizzazione dei desktop su server centralizzati."
+        },
+        {
+          "answer_text": "Un software antivirus installato su ogni desktop per la protezione centralizzata dei dati",
+          "interpretation": "Questa risposta confonde VDI con software di sicurezza",
+          "why_wrong": "Un antivirus e' un software di sicurezza, non ha relazione con la Virtual Desktop Infrastructure che riguarda la virtualizzazione dei desktop."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BONONI_NAT_very_easy_001",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Concetto base di NAT",
+    "clusters": [
+      "NAT",
+      "Network Address Translation"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/NAT-IPv4.pdf",
+      "source_file_page_number": 1,
+      "topics": [
+        "NAT",
+        "indirizzo IP pubblico",
+        "rete locale"
+      ]
+    },
+    "question_prompt": "Cosa fa il NAT (Network Address Translation) per i datagrammi in uscita da una rete locale?",
+    "choices": [
+      {
+        "text": "Aggiunge un header IPv6 per la compatibilita' con reti esterne",
+        "is_correct": false
+      },
+      {
+        "text": "Cripta il payload del datagramma con una chiave simmetrica",
+        "is_correct": false
+      },
+      {
+        "text": "Frammenta il datagramma in pacchetti piu' piccoli per il routing",
+        "is_correct": false
+      },
+      {
+        "text": "Sostituisce l'indirizzo IP privato sorgente con un unico indirizzo IP pubblico",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Sostituisce l'indirizzo IP privato sorgente con un unico indirizzo IP pubblico",
+        "rationale": "Il NAT traduce gli indirizzi IP privati della rete locale in un singolo indirizzo IP pubblico. Come indicato nel materiale, tutti i datagrammi in uscita dalla rete locale hanno lo stesso indirizzo IP NAT sorgente (es. 138.76.29.7) ma numeri di porta sorgente differenti.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/NAT-IPv4.pdf",
+          "page": 1
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Cripta il payload del datagramma con una chiave simmetrica",
+          "interpretation": "Confonde NAT con funzionalita' di cifratura come IPsec o VPN",
+          "why_wrong": "Il NAT non esegue cifratura. La sua funzione e' esclusivamente la traduzione degli indirizzi IP e delle porte."
+        },
+        {
+          "answer_text": "Frammenta il datagramma in pacchetti piu' piccoli per il routing",
+          "interpretation": "Confonde NAT con la frammentazione IP",
+          "why_wrong": "La frammentazione e' una funzione separata del livello di rete. Il NAT si occupa della traduzione degli indirizzi, non della dimensione dei pacchetti."
+        },
+        {
+          "answer_text": "Aggiunge un header IPv6 per la compatibilita' con reti esterne",
+          "interpretation": "Confonde NAT con meccanismi di transizione IPv4/IPv6",
+          "why_wrong": "Il NAT opera esclusivamente su indirizzi IPv4. La transizione a IPv6 e' un meccanismo diverso, citato anzi come alternativa al NAT."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "FORONI_4b_CertSSL_easy_003",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Categorie SSL - DV, OV, EV",
+    "clusters": [
+      "DV",
+      "OV",
+      "EV",
+      "Domain Validation",
+      "Organization Validation",
+      "Extended Validation"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4certificatissl-commerciale register.pdf",
+      "source_file_page_number": 4,
+      "topics": [
+        "DV",
+        "OV",
+        "EV",
+        "categorie SSL",
+        "validazione"
+      ]
+    },
+    "question_prompt": "Quali sono le tre principali categorie di certificati SSL in base al livello di validazione?",
+    "choices": [
+      {
+        "text": "Free, Shared, Dedicated",
+        "is_correct": false
+      },
+      {
+        "text": "SSL 1.0, SSL 2.0, SSL 3.0",
+        "is_correct": false
+      },
+      {
+        "text": "Basic, Standard, Premium",
+        "is_correct": false
+      },
+      {
+        "text": "DV (Domain Validation), OV (Organization Validation), EV (Extended Validation)",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "DV (Domain Validation), OV (Organization Validation), EV (Extended Validation)",
+        "rationale": "La slide 4 indica: 'Le principali categorie di SSL sono DV (Domain Validation) OV (Organization Validation) EV (Extended Validation)'. Il livello di controllo cresce da DV (solo dominio) a OV (dominio + azienda) a EV (dominio + azienda + verifica estesa).",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4certificatissl-commerciale register.pdf",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Basic, Standard, Premium",
+          "interpretation": "Usa terminologia commerciale generica invece dei termini tecnici corretti",
+          "why_wrong": "Queste sono denominazioni commerciali generiche, non le categorie tecniche standard dei certificati SSL. Le categorie corrette sono DV, OV e EV."
+        },
+        {
+          "answer_text": "Free, Shared, Dedicated",
+          "interpretation": "Confonde le categorie di certificati con tipologie di hosting",
+          "why_wrong": "Free/Shared/Dedicated sono termini tipici dei servizi di hosting, non delle categorie di certificati SSL."
+        },
+        {
+          "answer_text": "SSL 1.0, SSL 2.0, SSL 3.0",
+          "interpretation": "Confonde le categorie di certificati con le versioni del protocollo",
+          "why_wrong": "SSL 1.0, 2.0, 3.0 sono versioni del protocollo SSL, non categorie di certificati. Le categorie riguardano il livello di validazione (DV, OV, EV)."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_4b_CertSSL_medium_002"
+    ],
+    "distractor_strategy": "related_concept"
+  },
+  {
+    "id": "BERNABEI_02_SicurezzaAdmin_very_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Comandi DS - elenco base",
+    "clusters": [
+      "Comandi DS",
+      "Amministrazione Active Directory"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+      "source_file_page_number": 22,
+      "topics": [
+        "DSQuery",
+        "DSGet",
+        "DSMod",
+        "comandi DS"
+      ]
+    },
+    "question_prompt": "Quale comando DS viene utilizzato per effettuare una ricerca in Active Directory e restituire il Distinguished Name (DN) degli oggetti trovati?",
+    "choices": [
+      {
+        "text": "DSDelete",
+        "is_correct": false
+      },
+      {
+        "text": "DSQuery",
+        "is_correct": true
+      },
+      {
+        "text": "DSBackup",
+        "is_correct": false
+      },
+      {
+        "text": "DSFormat",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "DSQuery",
+        "rationale": "DSQuery effettua una ricerca basata sui parametri forniti e restituisce il Distinguished Name (DN) degli oggetti trovati in Active Directory. È il comando DS fondamentale per le operazioni di ricerca.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+          "page": 22
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "DSDelete",
+          "interpretation": "Comando di eliminazione generico",
+          "why_wrong": "DSDelete non esiste tra i comandi DS standard. Il comando per eliminare oggetti è DSRm. DSQuery è il comando specifico per la ricerca."
+        },
+        {
+          "answer_text": "DSBackup",
+          "interpretation": "Comando di backup",
+          "why_wrong": "DSBackup non è un comando DS esistente. I comandi DS sono: DSQuery, DSGet, DSMod, DSMove, DSAdd e DSRm."
+        },
+        {
+          "answer_text": "DSFormat",
+          "interpretation": "Comando di formattazione",
+          "why_wrong": "DSFormat non esiste. Non ha relazione con i comandi DS di Active Directory, che sono dedicati a query, lettura, modifica, spostamento, aggiunta e rimozione di oggetti."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_02_SicurezzaAdmin_easy_003"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "GUIDAZZOLI_devices_drivers_very_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Disco MBR - definizione base",
+    "clusters": [
+      "Partizionamento dischi",
+      "MBR",
+      "GPT"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Devices and Drivers.ppt",
+      "source_file_page_number": 4,
+      "topics": [
+        "MBR",
+        "Master Boot Record",
+        "partizionamento",
+        "settore disco"
+      ]
+    },
+    "question_prompt": "Dove si trova il Master Boot Record (MBR) di un disco?",
+    "choices": [
+      {
+        "text": "All'interno della memoria RAM del computer",
+        "is_correct": false
+      },
+      {
+        "text": "Nel primo settore del disco rigido",
+        "is_correct": true
+      },
+      {
+        "text": "Nell'ultimo file della cartella Windows",
+        "is_correct": false
+      },
+      {
+        "text": "Su un chip separato nella scheda madre",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Nel primo settore del disco rigido",
+        "rationale": "Il materiale indica che l'MBR 'Is on the first sector of the hard disk'. L'MBR viene creato quando il disco viene partizionato.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Devices and Drivers.ppt",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Nell'ultimo file della cartella Windows",
+          "interpretation": "Confonde l'MBR con un file del sistema operativo",
+          "why_wrong": "L'MBR non e' un file di Windows. Si trova nel primo settore fisico del disco, prima di qualsiasi file system."
+        },
+        {
+          "answer_text": "Su un chip separato nella scheda madre",
+          "interpretation": "Confonde l'MBR con il firmware BIOS/UEFI",
+          "why_wrong": "L'MBR risiede sul disco rigido, non sulla scheda madre. Non va confuso con il BIOS che risiede su un chip."
+        },
+        {
+          "answer_text": "All'interno della memoria RAM del computer",
+          "interpretation": "Confonde lo storage persistente con la memoria volatile",
+          "why_wrong": "L'MBR e' persistente sul disco rigido. La RAM e' volatile e perde i dati allo spegnimento."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_devices_drivers_easy_002",
+      "GUIDAZZOLI_devices_drivers_easy_003"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_12_DominiForeste_easy_005",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "AD CS - Public Key Infrastructure",
+    "clusters": [
+      "AD CS",
+      "PKI",
+      "Certificati",
+      "SSL"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "cognitive_level": "remember",
+      "question_type": "definition",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/12.Gestire domini e foreste.pptx",
+      "source_file_page_number": 25,
+      "topics": [
+        "AD CS",
+        "PKI",
+        "certificati",
+        "SSL",
+        "HTTPS",
+        "VPN",
+        "smart card"
+      ]
+    },
+    "question_prompt": "Quale servizio Active Directory è responsabile della creazione di una Public Key Infrastructure (PKI) per la gestione dei certificati?",
+    "choices": [
+      {
+        "text": "Active Directory Certificate Services (AD CS)",
+        "is_correct": true
+      },
+      {
+        "text": "Active Directory Federation Services (AD FS)",
+        "is_correct": false
+      },
+      {
+        "text": "Active Directory Lightweight Directory Services (AD LDS)",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Active Directory Certificate Services (AD CS)",
+        "rationale": "La slide 25 descrive AD CS come il servizio che crea una PKI (chiavi private e pubbliche) e gestisce i certificati per SSL/HTTPS, VPN, wireless, smart card e altri scenari di autenticazione.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/12.Gestire domini e foreste.pptx",
+          "page": 25
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Active Directory Federation Services (AD FS)",
+          "interpretation": "Confusione tra federation e certificati",
+          "why_wrong": "AD FS gestisce la federazione e il trust tra organizzazioni tramite Web services, non la PKI. È AD CS il servizio dedicato alla gestione dei certificati."
+        },
+        {
+          "answer_text": "Active Directory Lightweight Directory Services (AD LDS)",
+          "interpretation": "Confusione tra directory leggera e certificati",
+          "why_wrong": "AD LDS è una versione standalone di AD per applicazioni LDAP. Non gestisce certificati né PKI."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_12_DominiForeste_easy_004",
+      "BERNABEI_12_DominiForeste_easy_006"
+    ],
+    "distractor_strategy": "related_concept"
+  },
+  {
+    "id": "FORONI_4_CertificatiPKI_easy_006",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Let's Encrypt",
+    "clusters": [
+      "Let's Encrypt",
+      "CA gratuita",
+      "certificati gratuiti",
+      "domain validated"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+      "source_file_page_number": 105,
+      "topics": [
+        "Let's Encrypt",
+        "certificati gratuiti",
+        "domain validated",
+        "X.509",
+        "TLS"
+      ]
+    },
+    "question_prompt": "Cos'e' Let's Encrypt e che tipo di certificati rilascia?",
+    "choices": [
+      {
+        "text": "Un servizio commerciale di CA che rilascia certificati EV (Extended Validation) a basso costo",
+        "is_correct": false
+      },
+      {
+        "text": "Un plugin del browser che verifica automaticamente la validita' dei certificati SSL",
+        "is_correct": false
+      },
+      {
+        "text": "Un'autorita' di certificazione gratuita, attiva dal 2016, che rilascia solo certificati domain-validated per TLS",
+        "is_correct": true
+      },
+      {
+        "text": "Un software open source per generare certificati self-signed da usare in ambito aziendale",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Un'autorita' di certificazione gratuita, attiva dal 2016, che rilascia solo certificati domain-validated per TLS",
+        "rationale": "La slide 105 descrive Let's Encrypt come: 'Autorita' di certificazione. Rilascia gratuitamente certificati X.509 per TLS. Attiva da 12 aprile 2016. Solo domain-validated certificate. Identita' validata con controllo su dominio DNS.'",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+          "page": 105
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Un software open source per generare certificati self-signed da usare in ambito aziendale",
+          "interpretation": "Confonde una CA con un tool per certificati self-signed",
+          "why_wrong": "Let's Encrypt e' una vera CA riconosciuta dai browser, non un tool per certificati self-signed. I certificati che rilascia sono firmati e riconosciuti."
+        },
+        {
+          "answer_text": "Un servizio commerciale di CA che rilascia certificati EV (Extended Validation) a basso costo",
+          "interpretation": "Confonde il modello gratuito con uno commerciale e il tipo di certificato",
+          "why_wrong": "Let's Encrypt e' gratuito (non commerciale) e rilascia solo certificati domain-validated, non EV."
+        },
+        {
+          "answer_text": "Un plugin del browser che verifica automaticamente la validita' dei certificati SSL",
+          "interpretation": "Confonde una CA con un tool client-side",
+          "why_wrong": "Let's Encrypt e' un'autorita' di certificazione (CA), non un plugin. Emette certificati, non li verifica lato client."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_4_CertificatiPKI_medium_004"
+    ],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "BONONI_2b_netmask_very_easy_002",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Broadcast e indirizzo di rete",
+    "clusters": [
+      "Netmask e subnetting"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_2b_esempio_netmask.pdf",
+      "source_file_page_number": 5,
+      "topics": [
+        "broadcast",
+        "indirizzo di rete",
+        "host bits"
+      ]
+    },
+    "question_prompt": "In una sottorete IP, cosa rappresenta l'indirizzo con tutti i bit di host a 1?",
+    "choices": [
+      {
+        "text": "L'indirizzo del default router",
+        "is_correct": false
+      },
+      {
+        "text": "L'indirizzo di broadcast della sottorete",
+        "is_correct": true
+      },
+      {
+        "text": "L'indirizzo della rete stessa",
+        "is_correct": false
+      },
+      {
+        "text": "L'indirizzo del server DNS",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "L'indirizzo di broadcast della sottorete",
+        "rationale": "L'indirizzo con tutti i bit di host a 1 identifica il broadcast di rete, cioe' un messaggio destinato a tutti i dispositivi della sottorete. L'indirizzo con tutti i bit di host a 0 identifica la rete stessa.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_2b_esempio_netmask.pdf",
+          "page": 5
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "L'indirizzo della rete stessa",
+          "interpretation": "Confonde broadcast (tutti i bit host a 1) con indirizzo di rete (tutti i bit host a 0)",
+          "why_wrong": "L'indirizzo di rete ha tutti i bit di host a 0, non a 1. Tutti a 1 indica il broadcast."
+        },
+        {
+          "answer_text": "L'indirizzo del default router",
+          "interpretation": "Confonde con l'indirizzo del router",
+          "why_wrong": "Il default router ha un indirizzo IP specifico (es. .254), non corrisponde all'indirizzo con tutti i bit di host a 1."
+        },
+        {
+          "answer_text": "L'indirizzo del server DNS",
+          "interpretation": "Confonde con un servizio di rete",
+          "why_wrong": "Il server DNS ha un indirizzo IP specifico assegnato. L'indirizzo broadcast non identifica un host specifico."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "BERNABEI_05_AccountComputer_easy_005",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Eliminazione e riutilizzo account computer",
+    "clusters": [
+      "Account Computer",
+      "Amministrazione"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "best_practice",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/05.Gestire gli account computer.pptx",
+      "source_file_page_number": 22,
+      "topics": [
+        "delete",
+        "reset",
+        "SID",
+        "group membership",
+        "sostituzione computer"
+      ]
+    },
+    "question_prompt": "Quando si sostituisce un computer con un altro avente il medesimo ruolo, quale operazione e preferibile rispetto all'eliminazione dell'account?",
+    "choices": [
+      {
+        "text": "Eliminare l'account e ricrearlo manualmente con le stesse impostazioni",
+        "is_correct": false
+      },
+      {
+        "text": "Disabilitare l'account e crearne uno nuovo con nome diverso",
+        "is_correct": false
+      },
+      {
+        "text": "Usare \"Reset Computer Account\" per preservare SID e group membership",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Usare \"Reset Computer Account\" per preservare SID e group membership",
+        "rationale": "La slide 22 indica che, se si sta sostituendo un computer con un altro avente il medesimo ruolo, e preferibile usare reset computer account anziche eliminarlo, poiche la cancellazione elimina completamente SID e group membership.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/05.Gestire gli account computer.pptx",
+          "page": 22
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Eliminare l'account e ricrearlo manualmente con le stesse impostazioni",
+          "interpretation": "Delete e recreate come procedura standard",
+          "why_wrong": "L'eliminazione distrugge il SID e tutte le group membership dell'account. Il reset consente di preservare queste informazioni, evitando di doverle riconfigurare."
+        },
+        {
+          "answer_text": "Disabilitare l'account e crearne uno nuovo con nome diverso",
+          "interpretation": "Disabilitazione e nuovo account come alternativa",
+          "why_wrong": "Creare un nuovo account genera un SID diverso e non conserva le group membership. Il reset dell'account esistente e la soluzione raccomandata dal materiale."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_05_AccountComputer_medium_005",
+      "BERNABEI_05_AccountComputer_hard_004"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  },
+  {
+    "id": "GUIDAZZOLI_introduzione_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Tipologie di licenza Windows - dettaglio",
+    "clusters": [
+      "Licenze Microsoft",
+      "Infrastruttura client"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/1 -Introduzione.ppt",
+      "source_file_page_number": 8,
+      "topics": [
+        "licenza OEM",
+        "licenza Retail",
+        "licenza Upgrade",
+        "licenza VLP",
+        "licenza 365"
+      ]
+    },
+    "question_prompt": "Quale tra queste NON e' una tipologia di licenza Windows citata nel materiale?",
+    "choices": [
+      {
+        "text": "OEM",
+        "is_correct": false
+      },
+      {
+        "text": "Retail",
+        "is_correct": false
+      },
+      {
+        "text": "Freeware",
+        "is_correct": true
+      },
+      {
+        "text": "VLP",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Freeware",
+        "rationale": "Le tipologie di licenza Windows citate nel materiale sono: OEM, Retail, Upgrade, VLP e 365. Freeware non e' una tipologia di licenza Windows.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/1 -Introduzione.ppt",
+          "page": 8
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "OEM",
+          "interpretation": "Licenza preinstallata dal produttore hardware",
+          "why_wrong": "OEM e' una delle tipologie di licenza Windows espressamente citate nel materiale."
+        },
+        {
+          "answer_text": "Retail",
+          "interpretation": "Licenza acquistabile separatamente nei negozi",
+          "why_wrong": "Retail e' una delle tipologie di licenza Windows espressamente citate nel materiale."
+        },
+        {
+          "answer_text": "VLP",
+          "interpretation": "Volume Licensing Program per le aziende",
+          "why_wrong": "VLP e' una delle tipologie di licenza Windows espressamente citate nel materiale."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_introduzione_very_easy_001",
+      "GUIDAZZOLI_introduzione_easy_002"
+    ],
+    "distractor_strategy": "related_domain"
+  },
+  {
+    "id": "ANZALONE_3a_vnet_easy_003",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Funzione della VMkernel port",
+    "clusters": [
+      "Networking Virtuale",
+      "Infrastruttura VMware vSphere"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3a_vnet.pdf",
+      "source_file_page_number": 74,
+      "topics": [
+        "VMkernel port",
+        "vmknic",
+        "vMotion",
+        "iSCSI",
+        "NFS",
+        "FT logging"
+      ]
+    },
+    "question_prompt": "Qual è la funzione principale di una VMkernel port (vmknic) in un host ESXi?",
+    "choices": [
+      {
+        "text": "Fornire un'interfaccia di rete con indirizzo IP per servizi come vMotion, iSCSI, NFS, FT logging e management",
+        "is_correct": true
+      },
+      {
+        "text": "Creare tunnel VPN cifrati tra host ESXi situati in datacenter geograficamente distanti",
+        "is_correct": false
+      },
+      {
+        "text": "Connettere le macchine virtuali alla rete esterna tramite un bridge fisico dedicato",
+        "is_correct": false
+      },
+      {
+        "text": "Gestire la risoluzione DNS dei nomi delle VM all'interno del cluster vSphere",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Fornire un'interfaccia di rete con indirizzo IP per servizi come vMotion, iSCSI, NFS, FT logging e management",
+        "rationale": "Una VMkernel port è un tipo speciale di porta del virtual switch configurata con un indirizzo IP. Consente l'accesso dell'host a servizi di infrastruttura: vMotion, storage iSCSI, NFS, Fault Tolerance logging e management dell'host.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3a_vnet.pdf",
+          "page": 74
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Connettere le macchine virtuali alla rete esterna tramite un bridge fisico dedicato",
+          "interpretation": "Confonde VMkernel port con uplink adapter",
+          "why_wrong": "La connettività delle VM alla rete esterna è fornita dalle port group e dagli uplink adapter, non dalle VMkernel port."
+        },
+        {
+          "answer_text": "Gestire la risoluzione DNS dei nomi delle VM all'interno del cluster vSphere",
+          "interpretation": "Attribuisce funzioni DNS alla VMkernel port",
+          "why_wrong": "Le VMkernel port non gestiscono la risoluzione DNS. Il DNS è un servizio di rete separato e indipendente."
+        },
+        {
+          "answer_text": "Creare tunnel VPN cifrati tra host ESXi situati in datacenter geograficamente distanti",
+          "interpretation": "Confonde VMkernel port con funzionalità VPN",
+          "why_wrong": "Le VMkernel port non creano tunnel VPN. La loro funzione è fornire connettività IP per servizi infrastrutturali dell'hypervisor."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_3a_vnet_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "GUIDAZZOLI_network_very_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Definizione di default gateway",
+    "clusters": [
+      "IPv4",
+      "Default Gateway",
+      "Routing"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Network Connectivity.ppt",
+      "source_file_page_number": 7,
+      "topics": [
+        "default gateway",
+        "router",
+        "firewall",
+        "instradamento"
+      ]
+    },
+    "question_prompt": "Quale dispositivo puo' svolgere il ruolo di default gateway in una rete?",
+    "choices": [
+      {
+        "text": "Un router, un firewall o uno switch Layer 3",
+        "is_correct": true
+      },
+      {
+        "text": "Una stampante di rete collegata via USB",
+        "is_correct": false
+      },
+      {
+        "text": "Un monitor esterno collegato in HDMI",
+        "is_correct": false
+      },
+      {
+        "text": "Una tastiera wireless Bluetooth",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Un router, un firewall o uno switch Layer 3",
+        "rationale": "Il materiale elenca come possibili default gateway: Router, Switch Layer 2+/3, Firewall, Router/Firewall, Server, Proxy, Server Router. Tutti dispositivi in grado di instradare il traffico tra reti diverse.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Network Connectivity.ppt",
+          "page": 7
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Una stampante di rete collegata via USB",
+          "interpretation": "Confonde un dispositivo di stampa con un dispositivo di rete",
+          "why_wrong": "Una stampante USB non ha funzionalita' di routing e non puo' instradare traffico tra reti diverse."
+        },
+        {
+          "answer_text": "Un monitor esterno collegato in HDMI",
+          "interpretation": "Confonde una periferica video con un dispositivo di rete",
+          "why_wrong": "Un monitor e' un dispositivo di output video, non ha alcuna funzionalita' di rete."
+        },
+        {
+          "answer_text": "Una tastiera wireless Bluetooth",
+          "interpretation": "Confonde una periferica di input con un dispositivo di rete",
+          "why_wrong": "Una tastiera e' un dispositivo di input, non ha capacita' di routing o instradamento."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_network_very_easy_002",
+      "GUIDAZZOLI_network_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BONONI_NetworkSecurity_easy_008",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "SSL/TLS - funzionalita' base",
+    "clusters": [
+      "Sicurezza a livello applicativo e trasporto"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+      "source_file_page_number": 73,
+      "topics": [
+        "SSL",
+        "TLS",
+        "transport layer",
+        "server authentication"
+      ]
+    },
+    "question_prompt": "Il protocollo SSL (Secure Sockets Layer) opera a quale livello per fornire sicurezza alle applicazioni TCP-based?",
+    "choices": [
+      {
+        "text": "Livello di rete (network layer)",
+        "is_correct": false
+      },
+      {
+        "text": "Livello applicativo (application layer)",
+        "is_correct": false
+      },
+      {
+        "text": "Livello fisico (physical layer)",
+        "is_correct": false
+      },
+      {
+        "text": "Livello di trasporto (transport layer)",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Livello di trasporto (transport layer)",
+        "rationale": "SSL fornisce sicurezza a livello di trasporto (transport layer security) per qualsiasi applicazione TCP-based che utilizzi i servizi SSL. E' la base di TLS (Transport Layer Security) dell'IETF.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+          "page": 73
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Livello di rete (network layer)",
+          "interpretation": "Lo studente confonde SSL con IPsec",
+          "why_wrong": "La sicurezza a livello di rete e' fornita da IPsec, non da SSL."
+        },
+        {
+          "answer_text": "Livello applicativo (application layer)",
+          "interpretation": "Lo studente confonde il livello di SSL con quello delle applicazioni che lo usano",
+          "why_wrong": "SSL opera sotto il livello applicativo, al livello di trasporto, fornendo sicurezza trasparente alle applicazioni."
+        },
+        {
+          "answer_text": "Livello fisico (physical layer)",
+          "interpretation": "Lo studente non conosce la posizione di SSL nello stack",
+          "why_wrong": "Il livello fisico riguarda la trasmissione dei segnali elettrici/ottici, non la sicurezza logica dei dati."
+        }
+      ]
+    },
+    "related_questions": [
+      "BONONI_NetworkSecurity_hard_005"
+    ],
+    "distractor_strategy": "layer_confusion"
+  },
+  {
+    "id": "BONONI_intro_reti2025A_easy_003",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Componenti per la connessione a una rete",
+    "clusters": [
+      "Componenti di rete"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_intro_reti2025Anew.pdf",
+      "source_file_page_number": 10,
+      "topics": [
+        "scheda di rete",
+        "mezzo trasmissivo",
+        "connettore",
+        "protocolli"
+      ]
+    },
+    "question_prompt": "Quali sono le componenti minime necessarie per connettere un calcolatore a una rete?",
+    "choices": [
+      {
+        "text": "Monitor, tastiera, mouse e stampante di rete",
+        "is_correct": false
+      },
+      {
+        "text": "Scheda di rete, mezzo di trasmissione, connettore di rete e protocolli di rete",
+        "is_correct": true
+      },
+      {
+        "text": "Router, firewall, server DNS e access point wireless",
+        "is_correct": false
+      },
+      {
+        "text": "Processore, RAM, disco rigido e alimentatore",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Scheda di rete, mezzo di trasmissione, connettore di rete e protocolli di rete",
+        "rationale": "La connessione di un calcolatore a una rete richiede: un dispositivo o scheda di rete (hardware per codificare/decodificare e trasmettere/ricevere dati), un mezzo di trasmissione (supporto fisico), un connettore di rete (interfaccia standard) e i protocolli di rete (regole software per la comunicazione).",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_intro_reti2025Anew.pdf",
+          "page": 10
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Monitor, tastiera, mouse e stampante di rete",
+          "interpretation": "Questa risposta elenca periferiche di input/output generiche",
+          "why_wrong": "Queste sono periferiche del calcolatore per l'interazione con l'utente, non componenti specifiche per la connessione di rete."
+        },
+        {
+          "answer_text": "Processore, RAM, disco rigido e alimentatore",
+          "interpretation": "Questa risposta elenca componenti hardware interni del calcolatore",
+          "why_wrong": "Questi sono componenti base del calcolatore stesso, non le componenti aggiuntive necessarie per connetterlo a una rete."
+        },
+        {
+          "answer_text": "Router, firewall, server DNS e access point wireless",
+          "interpretation": "Questa risposta elenca dispositivi di rete avanzati",
+          "why_wrong": "Questi sono dispositivi di rete avanzati per infrastrutture complesse. Le componenti minime sono scheda di rete, mezzo trasmissivo, connettore e protocolli."
+        }
+      ]
+    },
+    "related_questions": [
+      "BONONI_intro_reti2025A_easy_005"
+    ],
+    "distractor_strategy": "related_concept"
+  },
+  {
+    "id": "ANZALONE_3c_iscsi-fc_very_easy_002",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Fibre Channel - concetto base",
+    "clusters": [
+      "Protocolli di Storage",
+      "SAN"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3c_iscsi-fc.pdf",
+      "source_file_page_number": 16,
+      "topics": [
+        "Fibre Channel",
+        "SAN",
+        "storage"
+      ]
+    },
+    "question_prompt": "In ambito SAN, quale protocollo richiede un'infrastruttura di rete dedicata in fibra ottica?",
+    "choices": [
+      {
+        "text": "SMTP",
+        "is_correct": false
+      },
+      {
+        "text": "Fibre Channel",
+        "is_correct": true
+      },
+      {
+        "text": "HTTP",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Fibre Channel",
+        "rationale": "Fibre Channel richiede una rete dedicata in fibra ottica per essere implementato, a differenza di iSCSI che puo' funzionare su infrastruttura Ethernet esistente.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3c_iscsi-fc.pdf",
+          "page": 16
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "HTTP",
+          "interpretation": "Protocollo per il trasferimento di pagine web",
+          "why_wrong": "HTTP e' il protocollo usato per il web, non ha alcuna relazione con le SAN o lo storage."
+        },
+        {
+          "answer_text": "SMTP",
+          "interpretation": "Protocollo per l'invio di email",
+          "why_wrong": "SMTP e' il protocollo per la posta elettronica, non e' un protocollo di storage."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_3c_iscsi-fc_very_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  }
+]

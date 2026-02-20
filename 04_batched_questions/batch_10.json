@@ -1,0 +1,1450 @@
+[
+  {
+    "id": "FORONI_3_Crittografia_easy_001",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Crittografia vs Steganografia",
+    "clusters": [
+      "crittografia",
+      "steganografia",
+      "tecniche di sicurezza"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "conceptual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/3.CRITTOGRAFIA.pdf",
+      "source_file_page_number": 3,
+      "topics": [
+        "crittografia",
+        "steganografia"
+      ]
+    },
+    "question_prompt": "Quale differenza fondamentale esiste tra crittografia e steganografia come tecniche per la sicurezza dei messaggi?",
+    "choices": [
+      {
+        "text": "La crittografia rende il messaggio illeggibile, la steganografia ne nasconde l'esistenza stessa",
+        "is_correct": true
+      },
+      {
+        "text": "La crittografia usa chiavi pubbliche, la steganografia usa chiavi private",
+        "is_correct": false
+      },
+      {
+        "text": "La crittografia protegge l'integrita', la steganografia protegge solo la riservatezza",
+        "is_correct": false
+      },
+      {
+        "text": "La crittografia e' piu' veloce, la steganografia e' piu' sicura",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "La crittografia rende il messaggio illeggibile, la steganografia ne nasconde l'esistenza stessa",
+        "rationale": "La slide 3 elenca crittografia e steganografia come due tecniche distinte. Lo scopo della crittografia e' 'rendere illeggibile un testo in chiaro a chi non e' autorizzato' (slide 5), mentre la steganografia mira a nascondere l'esistenza stessa del messaggio segreto all'interno di un altro contenuto.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/3.CRITTOGRAFIA.pdf",
+          "page": 3
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "La crittografia e' piu' veloce, la steganografia e' piu' sicura",
+          "interpretation": "Confonde le caratteristiche prestazionali con la differenza concettuale",
+          "why_wrong": "La differenza non riguarda velocita' o livello di sicurezza, ma l'approccio: rendere illeggibile vs nascondere l'esistenza."
+        },
+        {
+          "answer_text": "La crittografia usa chiavi pubbliche, la steganografia usa chiavi private",
+          "interpretation": "Attribuisce erroneamente una distinzione basata sul tipo di chiavi",
+          "why_wrong": "La crittografia puo' usare sia chiavi pubbliche (asimmetrica) che chiavi condivise (simmetrica). La steganografia non e' definita dal tipo di chiave."
+        },
+        {
+          "answer_text": "La crittografia protegge l'integrita', la steganografia protegge solo la riservatezza",
+          "interpretation": "Confonde le proprieta' di sicurezza con le tecniche",
+          "why_wrong": "Entrambe le tecniche sono citate come risposte ai problemi di sicurezza. La crittografia puo' garantire anche riservatezza, autenticazione e non ripudiabilita'."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_3_Crittografia_very_easy_001"
+    ],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "BERNABEI_03_GestioneUtenti_medium_004",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Modifica attributi di utenti multipli",
+    "clusters": [
+      "Active Directory",
+      "Gestione Utenti",
+      "Amministrazione Bulk"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+      "source_file_page_number": 19,
+      "topics": [
+        "modifica multipla",
+        "attributi",
+        "bulk editing",
+        "CTRL+click"
+      ]
+    },
+    "question_prompt": "Quali tab di attributi sono modificabili simultaneamente selezionando più utenti in ADUC con CTRL+click e scegliendo Properties?",
+    "choices": [
+      {
+        "text": "Solo il tab General con il campo Description",
+        "is_correct": false
+      },
+      {
+        "text": "Solo il tab Account per modificare il UPN suffix",
+        "is_correct": false
+      },
+      {
+        "text": "General, Account, Address, Profile e Organization",
+        "is_correct": true
+      },
+      {
+        "text": "Esclusivamente il tab Member Of per le group membership",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "General, Account, Address, Profile e Organization",
+        "rationale": "Il materiale elenca i tab disponibili per la modifica multipla: General (Description, Office, ecc.), Account (UPN Suffix, Logon Hours, ecc.), Address, Profile (Profile Path, Logon Script, Home Folder) e Organization (Title, Department, Company, Manager).",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+          "page": 19
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Solo il tab General con il campo Description",
+          "interpretation": "Solo un tab",
+          "why_wrong": "La modifica multipla non è limitata al solo tab General. Sono disponibili anche Account, Address, Profile e Organization."
+        },
+        {
+          "answer_text": "Esclusivamente il tab Member Of per le group membership",
+          "interpretation": "Solo membership",
+          "why_wrong": "Il tab Member Of non è elencato tra quelli disponibili nella modifica multipla. I tab disponibili sono General, Account, Address, Profile e Organization."
+        },
+        {
+          "answer_text": "Solo il tab Account per modificare il UPN suffix",
+          "interpretation": "Solo Account",
+          "why_wrong": "Sebbene il tab Account sia disponibile nella modifica multipla, non è l'unico. Sono disponibili anche General, Address, Profile e Organization."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_03_GestioneUtenti_easy_005",
+      "BERNABEI_03_GestioneUtenti_hard_004"
+    ],
+    "distractor_strategy": "partial_match"
+  },
+  {
+    "id": "ANZALONE_1a_virtualIntro_very_easy_001",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Definizione di virtualizzazione",
+    "clusters": [
+      "Virtualizzazione e Hypervisor"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+      "source_file_page_number": 6,
+      "topics": [
+        "virtualizzazione",
+        "definizione",
+        "astrazione"
+      ]
+    },
+    "question_prompt": "In informatica, cosa significa virtualizzare una risorsa come un server o uno storage?",
+    "choices": [
+      {
+        "text": "Collegare il server a Internet tramite un cavo in fibra ottica",
+        "is_correct": false
+      },
+      {
+        "text": "Stampare lo schema del circuito elettronico del server",
+        "is_correct": false
+      },
+      {
+        "text": "Cancellare completamente il sistema operativo dal disco fisso",
+        "is_correct": false
+      },
+      {
+        "text": "Creare una versione virtuale di un dispositivo o risorsa, astraendola dall'hardware fisico sottostante",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Creare una versione virtuale di un dispositivo o risorsa, astraendola dall'hardware fisico sottostante",
+        "rationale": "La virtualizzazione consiste nel creare una versione virtuale di un dispositivo o risorsa (server, storage, rete, OS). Viene inserito un livello di astrazione tra la risorsa virtuale e quella fisica reale, permettendo di suddividere la risorsa in uno o piu' ambienti di esecuzione.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+          "page": 6
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Cancellare completamente il sistema operativo dal disco fisso",
+          "interpretation": "Questa risposta descrive la formattazione di un disco",
+          "why_wrong": "La virtualizzazione non cancella nulla: aggiunge un livello di astrazione sopra l'hardware reale per creare risorse virtuali."
+        },
+        {
+          "answer_text": "Collegare il server a Internet tramite un cavo in fibra ottica",
+          "interpretation": "Questa risposta descrive un'operazione di cablaggio fisico",
+          "why_wrong": "Il collegamento fisico alla rete e' un'operazione di networking, non ha nulla a che fare con la virtualizzazione."
+        },
+        {
+          "answer_text": "Stampare lo schema del circuito elettronico del server",
+          "interpretation": "Questa risposta descrive un'attivita' di documentazione hardware",
+          "why_wrong": "Stampare uno schema elettronico e' completamente estraneo al concetto di virtualizzazione."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "ANZALONE_2a_introVmware_very_easy_001",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "VMware ESXi - hypervisor",
+    "clusters": [
+      "Virtualizzazione e Hypervisor"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2a_introVmware.pdf",
+      "source_file_page_number": 9,
+      "topics": [
+        "ESXi",
+        "hypervisor",
+        "vSphere"
+      ]
+    },
+    "question_prompt": "Qual è il componente fondamentale della suite VMware vSphere che funge da hypervisor?",
+    "choices": [
+      {
+        "text": "Microsoft Hyper-V",
+        "is_correct": false
+      },
+      {
+        "text": "VMware ESXi",
+        "is_correct": true
+      },
+      {
+        "text": "Oracle Database",
+        "is_correct": false
+      },
+      {
+        "text": "Adobe Photoshop",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "VMware ESXi",
+        "rationale": "VMware ESXi è l'hypervisor alla base della suite vSphere. Come indicato nel materiale, è il 'core of the vSphere product suite' e il livello di virtualizzazione su cui si fonda tutta la product line.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2a_introVmware.pdf",
+          "page": 9
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Microsoft Hyper-V",
+          "interpretation": "Hypervisor di un competitor",
+          "why_wrong": "Hyper-V è l'hypervisor di Microsoft, un prodotto concorrente di VMware ESXi, non un componente della suite vSphere."
+        },
+        {
+          "answer_text": "Adobe Photoshop",
+          "interpretation": "Software di editing grafico",
+          "why_wrong": "Photoshop è un software di editing grafico, completamente estraneo alla virtualizzazione e alla suite VMware vSphere."
+        },
+        {
+          "answer_text": "Oracle Database",
+          "interpretation": "Sistema di gestione database",
+          "why_wrong": "Oracle Database è un RDBMS, non ha alcuna relazione con l'hypervisor di virtualizzazione vSphere."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_2a_introVmware_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_01_IntrodAD_medium_005",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Installazione Server Core",
+    "clusters": [
+      "Windows Server",
+      "Sicurezza dei sistemi"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "best_practice",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+      "source_file_page_number": 41,
+      "topics": [
+        "Server Core",
+        "sicurezza",
+        "superficie di attacco",
+        "Windows Server"
+      ]
+    },
+    "question_prompt": "Perche l'installazione Server Core e considerata una best practice di sicurezza per i Domain Controller?",
+    "choices": [
+      {
+        "text": "Disabilita completamente l'accesso remoto, impedendo qualsiasi connessione di rete",
+        "is_correct": false
+      },
+      {
+        "text": "Riduce i componenti installati, diminuendo la superficie di attacco e le possibilita di compromissione",
+        "is_correct": true
+      },
+      {
+        "text": "Permette di installare antivirus piu potenti grazie alla maggiore RAM disponibile",
+        "is_correct": false
+      },
+      {
+        "text": "Include piu componenti grafici che facilitano il monitoraggio delle minacce in tempo reale",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Riduce i componenti installati, diminuendo la superficie di attacco e le possibilita di compromissione",
+        "rationale": "La slide 41 spiega che l'installazione Core non dispone dell'interfaccia grafica, riducendo il numero di componenti installati, le possibilita di compromissione e di attacco, oltre a richiedere minori risorse hardware.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+          "page": 41
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Include piu componenti grafici che facilitano il monitoraggio delle minacce in tempo reale",
+          "interpretation": "Inversione delle caratteristiche di Server Core",
+          "why_wrong": "Server Core elimina l'interfaccia grafica, non la include; la sicurezza deriva dalla riduzione dei componenti, non dall'aggiunta."
+        },
+        {
+          "answer_text": "Permette di installare antivirus piu potenti grazie alla maggiore RAM disponibile",
+          "interpretation": "Errata correlazione tra Core e antivirus",
+          "why_wrong": "Il vantaggio di Core e la riduzione della superficie di attacco, non la possibilita di installare antivirus piu potenti."
+        },
+        {
+          "answer_text": "Disabilita completamente l'accesso remoto, impedendo qualsiasi connessione di rete",
+          "interpretation": "Errata idea di isolamento totale",
+          "why_wrong": "Server Core supporta la gestione remota tramite Remote Desktop (riga di comando), MMC e PowerShell; non disabilita l'accesso remoto."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_01_IntrodAD_hard_004",
+      "BERNABEI_01_IntrodAD_very_easy_003"
+    ],
+    "distractor_strategy": "partial_truth"
+  },
+  {
+    "id": "FORONI_08_NormativeSicurezza_medium_002",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Principio di privacy by design e by default",
+    "clusters": [
+      "GDPR",
+      "privacy by design",
+      "privacy by default",
+      "novita'"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "conceptual",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/8.Informativa normative sulla sicurezza dei dati.pdf",
+      "source_file_page_number": 15,
+      "topics": [
+        "privacy by design",
+        "privacy by default",
+        "protezione dati"
+      ]
+    },
+    "question_prompt": "Cosa implica il principio di 'privacy by design' introdotto dal GDPR?",
+    "choices": [
+      {
+        "text": "L'utente deve configurare manualmente le proprie impostazioni di privacy dopo l'installazione del software",
+        "is_correct": false
+      },
+      {
+        "text": "La protezione dei dati personali deve essere integrata fin dalla fase di progettazione di sistemi e processi",
+        "is_correct": true
+      },
+      {
+        "text": "Ogni sistema informatico deve essere certificato dal Garante della Privacy prima della messa in produzione",
+        "is_correct": false
+      },
+      {
+        "text": "I dati personali devono essere criptati esclusivamente con algoritmi approvati dall'UE",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "La protezione dei dati personali deve essere integrata fin dalla fase di progettazione di sistemi e processi",
+        "rationale": "Il principio di privacy by design prevede che la protezione dei dati personali sia considerata fin dall'inizio della progettazione di sistemi, servizi e processi, e non come aggiunta successiva.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/8.Informativa normative sulla sicurezza dei dati.pdf",
+          "page": 15
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "I dati personali devono essere criptati esclusivamente con algoritmi approvati dall'UE",
+          "interpretation": "Interpreta privacy by design come un obbligo tecnico specifico sulla crittografia",
+          "why_wrong": "La privacy by design e' un principio progettuale generale, non un obbligo tecnico specifico sulla cifratura."
+        },
+        {
+          "answer_text": "Ogni sistema informatico deve essere certificato dal Garante della Privacy prima della messa in produzione",
+          "interpretation": "Confonde il principio progettuale con un processo di certificazione obbligatorio",
+          "why_wrong": "Non esiste un obbligo di certificazione preventiva dal Garante. Il principio richiede che la privacy sia integrata nel design."
+        },
+        {
+          "answer_text": "L'utente deve configurare manualmente le proprie impostazioni di privacy dopo l'installazione del software",
+          "interpretation": "Descrive l'opposto di privacy by default",
+          "why_wrong": "Questo e' l'opposto di privacy by default, che prevede che le impostazioni piu' protettive siano attive di default senza intervento dell'utente."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "principle_misinterpretation"
+  },
+  {
+    "id": "BERNABEI_02_SicurezzaAdmin_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "RSAT - installazione strumenti remoti",
+    "clusters": [
+      "Amministrazione Active Directory",
+      "Strumenti di gestione Windows"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+      "source_file_page_number": 6,
+      "topics": [
+        "RSAT",
+        "snap-in",
+        "installazione",
+        "domain controller"
+      ]
+    },
+    "question_prompt": "Come si possono ottenere gli snap-in di Active Directory su un computer client che non è un domain controller?",
+    "choices": [
+      {
+        "text": "Effettuando un aggiornamento del BIOS del computer",
+        "is_correct": false
+      },
+      {
+        "text": "Scaricando il pacchetto Microsoft Office Enterprise",
+        "is_correct": false
+      },
+      {
+        "text": "Gli snap-in di Active Directory sono disponibili di default su tutti i computer Windows",
+        "is_correct": false
+      },
+      {
+        "text": "Installando gli strumenti RSAT (Remote Server Administration Tools)",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Installando gli strumenti RSAT (Remote Server Administration Tools)",
+        "rationale": "Gli snap-in di AD vengono installati automaticamente solo sui domain controller. Su client Windows 10/11 o server non DC, è necessario installare gli strumenti RSAT tramite 'App e funzionalità' > 'Funzionalità facoltative', oppure su Windows Server tramite Server Manager > Add Roles and Features > Features > Remote Server Administration Tools.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+          "page": 6
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Gli snap-in di Active Directory sono disponibili di default su tutti i computer Windows",
+          "interpretation": "Snap-in già presenti ovunque",
+          "why_wrong": "Gli snap-in di AD vengono installati automaticamente solo sui domain controller, non su tutti i computer Windows. Sui client è necessario installare RSAT."
+        },
+        {
+          "answer_text": "Scaricando il pacchetto Microsoft Office Enterprise",
+          "interpretation": "Suite Office come strumento admin",
+          "why_wrong": "Microsoft Office è una suite di produttività e non contiene strumenti di amministrazione di Active Directory. Gli snap-in si ottengono tramite RSAT."
+        },
+        {
+          "answer_text": "Effettuando un aggiornamento del BIOS del computer",
+          "interpretation": "Aggiornamento firmware",
+          "why_wrong": "L'aggiornamento del BIOS riguarda il firmware hardware del computer e non ha alcuna relazione con l'installazione di strumenti amministrativi software come gli snap-in di AD."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_02_SicurezzaAdmin_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "ANZALONE_3c_iscsi-fc_medium_002",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "iSCSI port binding in ESXi",
+    "clusters": [
+      "Protocolli di Storage",
+      "SAN",
+      "VMware ESXi"
+    ],
+    "cognitive_level": "apply",
+    "question_type": "scenario",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3c_iscsi-fc.pdf",
+      "source_file_page_number": 13,
+      "topics": [
+        "iSCSI",
+        "port binding",
+        "ESXi",
+        "multipathing",
+        "vmknic"
+      ]
+    },
+    "question_prompt": "Un host ESXi ha due vmknic sulla stessa subnet per iSCSI. Senza port binding, cosa accade?",
+    "choices": [
+      {
+        "text": "L'host genera un errore e rifiuta di connettersi al target iSCSI",
+        "is_correct": false
+      },
+      {
+        "text": "L'host utilizza una sola vmknic per il traffico iSCSI, ignorando la seconda",
+        "is_correct": true
+      },
+      {
+        "text": "L'host distribuisce automaticamente il traffico su entrambe le vmknic in round-robin",
+        "is_correct": false
+      },
+      {
+        "text": "Entrambe le vmknic vengono disattivate automaticamente dal kernel",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "L'host utilizza una sola vmknic per il traffico iSCSI, ignorando la seconda",
+        "rationale": "Senza port binding, se due vmkernel sono sulla stessa subnet, l'host ESXi ne sceglie semplicemente una e non utilizza entrambe per la trasmissione dei pacchetti iSCSI. Il port binding forza l'initiator a utilizzare un adattatore specifico.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3c_iscsi-fc.pdf",
+          "page": 13
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "L'host distribuisce automaticamente il traffico su entrambe le vmknic in round-robin",
+          "interpretation": "Presuppone un bilanciamento automatico che non avviene senza port binding",
+          "why_wrong": "Il bilanciamento automatico su entrambe le vmknic non avviene senza port binding. E' proprio per questo motivo che il port binding e' necessario per abilitare il multipathing iSCSI."
+        },
+        {
+          "answer_text": "L'host genera un errore e rifiuta di connettersi al target iSCSI",
+          "interpretation": "Suggerisce un comportamento di errore che non si verifica",
+          "why_wrong": "Non si verifica alcun errore: l'host funziona normalmente, ma utilizza solo una delle due vmknic, sprecando la seconda."
+        },
+        {
+          "answer_text": "Entrambe le vmknic vengono disattivate automaticamente dal kernel",
+          "interpretation": "Suggerisce un comportamento distruttivo inesistente",
+          "why_wrong": "Il kernel non disattiva le vmknic. Semplicemente ne usa una sola per il traffico iSCSI."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_3c_iscsi-fc_medium_001"
+    ],
+    "distractor_strategy": "common_misconception"
+  },
+  {
+    "id": "BONONI_2b_netmask_medium_002",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Stessa sottorete con netmask diversa",
+    "clusters": [
+      "Netmask e subnetting"
+    ],
+    "cognitive_level": "analyze",
+    "question_type": "scenario",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_2b_esempio_netmask.pdf",
+      "source_file_page_number": 3,
+      "topics": [
+        "stessa sottorete",
+        "netmask",
+        "routing locale"
+      ]
+    },
+    "question_prompt": "Due host con IP 130.136.169.4 e 130.136.160.11 e netmask 255.255.224.0 si trovano sulla stessa sottorete?",
+    "choices": [
+      {
+        "text": "Si', perche' applicando l'AND con 255.255.224.0, entrambi appartengono alla sottorete 5 (130.136.160.0)",
+        "is_correct": true
+      },
+      {
+        "text": "No, perche' il terzo byte (169 vs 160) e' diverso e quindi le sottoreti sono diverse",
+        "is_correct": false
+      },
+      {
+        "text": "Dipende dal default router: solo lui sa se sono sulla stessa sottorete",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Si', perche' applicando l'AND con 255.255.224.0, entrambi appartengono alla sottorete 5 (130.136.160.0)",
+        "rationale": "Per 130.136.169.4: 169 AND 224 = 160 -> sottorete 130.136.160.0 (sottorete 5). Per 130.136.160.11: 160 AND 224 = 160 -> sottorete 130.136.160.0 (sottorete 5). Entrambi appartengono alla stessa sottorete, quindi comunicano localmente.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_2b_esempio_netmask.pdf",
+          "page": 3
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "No, perche' il terzo byte (169 vs 160) e' diverso e quindi le sottoreti sono diverse",
+          "interpretation": "Confronta i byte senza applicare la netmask",
+          "why_wrong": "Non si puo' confrontare direttamente il terzo byte. Bisogna applicare l'AND con la netmask: sia 169 AND 224 che 160 AND 224 danno 160."
+        },
+        {
+          "answer_text": "Dipende dal default router: solo lui sa se sono sulla stessa sottorete",
+          "interpretation": "Delega al router un calcolo che ogni host puo' fare",
+          "why_wrong": "Ogni host puo' determinare autonomamente se il destinatario e' nella stessa sottorete applicando l'AND tra l'IP e la propria netmask."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "partial_knowledge"
+  },
+  {
+    "id": "FORONI_4_CertificatiPKI_medium_006",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "History of SSL/TLS",
+    "clusters": [
+      "SSL",
+      "TLS",
+      "storia",
+      "Netscape",
+      "IETF"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+      "source_file_page_number": 99,
+      "topics": [
+        "SSL",
+        "TLS",
+        "storia",
+        "Netscape",
+        "IETF",
+        "RFC"
+      ]
+    },
+    "question_prompt": "Chi ha creato SSL e come e' avvenuta la transizione a TLS?",
+    "choices": [
+      {
+        "text": "Microsoft creo' SSL nel 1996 per Internet Explorer; l'IEEE lo rinomino' TLS nel 2000",
+        "is_correct": false
+      },
+      {
+        "text": "Netscape Communications creo' SSL 1.0 nel 1994; l'IETF successivamente rinomino' il protocollo in TLS (Transport Layer Security)",
+        "is_correct": true
+      },
+      {
+        "text": "L'ITU-T sviluppo' SSL nel 1990 come parte dello standard X.509; divenne TLS nel 1995",
+        "is_correct": false
+      },
+      {
+        "text": "RSA Security creo' SSL nel 1998 come estensione di PKCS; W3C lo rinomino' TLS nel 2002",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Netscape Communications creo' SSL 1.0 nel 1994; l'IETF successivamente rinomino' il protocollo in TLS (Transport Layer Security)",
+        "rationale": "La slide 99 riporta: 'Netscape Communications created SSL 1.0 in 1994. First working version of SSL was 2.0 (February 1995). SSL 3.0 was released in 1996. Internet Engineering Task Force (IETF) renamed the protocol to TLS (Transport Layer Security). TLS 1.0 was defined in RFC 2246 in April 1999.'",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+          "page": 99
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Microsoft creo' SSL nel 1996 per Internet Explorer; l'IEEE lo rinomino' TLS nel 2000",
+          "interpretation": "Attribuisce SSL a Microsoft anziche' Netscape",
+          "why_wrong": "SSL fu creato da Netscape Communications nel 1994, non da Microsoft. E fu l'IETF (non l'IEEE) a rinominarlo TLS."
+        },
+        {
+          "answer_text": "L'ITU-T sviluppo' SSL nel 1990 come parte dello standard X.509; divenne TLS nel 1995",
+          "interpretation": "Confonde SSL con lo standard X.509 e sbaglia ente e date",
+          "why_wrong": "L'ITU-T ha definito X.509 (standard per certificati), non SSL. SSL fu creato da Netscape nel 1994. TLS fu definito dall'IETF nel 1999."
+        },
+        {
+          "answer_text": "RSA Security creo' SSL nel 1998 come estensione di PKCS; W3C lo rinomino' TLS nel 2002",
+          "interpretation": "Confonde gli enti e le date",
+          "why_wrong": "SSL fu creato da Netscape (non RSA Security) nel 1994 (non 1998). RSA Security ha definito gli standard PKCS. Il W3C non ha rinominato SSL in TLS."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "ANZALONE_2b_ft_bc_medium_003",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "vSphere HA - Requisiti cluster",
+    "clusters": [
+      "Infrastruttura VMware vSphere",
+      "Storage e Datastore"
+    ],
+    "cognitive_level": "apply",
+    "question_type": "best_practice",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2b_ft_bc.pdf",
+      "source_file_page_number": 32,
+      "topics": [
+        "vSphere HA",
+        "shared storage",
+        "datastore",
+        "virtual networking"
+      ]
+    },
+    "question_prompt": "Quali requisiti infrastrutturali devono soddisfare tutti gli host in un cluster vSphere HA?",
+    "choices": [
+      {
+        "text": "Stesso modello di CPU e identica quantità di RAM su ogni host del cluster",
+        "is_correct": false
+      },
+      {
+        "text": "Connessione diretta a Internet pubblica e indirizzo IP statico univoco per ogni host",
+        "is_correct": false
+      },
+      {
+        "text": "Sistema operativo guest identico su tutte le VM e licenza Enterprise Plus su ogni host",
+        "is_correct": false
+      },
+      {
+        "text": "Accesso agli stessi datastore condivisi e configurazione di rete virtuale identica",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Accesso agli stessi datastore condivisi e configurazione di rete virtuale identica",
+        "rationale": "Tutti gli host in un cluster vSphere HA devono avere accesso alle stesse posizioni di storage condiviso (Fibre Channel, FCoE, iSCSI, NFS) utilizzate dalle VM e devono avere una configurazione di rete virtuale identica, compresa la partecipazione allo stesso vSphere Distributed Switch.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2b_ft_bc.pdf",
+          "page": 32
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Stesso modello di CPU e identica quantità di RAM su ogni host del cluster",
+          "interpretation": "Requisito hardware omogeneo",
+          "why_wrong": "Il materiale non richiede lo stesso modello di CPU e la stessa RAM per vSphere HA. Questo requisito è più pertinente a vSphere FT che richiede host FT-compatible con processori compatibili tra loro."
+        },
+        {
+          "answer_text": "Connessione diretta a Internet pubblica e indirizzo IP statico univoco per ogni host",
+          "interpretation": "Requisito di connettività Internet",
+          "why_wrong": "Gli host del cluster non necessitano di connessione diretta a Internet; il requisito è l'accesso allo storage condiviso e alla rete virtuale interna del cluster."
+        },
+        {
+          "answer_text": "Sistema operativo guest identico su tutte le VM e licenza Enterprise Plus su ogni host",
+          "interpretation": "Requisito di uniformità OS e licensing",
+          "why_wrong": "Le VM possono avere guest OS diversi. Il requisito riguarda l'infrastruttura degli host (storage e rete), non i sistemi operativi delle VM."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_2b_ft_bc_medium_004"
+    ],
+    "distractor_strategy": "common_misconception"
+  },
+  {
+    "id": "BERNABEI_06b_Loopback_easy_003",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Percorso di abilitazione Loopback Processing",
+    "clusters": [
+      "Group Policy",
+      "Loopback Processing",
+      "Configurazione"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "cognitive_level": "remember",
+      "question_type": "definition",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/06b.Loopback policies.pptx",
+      "source_file_page_number": 12,
+      "topics": [
+        "Computer Configuration",
+        "Administrative Templates",
+        "Group Policy"
+      ]
+    },
+    "question_prompt": "In quale percorso della GPO si abilita il Loopback Processing?",
+    "choices": [
+      {
+        "text": "User Configuration\\Policies\\Administrative Templates\\System\\Group Policy",
+        "is_correct": false
+      },
+      {
+        "text": "Computer Configuration\\Preferences\\Windows Settings\\Group Policy",
+        "is_correct": false
+      },
+      {
+        "text": "Computer Configuration\\Policies\\Administrative Templates\\System\\Group Policy",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Computer Configuration\\Policies\\Administrative Templates\\System\\Group Policy",
+        "rationale": "La slide 12 indica che il Loopback Processing si configura nel percorso Computer Configuration\\Policies\\Administrative Templates\\System\\Group Policy, poiche e un'impostazione che appartiene alla configurazione del computer.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/06b.Loopback policies.pptx",
+          "page": 12
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "User Configuration\\Policies\\Administrative Templates\\System\\Group Policy",
+          "interpretation": "Il Loopback si configura nella User Configuration",
+          "why_wrong": "Il Loopback Processing e un'impostazione della Computer Configuration, non della User Configuration. Essendo legato al comportamento del computer, deve essere configurato nelle policy del computer."
+        },
+        {
+          "answer_text": "Computer Configuration\\Preferences\\Windows Settings\\Group Policy",
+          "interpretation": "Confusione tra Policies e Preferences",
+          "why_wrong": "Il Loopback Processing si trova sotto Policies\\Administrative Templates, non sotto Preferences\\Windows Settings. Le Preferences sono un'area diversa delle Group Policy."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_06b_Loopback_very_easy_002",
+      "BERNABEI_06b_Loopback_medium_003"
+    ],
+    "distractor_strategy": "partial_knowledge"
+  },
+  {
+    "id": "BERNABEI_10_SitiRepliche_easy_004",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Global Catalog - Porta predefinita",
+    "clusters": [
+      "Global Catalog",
+      "Porte di rete"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "cognitive_level": "remember",
+      "question_type": "factual",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/10.Gestire i siti e le repliche.pptx",
+      "source_file_page_number": 14,
+      "topics": [
+        "Global Catalog",
+        "porta 3268",
+        "interrogazione"
+      ]
+    },
+    "question_prompt": "Quale porta predefinita viene utilizzata per interrogare il Global Catalog?",
+    "choices": [
+      {
+        "text": "3268",
+        "is_correct": true
+      },
+      {
+        "text": "88",
+        "is_correct": false
+      },
+      {
+        "text": "389",
+        "is_correct": false
+      },
+      {
+        "text": "636",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "3268",
+        "rationale": "La slide 14 indica esplicitamente che la porta predefinita per interrogare il Global Catalog è la 3268.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/10.Gestire i siti e le repliche.pptx",
+          "page": 14
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "389",
+          "interpretation": "Confusione tra LDAP standard e GC",
+          "why_wrong": "La porta 389 è la porta standard di LDAP, non del Global Catalog. Il GC utilizza la porta 3268."
+        },
+        {
+          "answer_text": "636",
+          "interpretation": "Confusione con LDAPS",
+          "why_wrong": "La porta 636 è utilizzata per LDAPS (LDAP over SSL), non per il Global Catalog."
+        },
+        {
+          "answer_text": "88",
+          "interpretation": "Confusione con Kerberos",
+          "why_wrong": "La porta 88 è utilizzata dal protocollo Kerberos per l'autenticazione, non per le query al Global Catalog."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_10_SitiRepliche_easy_005",
+      "BERNABEI_10_SitiRepliche_medium_002"
+    ],
+    "distractor_strategy": "related_concept"
+  },
+  {
+    "id": "BERNABEI_01_IntrodAD_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Terminologia di sicurezza: SID",
+    "clusters": [
+      "Sicurezza e controllo accessi",
+      "Identity and Access Management"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+      "source_file_page_number": 7,
+      "topics": [
+        "SID",
+        "Security Identifier",
+        "security principal"
+      ]
+    },
+    "question_prompt": "In Active Directory, cos'e un SID (Security Identifier)?",
+    "choices": [
+      {
+        "text": "Un valore univoco e immutabile che identifica security principal come utenti, gruppi e computer",
+        "is_correct": true
+      },
+      {
+        "text": "Una password temporanea generata durante il primo accesso al dominio",
+        "is_correct": false
+      },
+      {
+        "text": "Un certificato digitale rilasciato da una Certification Authority esterna",
+        "is_correct": false
+      },
+      {
+        "text": "Un indirizzo IP statico assegnato ai Domain Controller del dominio",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Un valore univoco e immutabile che identifica security principal come utenti, gruppi e computer",
+        "rationale": "La slide 7 definisce il SID come un valore univoco e immutabile utilizzato per identificare i principi di sicurezza come utenti, gruppi e computer.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+          "page": 7
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Un certificato digitale rilasciato da una Certification Authority esterna",
+          "interpretation": "Confusione tra SID e certificati PKI",
+          "why_wrong": "Il SID e un identificatore numerico interno ad Active Directory, non un certificato digitale."
+        },
+        {
+          "answer_text": "Un indirizzo IP statico assegnato ai Domain Controller del dominio",
+          "interpretation": "Confusione tra identificatore di sicurezza e indirizzo di rete",
+          "why_wrong": "Il SID identifica entita di sicurezza (utenti, gruppi), non e un indirizzo IP."
+        },
+        {
+          "answer_text": "Una password temporanea generata durante il primo accesso al dominio",
+          "interpretation": "Confusione tra SID e credenziali",
+          "why_wrong": "Il SID non e una password; e un identificatore permanente e immutabile assegnato agli oggetti di sicurezza."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_01_IntrodAD_easy_002",
+      "BERNABEI_01_IntrodAD_medium_001"
+    ],
+    "distractor_strategy": "related_domain"
+  },
+  {
+    "id": "FORONI_4_CertificatiPKI_easy_002",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Problema dell'annuncio pubblico",
+    "clusters": [
+      "distribuzione chiavi",
+      "annuncio pubblico",
+      "fiducia",
+      "sicurezza"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "conceptual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+      "source_file_page_number": 5,
+      "topics": [
+        "annuncio pubblico",
+        "distribuzione chiavi",
+        "fiducia"
+      ]
+    },
+    "question_prompt": "Qual e' il principale problema del metodo 'annuncio pubblico' per la distribuzione delle chiavi pubbliche?",
+    "choices": [
+      {
+        "text": "Puo' essere usato solo per chiavi simmetriche, non asimmetriche",
+        "is_correct": false
+      },
+      {
+        "text": "Non si puo' avere fiducia nell'annuncio: chiunque potrebbe pubblicizzare una chiave falsa spacciandola per quella di un altro utente",
+        "is_correct": true
+      },
+      {
+        "text": "Richiede un server sempre online che gestisce le richieste",
+        "is_correct": false
+      },
+      {
+        "text": "E' troppo lento perche' richiede l'invio di email a tutti gli utenti",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Non si puo' avere fiducia nell'annuncio: chiunque potrebbe pubblicizzare una chiave falsa spacciandola per quella di un altro utente",
+        "rationale": "La slide 5 spiega che nell'annuncio pubblico si puo' pubblicizzare la propria chiave pubblica (scambio diretto, sito web, email, bacheca) ma il 'Problema: Possiamo fidarci dell'annuncio?'. Chiunque potrebbe pubblicare una chiave falsa.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+          "page": 5
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "E' troppo lento perche' richiede l'invio di email a tutti gli utenti",
+          "interpretation": "Confonde il problema di fiducia con un problema prestazionale",
+          "why_wrong": "Il problema non e' la velocita' ma l'affidabilita': non si puo' verificare che l'annuncio sia autentico."
+        },
+        {
+          "answer_text": "Richiede un server sempre online che gestisce le richieste",
+          "interpretation": "Confonde con il problema dell'autorita' per le chiavi pubbliche",
+          "why_wrong": "Il requisito di un server online e' lo svantaggio dell'autorita' per le chiavi pubbliche (slide 7), non dell'annuncio pubblico."
+        },
+        {
+          "answer_text": "Puo' essere usato solo per chiavi simmetriche, non asimmetriche",
+          "interpretation": "Confonde il contesto d'uso",
+          "why_wrong": "L'annuncio pubblico riguarda specificamente la distribuzione di chiavi pubbliche (asimmetriche). Il problema e' la fiducia nell'annuncio, non il tipo di chiave."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_4_CertificatiPKI_very_easy_003"
+    ],
+    "distractor_strategy": "related_concept"
+  },
+  {
+    "id": "BERNABEI_04_GestireGruppi_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Gruppi Global",
+    "clusters": [
+      "Gestione Gruppi",
+      "Group Scopes"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "difficulty_doc": "values: very_easy / easy / medium / hard",
+      "cognitive_level": "remember",
+      "cognitive_level_doc": "values: remember | understand | apply | analyze",
+      "question_type": "definition",
+      "question_type_doc": "values: definition | concept | scenario | comparison | troubleshooting | best_practice",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+      "source_file_doc": "relative path to original document",
+      "source_file_page_number": 15,
+      "source_file_page_number_doc": "page number of content used; 0 if holistic",
+      "topics": [
+        "Global Groups",
+        "Role Groups",
+        "membership",
+        "scope"
+      ],
+      "topics_doc": "list of topics"
+    },
+    "question_prompt": "Quali oggetti possono essere membri di un gruppo Global in Active Directory?",
+    "question_prompt_doc": "10-25 words, Italian, English tech terms",
+    "choices": [
+      {
+        "text": "Security principal di qualsiasi dominio nella foresta",
+        "is_correct": false
+      },
+      {
+        "text": "Oggetti di domini esterni trustati e della stessa foresta",
+        "is_correct": false
+      },
+      {
+        "text": "Solo account utente, esclusi computer e altri gruppi",
+        "is_correct": false
+      },
+      {
+        "text": "Solo security principal (utenti, computer, gruppi) dello stesso dominio",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Solo security principal (utenti, computer, gruppi) dello stesso dominio",
+        "rationale": "La slide 15 specifica che i gruppi Global possono includere come membri soltanto security principal dello stesso dominio.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+          "page": 15
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Security principal di qualsiasi dominio nella foresta",
+          "interpretation": "Membership cross-domain nei gruppi Global",
+          "why_wrong": "I gruppi Global accettano solo membri dello stesso dominio. Sono i gruppi Universal e Domain Local che possono includere membri di altri domini."
+        },
+        {
+          "answer_text": "Solo account utente, esclusi computer e altri gruppi",
+          "interpretation": "Membership limitata ai soli utenti",
+          "why_wrong": "I gruppi Global possono contenere anche account computer e altri gruppi Global dello stesso dominio, non solo account utente."
+        },
+        {
+          "answer_text": "Oggetti di domini esterni trustati e della stessa foresta",
+          "interpretation": "Membership da domini esterni",
+          "why_wrong": "I gruppi Global non possono contenere membri di altri domini, ne interni alla foresta ne esterni trustati. Possono solo contenere membri del proprio dominio."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_04_GestireGruppi_easy_004",
+      "BERNABEI_04_GestireGruppi_medium_002"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  },
+  {
+    "id": "BERNABEI_05_AccountComputer_medium_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Mettere in sicurezza la domain join",
+    "clusters": [
+      "Account Computer",
+      "Domain Join",
+      "Sicurezza"
+    ],
+    "cognitive_level": "apply",
+    "question_type": "best_practice",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/05.Gestire gli account computer.pptx",
+      "source_file_page_number": 11,
+      "topics": [
+        "ms-DS-MachineAccountQuota",
+        "redircmp",
+        "prestage",
+        "sicurezza"
+      ]
+    },
+    "question_prompt": "Per impedire che i Domain Users possano effettuare autonomamente la join di computer a dominio, quale parametro deve essere modificato e con quale valore?",
+    "choices": [
+      {
+        "text": "MaxComputerJoin impostato a 0 tramite GPO",
+        "is_correct": false
+      },
+      {
+        "text": "DomainJoinRestriction impostato a Deny nelle proprieta del dominio",
+        "is_correct": false
+      },
+      {
+        "text": "ms-DS-MachineAccountQuota impostato a -1",
+        "is_correct": false
+      },
+      {
+        "text": "ms-DS-MachineAccountQuota impostato a 0",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "ms-DS-MachineAccountQuota impostato a 0",
+        "rationale": "La slide 11 indica che per impostazione predefinita ogni utente puo eseguire la join di 10 macchine a dominio, e che per restringere questa possibilita occorre modificare il parametro ms-DS-MachineAccountQuota con valore 0.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/05.Gestire gli account computer.pptx",
+          "page": 11
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "ms-DS-MachineAccountQuota impostato a -1",
+          "interpretation": "Valore -1 come disabilitazione",
+          "why_wrong": "Il valore corretto e 0, non -1. Il valore 0 impedisce ai Domain Users di effettuare la join di qualsiasi macchina a dominio senza pre-stage."
+        },
+        {
+          "answer_text": "MaxComputerJoin impostato a 0 tramite GPO",
+          "interpretation": "Parametro GPO inesistente",
+          "why_wrong": "Non esiste un parametro chiamato MaxComputerJoin nelle Group Policy. Il parametro corretto e ms-DS-MachineAccountQuota, configurato nelle proprieta del dominio."
+        },
+        {
+          "answer_text": "DomainJoinRestriction impostato a Deny nelle proprieta del dominio",
+          "interpretation": "Attributo fittizio del dominio",
+          "why_wrong": "Non esiste un attributo DomainJoinRestriction. Il controllo si effettua tramite ms-DS-MachineAccountQuota nelle proprieta del dominio."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_05_AccountComputer_medium_002",
+      "BERNABEI_05_AccountComputer_hard_001"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  },
+  {
+    "id": "BERNABEI_10_SitiRepliche_easy_003",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Record SRV per localizzazione DC",
+    "clusters": [
+      "DNS",
+      "Siti AD",
+      "Localizzazione DC"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "cognitive_level": "remember",
+      "question_type": "factual",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/10.Gestire i siti e le repliche.pptx",
+      "source_file_page_number": 8,
+      "topics": [
+        "record SRV",
+        "DNS",
+        "_tcp",
+        "localizzazione DC"
+      ]
+    },
+    "question_prompt": "In quale locazione DNS vengono registrati i record SRV relativi ai DC di uno specifico sito?",
+    "choices": [
+      {
+        "text": "_tcp.siteName._sites.dominio",
+        "is_correct": true
+      },
+      {
+        "text": "_tcp.dominio",
+        "is_correct": false
+      },
+      {
+        "text": "_udp.siteName._sites.dominio",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "_tcp.siteName._sites.dominio",
+        "rationale": "La slide 8 indica che i record SRV specifici per sito vengono inseriti in _tcp.siteName._sites.dominio, mentre _tcp.dominio contiene i record di tutti i DC del dominio.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/10.Gestire i siti e le repliche.pptx",
+          "page": 8
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "_tcp.dominio",
+          "interpretation": "Confusione tra record per sito e record globali",
+          "why_wrong": "_tcp.dominio contiene i record SRV di TUTTI i DC del dominio, non quelli specifici di un sito. Per il sito specifico si usa _tcp.siteName._sites.dominio."
+        },
+        {
+          "answer_text": "_udp.siteName._sites.dominio",
+          "interpretation": "Protocollo errato (UDP invece di TCP)",
+          "why_wrong": "Il prefisso corretto è _tcp, non _udp. I servizi di Active Directory (LDAP, Kerberos) vengono registrati sotto _tcp."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_10_SitiRepliche_easy_004",
+      "BERNABEI_10_SitiRepliche_medium_001"
+    ],
+    "distractor_strategy": "subtle_detail"
+  },
+  {
+    "id": "FORONI_1_CIA_very_easy_001",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Triade CIA - definizione",
+    "clusters": [
+      "CIA",
+      "Confidentiality",
+      "Integrity",
+      "Availability"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/1.CIA.pdf",
+      "source_file_page_number": 3,
+      "topics": [
+        "CIA triad",
+        "riservatezza",
+        "integrita'",
+        "disponibilita'"
+      ]
+    },
+    "question_prompt": "Quali sono i tre requisiti fondamentali della sicurezza informatica secondo la triade CIA?",
+    "choices": [
+      {
+        "text": "Comunicazione (Communication), Interoperabilita' (Interoperability), Affidabilita' (Reliability)",
+        "is_correct": false
+      },
+      {
+        "text": "Controllo (Control), Ispezione (Inspection), Analisi (Analysis)",
+        "is_correct": false
+      },
+      {
+        "text": "Crittografia (Cryptography), Identificazione (Identification), Autenticazione (Authentication)",
+        "is_correct": false
+      },
+      {
+        "text": "Riservatezza (Confidentiality), Integrita' (Integrity), Disponibilita' (Availability)",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Riservatezza (Confidentiality), Integrita' (Integrity), Disponibilita' (Availability)",
+        "rationale": "La sicurezza informatica e' definita come l'insieme delle misure atte a proteggere i requisiti di Riservatezza (Confidentiality - Disclosure), Integrita' (Integrity - Alteration) e Disponibilita' (Availability - Destruction).",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/1.CIA.pdf",
+          "page": 3
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Crittografia (Cryptography), Identificazione (Identification), Autenticazione (Authentication)",
+          "interpretation": "Confonde la triade CIA con altri concetti di sicurezza che sono aspetti complementari ma non formano la triade fondamentale",
+          "why_wrong": "Identificazione e autenticazione sono aspetti rilevanti della sicurezza, ma non fanno parte della triade CIA. La crittografia e' uno strumento, non un requisito."
+        },
+        {
+          "answer_text": "Controllo (Control), Ispezione (Inspection), Analisi (Analysis)",
+          "interpretation": "Tenta di ricostruire l'acronimo CIA con termini diversi",
+          "why_wrong": "Questi termini non corrispondono ai tre pilastri della sicurezza informatica definiti dalla triade CIA."
+        },
+        {
+          "answer_text": "Comunicazione (Communication), Interoperabilita' (Interoperability), Affidabilita' (Reliability)",
+          "interpretation": "Confonde i requisiti di sicurezza con requisiti generici dei sistemi informatici",
+          "why_wrong": "L'affidabilita' e l'interoperabilita' sono qualita' dei sistemi IT ma non fanno parte della triade CIA della sicurezza informatica."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_1_CIA_easy_001",
+      "FORONI_1_CIA_easy_002",
+      "FORONI_1_CIA_easy_003"
+    ],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "BERNABEI_03_GestioneUtenti_easy_004",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Profilo utente roaming",
+    "clusters": [
+      "Active Directory",
+      "Gestione Utenti",
+      "Profilo Utente"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+      "source_file_page_number": 18,
+      "topics": [
+        "roaming profile",
+        "profile path",
+        "%username%"
+      ]
+    },
+    "question_prompt": "A cosa serve il Profile Path nel tab Profile di un account utente in Active Directory?",
+    "choices": [
+      {
+        "text": "Specifica il percorso del roaming profile per mantenere impostazioni e dati su qualsiasi PC del dominio",
+        "is_correct": true
+      },
+      {
+        "text": "Definisce la cartella di installazione dei driver di rete",
+        "is_correct": false
+      },
+      {
+        "text": "Indica il percorso dell'eseguibile del sistema operativo",
+        "is_correct": false
+      },
+      {
+        "text": "Imposta il percorso del file di log degli errori di sistema",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Specifica il percorso del roaming profile per mantenere impostazioni e dati su qualsiasi PC del dominio",
+        "rationale": "Il materiale descrive il Profile Path come il percorso del profilo roaming che consente agli utenti di mantenere le proprie impostazioni e dati del desktop su qualsiasi computer del dominio a cui accedono, tipicamente nella forma \\\\server\\profiles\\%username%.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+          "page": 18
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Indica il percorso dell'eseguibile del sistema operativo",
+          "interpretation": "Path del SO",
+          "why_wrong": "Il Profile Path non si riferisce all'eseguibile del sistema operativo ma al percorso di rete del profilo utente roaming."
+        },
+        {
+          "answer_text": "Definisce la cartella di installazione dei driver di rete",
+          "interpretation": "Driver di rete",
+          "why_wrong": "Il Profile Path non ha alcuna relazione con i driver di rete. Serve per il profilo roaming dell'utente."
+        },
+        {
+          "answer_text": "Imposta il percorso del file di log degli errori di sistema",
+          "interpretation": "Log di sistema",
+          "why_wrong": "I file di log di sistema non sono configurati tramite il Profile Path dell'account utente."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_03_GestioneUtenti_easy_005",
+      "BERNABEI_03_GestioneUtenti_medium_004"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  }
+]

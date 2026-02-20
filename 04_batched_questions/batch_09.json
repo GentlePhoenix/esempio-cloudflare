@@ -1,0 +1,1451 @@
+[
+  {
+    "id": "BONONI_NetworkSecurity_medium_003",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Firma digitale con message digest",
+    "clusters": [
+      "Firma digitale e integrita'"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "conceptual",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+      "source_file_page_number": 42,
+      "topics": [
+        "firma digitale",
+        "message digest",
+        "hash",
+        "efficienza"
+      ]
+    },
+    "question_prompt": "Perche' nella pratica la firma digitale si applica al message digest H(m) anziche' all'intero messaggio m?",
+    "choices": [
+      {
+        "text": "Perche' il message digest contiene piu' informazioni del messaggio originale",
+        "is_correct": false
+      },
+      {
+        "text": "Perche' e' impossibile applicare la cifratura a chiave pubblica su messaggi lunghi",
+        "is_correct": false
+      },
+      {
+        "text": "Perche' cifrare con la chiave privata un digest a lunghezza fissa e' computazionalmente molto piu' efficiente che cifrare l'intero messaggio",
+        "is_correct": true
+      },
+      {
+        "text": "Perche' il digest puo' essere inviato solo tramite canali sicuri",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Perche' cifrare con la chiave privata un digest a lunghezza fissa e' computazionalmente molto piu' efficiente che cifrare l'intero messaggio",
+        "rationale": "La cifratura a chiave pubblica e' computazionalmente costosa ('computationally expensive to public-key-encrypt long messages'). Applicando prima una funzione hash si ottiene un digest di lunghezza fissa (128 bit per MD5, 160 per SHA-1) che e' molto piu' rapido da cifrare con la chiave privata.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+          "page": 40
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Perche' il message digest contiene piu' informazioni del messaggio originale",
+          "interpretation": "Lo studente non comprende la natura delle funzioni hash",
+          "why_wrong": "Il digest e' una 'impronta digitale' a lunghezza fissa: contiene meno informazioni del messaggio originale. La funzione hash e' many-to-1."
+        },
+        {
+          "answer_text": "Perche' e' impossibile applicare la cifratura a chiave pubblica su messaggi lunghi",
+          "interpretation": "Lo studente confonde 'costoso' con 'impossibile'",
+          "why_wrong": "Non e' impossibile, ma computazionalmente molto costoso. Il digest rende l'operazione molto piu' efficiente."
+        },
+        {
+          "answer_text": "Perche' il digest puo' essere inviato solo tramite canali sicuri",
+          "interpretation": "Lo studente fraintende il modello di distribuzione",
+          "why_wrong": "Il digest firmato puo' essere inviato su qualsiasi canale. La sicurezza e' garantita dalla cifratura con chiave privata, non dal canale."
+        }
+      ]
+    },
+    "related_questions": [
+      "BONONI_NetworkSecurity_easy_005",
+      "BONONI_NetworkSecurity_easy_007"
+    ],
+    "distractor_strategy": "misconception_based"
+  },
+  {
+    "id": "ANZALONE_4a_storage_easy_004",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Storage vMotion",
+    "clusters": [
+      "Storage",
+      "VMware vSphere",
+      "Migrazione"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/4a_storage.pdf",
+      "source_file_page_number": 59,
+      "topics": [
+        "Storage vMotion",
+        "VMware",
+        "migrazione",
+        "datastore"
+      ]
+    },
+    "question_prompt": "Cosa permette di fare Storage vMotion in ambiente VMware vSphere?",
+    "choices": [
+      {
+        "text": "Spostare fisicamente un server da un rack a un altro nel data center",
+        "is_correct": false
+      },
+      {
+        "text": "Aumentare automaticamente la RAM assegnata a una VM sotto carico",
+        "is_correct": false
+      },
+      {
+        "text": "Eliminare definitivamente una VM e tutti i suoi file associati dal datastore",
+        "is_correct": false
+      },
+      {
+        "text": "Migrare i dischi virtuali di una VM da un datastore a un altro senza interrompere il servizio",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Migrare i dischi virtuali di una VM da un datastore a un altro senza interrompere il servizio",
+        "rationale": "Storage vMotion permette di migrare i file disco di una VM da un datastore a un altro mentre la VM e' in esecuzione, senza downtime. E' utile per manutenzione storage, bilanciamento del carico e upgrade dei datastore.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/4a_storage.pdf",
+          "page": 59
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Spostare fisicamente un server da un rack a un altro nel data center",
+          "interpretation": "Confonde la migrazione virtuale con lo spostamento fisico dell'hardware",
+          "why_wrong": "Storage vMotion opera a livello virtuale, migrando file tra datastore. Non ha nulla a che fare con lo spostamento fisico di server."
+        },
+        {
+          "answer_text": "Aumentare automaticamente la RAM assegnata a una VM sotto carico",
+          "interpretation": "Confonde Storage vMotion con funzionalita' di auto-scaling",
+          "why_wrong": "Storage vMotion si occupa della migrazione dello storage, non della gestione della memoria RAM delle VM."
+        },
+        {
+          "answer_text": "Eliminare definitivamente una VM e tutti i suoi file associati dal datastore",
+          "interpretation": "Confonde la migrazione con l'eliminazione",
+          "why_wrong": "Storage vMotion migra i file, non li elimina. I file originali vengono cancellati solo dopo che la migrazione e' confermata come riuscita."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_4a_storage_easy_002"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_08_DNS_easy_004",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "DNS Client cache",
+    "clusters": [
+      "DNS",
+      "DNS Client",
+      "Resolver",
+      "Cache"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "cognitive_level": "remember",
+      "question_type": "factual",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/08.Configurazione di un server Domain Name System (DNS).pptx",
+      "source_file_page_number": 11,
+      "topics": [
+        "DNS Client",
+        "cache",
+        "ipconfig",
+        "flushdns"
+      ]
+    },
+    "question_prompt": "Quale comando si utilizza per svuotare la cache DNS del client in ambiente Windows?",
+    "choices": [
+      {
+        "text": "ipconfig /flushdns",
+        "is_correct": true
+      },
+      {
+        "text": "ipconfig /registerdns",
+        "is_correct": false
+      },
+      {
+        "text": "ipconfig /displaydns",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "ipconfig /flushdns",
+        "rationale": "La slide 11 indica chiaramente che il comando per resettare (svuotare) la cache DNS del client e 'ipconfig /flushdns'.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/08.Configurazione di un server Domain Name System (DNS).pptx",
+          "page": 11
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "ipconfig /displaydns",
+          "interpretation": "Confusione fra visualizzare e svuotare la cache",
+          "why_wrong": "Il comando ipconfig /displaydns serve per visualizzare il contenuto della cache DNS del client, non per svuotarla."
+        },
+        {
+          "answer_text": "ipconfig /registerdns",
+          "interpretation": "Confusione fra registrazione e svuotamento",
+          "why_wrong": "Il comando ipconfig /registerdns serve per registrare sul server DNS un record per il client (slide 28), non per svuotare la cache."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_08_DNS_easy_005",
+      "BERNABEI_08_DNS_hard_005"
+    ],
+    "distractor_strategy": "similar_command"
+  },
+  {
+    "id": "FORONI_4_CertificatiPKI_easy_004",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Standard X.509 - definizione",
+    "clusters": [
+      "X.509",
+      "certificati",
+      "ITU-T",
+      "standard"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+      "source_file_page_number": 20,
+      "topics": [
+        "X.509",
+        "ITU-T",
+        "directory service",
+        "X.500"
+      ]
+    },
+    "question_prompt": "Cos'e' lo standard X.509 e da chi e' stato definito?",
+    "choices": [
+      {
+        "text": "Un protocollo di cifratura simmetrica sviluppato da RSA Security nel 1991",
+        "is_correct": false
+      },
+      {
+        "text": "Lo standard piu' diffuso per i certificati digitali, definito da ITU-T nel 1988, parte della serie X.500",
+        "is_correct": true
+      },
+      {
+        "text": "Uno standard ISO per la firma digitale, sviluppato nel 2005",
+        "is_correct": false
+      },
+      {
+        "text": "Un formato proprietario di Microsoft per i certificati di Active Directory",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Lo standard piu' diffuso per i certificati digitali, definito da ITU-T nel 1988, parte della serie X.500",
+        "rationale": "La slide 20 descrive X.509 come 'Piu' diffuso ed utilizzato standard per i certificati. Parte della serie X.500 di raccomandazioni che definisce un directory service. Definito nel 1988 da ITU-T (International Telecommunication Union, Telecommunication Standardization Sector), modificato nel 1993 e 1995.'",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+          "page": 20
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Un protocollo di cifratura simmetrica sviluppato da RSA Security nel 1991",
+          "interpretation": "Confonde X.509 con un algoritmo di cifratura",
+          "why_wrong": "X.509 non e' un protocollo di cifratura ma uno standard per il formato dei certificati digitali. E' stato definito da ITU-T, non da RSA Security."
+        },
+        {
+          "answer_text": "Un formato proprietario di Microsoft per i certificati di Active Directory",
+          "interpretation": "Confonde con un prodotto proprietario",
+          "why_wrong": "X.509 e' uno standard internazionale aperto definito da ITU-T, non un formato proprietario Microsoft. E' usato da molte applicazioni: S/MIME, SSL/TLS, SET, IPSEC."
+        },
+        {
+          "answer_text": "Uno standard ISO per la firma digitale, sviluppato nel 2005",
+          "interpretation": "Confonde l'ente e l'anno",
+          "why_wrong": "X.509 e' stato definito da ITU-T (non ISO) nel 1988 (non 2005) e riguarda i certificati digitali, non specificamente la firma digitale."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_4_CertificatiPKI_medium_002"
+    ],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "ANZALONE_3a_vnet_very_easy_003",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Definizione di VLAN",
+    "clusters": [
+      "Networking Virtuale",
+      "Sicurezza delle Reti"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3a_vnet.pdf",
+      "source_file_page_number": 78,
+      "topics": [
+        "VLAN",
+        "802.1Q",
+        "segmentazione"
+      ]
+    },
+    "question_prompt": "Che cos'è una VLAN e quale standard la definisce?",
+    "choices": [
+      {
+        "text": "Un protocollo di autenticazione per utenti che accedono alle reti wireless, standard WPA3",
+        "is_correct": false
+      },
+      {
+        "text": "Un insieme di workstation in una LAN isolate logicamente come se fossero su segmenti separati, standard 802.1Q",
+        "is_correct": true
+      },
+      {
+        "text": "Un algoritmo di compressione dati usato nei datacenter per ridurre la banda, standard H.264",
+        "is_correct": false
+      },
+      {
+        "text": "Un tipo di cavo Ethernet utilizzato per collegare server a velocità 10 Gbps, standard 802.11ac",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Un insieme di workstation in una LAN isolate logicamente come se fossero su segmenti separati, standard 802.1Q",
+        "rationale": "Una VLAN è un insieme di workstation all'interno di una LAN che possono comunicare tra loro come se fossero su un unico segmento isolato. Lo standard che la definisce è IEEE 802.1Q.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3a_vnet.pdf",
+          "page": 78
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Un tipo di cavo Ethernet utilizzato per collegare server a velocità 10 Gbps, standard 802.11ac",
+          "interpretation": "Confonde VLAN con cablaggio fisico e standard wireless",
+          "why_wrong": "802.11ac è uno standard Wi-Fi, non riguarda le VLAN. Una VLAN è una segmentazione logica, non un tipo di cavo."
+        },
+        {
+          "answer_text": "Un protocollo di autenticazione per utenti che accedono alle reti wireless, standard WPA3",
+          "interpretation": "Confonde VLAN con protocolli di sicurezza wireless",
+          "why_wrong": "WPA3 è un protocollo di sicurezza wireless. Le VLAN sono segmentazioni logiche di rete definite dallo standard 802.1Q."
+        },
+        {
+          "answer_text": "Un algoritmo di compressione dati usato nei datacenter per ridurre la banda, standard H.264",
+          "interpretation": "Confonde VLAN con codec video",
+          "why_wrong": "H.264 è un codec di compressione video. Le VLAN non hanno alcuna relazione con la compressione dati."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_3a_vnet_easy_002"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "ANZALONE_2a_introVmware_medium_003",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "NIC count - pianificazione rete",
+    "clusters": [
+      "Infrastruttura VMware vSphere",
+      "Networking Virtuale"
+    ],
+    "cognitive_level": "apply",
+    "question_type": "best_practice",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2a_introVmware.pdf",
+      "source_file_page_number": 24,
+      "topics": [
+        "NIC",
+        "network infrastructure",
+        "ESXi management",
+        "vMotion"
+      ]
+    },
+    "question_prompt": "Quante NIC minime sono raccomandate per un host ESXi con management network, vMotion e traffico VM?",
+    "choices": [
+      {
+        "text": "Una sola NIC è sufficiente per tutte le funzioni se è 10 Gigabit Ethernet",
+        "is_correct": false
+      },
+      {
+        "text": "Esattamente 3 NIC: una per management, una per vMotion e una per le VM",
+        "is_correct": false
+      },
+      {
+        "text": "Almeno 6 NIC: 2 per management/vMotion, 2 per FT/storage e 2 per traffico VM",
+        "is_correct": true
+      },
+      {
+        "text": "Il numero di NIC non è rilevante perché vSphere gestisce tutto via software-defined networking",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Almeno 6 NIC: 2 per management/vMotion, 2 per FT/storage e 2 per traffico VM",
+        "rationale": "Le linee guida indicano almeno 2 NIC per management/vMotion (combinabili), 2 per FT, 2 per iSCSI/NFS e 2 per il traffico VM. Molte installazioni hanno 8, 10 o anche 12 NIC. Il minimo tipico è 6 NIC.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2a_introVmware.pdf",
+          "page": 24
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Una sola NIC è sufficiente per tutte le funzioni se è 10 Gigabit Ethernet",
+          "interpretation": "Consolidamento su singola NIC ad alta velocità",
+          "why_wrong": "Anche con 10 GbE, una sola NIC non fornisce ridondanza. Le best practice richiedono NIC multiple per separare il traffico e garantire ridondanza in caso di guasto."
+        },
+        {
+          "answer_text": "Esattamente 3 NIC: una per management, una per vMotion e una per le VM",
+          "interpretation": "Una NIC per funzione senza ridondanza",
+          "why_wrong": "Tre NIC senza ridondanza non rispettano le best practice. VMware raccomanda almeno 2 NIC per ogni tipo di traffico per garantire ridondanza, specialmente per management e vMotion."
+        },
+        {
+          "answer_text": "Il numero di NIC non è rilevante perché vSphere gestisce tutto via software-defined networking",
+          "interpretation": "SDN elimina la necessità di NIC fisiche",
+          "why_wrong": "Anche con soluzioni SDN, sono necessarie NIC fisiche per connettere l'host alla rete. Il numero di NIC fisiche resta critico per prestazioni e ridondanza."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_2a_introVmware_medium_002"
+    ],
+    "distractor_strategy": "partial_truth"
+  },
+  {
+    "id": "FORONI_07_GatheringInfo_very_easy_002",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Social engineering come metodo non tecnico",
+    "clusters": [
+      "social engineering",
+      "fattore umano",
+      "sicurezza"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/7.Gathering Target Information.pdf",
+      "source_file_page_number": 18,
+      "topics": [
+        "social engineering",
+        "metodo non tecnico",
+        "elemento umano"
+      ]
+    },
+    "question_prompt": "Cosa si intende per 'social engineering' nella sicurezza informatica?",
+    "choices": [
+      {
+        "text": "Un protocollo di comunicazione sicura tra server e client",
+        "is_correct": false
+      },
+      {
+        "text": "Un software automatizzato per la scansione delle vulnerabilita' di rete",
+        "is_correct": false
+      },
+      {
+        "text": "Un metodo non tecnico per violare un sistema, basato sull'inganno degli utenti",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Un metodo non tecnico per violare un sistema, basato sull'inganno degli utenti",
+        "rationale": "Il materiale definisce il social engineering come 'a nontechnical method of breaking into a system or network' basato sul 'process of deceiving users of a system' a pagina 18.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/7.Gathering Target Information.pdf",
+          "page": 18
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Un software automatizzato per la scansione delle vulnerabilita' di rete",
+          "interpretation": "Confonde un metodo basato sull'elemento umano con uno strumento tecnico",
+          "why_wrong": "Il social engineering e' esplicitamente un metodo non tecnico. Non utilizza software di scansione ma sfrutta l'elemento umano per aggirare le misure di sicurezza."
+        },
+        {
+          "answer_text": "Un protocollo di comunicazione sicura tra server e client",
+          "interpretation": "Confonde il social engineering con un protocollo di sicurezza",
+          "why_wrong": "Il social engineering non e' un protocollo ma una tecnica di manipolazione delle persone. Non ha nulla a che fare con la comunicazione sicura tra sistemi."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "category_confusion"
+  },
+  {
+    "id": "BERNABEI_03_GestioneUtenti_medium_003",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Sblocco account e credenziali cached",
+    "clusters": [
+      "Active Directory",
+      "Gestione Utenti",
+      "Troubleshooting"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "troubleshooting",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+      "source_file_page_number": 13,
+      "topics": [
+        "unlock account",
+        "cached credentials",
+        "account lockout"
+      ]
+    },
+    "question_prompt": "Dopo aver sbloccato un account utente in AD, quale verifica aggiuntiva suggerisce il materiale per evitare un nuovo blocco?",
+    "choices": [
+      {
+        "text": "Disattivare la policy di account lockout a livello di dominio",
+        "is_correct": false
+      },
+      {
+        "text": "Eliminare l'account e ricrearlo con un nuovo nome",
+        "is_correct": false
+      },
+      {
+        "text": "Verificare che non vi siano client o macchine con credenziali memorizzate (cached credentials)",
+        "is_correct": true
+      },
+      {
+        "text": "Riavviare tutti i Domain Controller del dominio",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Verificare che non vi siano client o macchine con credenziali memorizzate (cached credentials)",
+        "rationale": "Il materiale indica specificamente che, oltre a sbloccare l'account, bisogna verificare che non siano presenti client o altre macchine che abbiano credenziali memorizzate, poiché queste potrebbero causare un nuovo lockout.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+          "page": 13
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Riavviare tutti i Domain Controller del dominio",
+          "interpretation": "Riavvio DC",
+          "why_wrong": "Riavviare i DC non è necessario né consigliato dopo lo sblocco di un account. Il problema è spesso legato a cached credentials sui client."
+        },
+        {
+          "answer_text": "Eliminare l'account e ricrearlo con un nuovo nome",
+          "interpretation": "Ricreazione account",
+          "why_wrong": "Eliminare e ricreare l'account è una misura estrema e non necessaria. Basta sbloccare l'account e controllare le credenziali cached."
+        },
+        {
+          "answer_text": "Disattivare la policy di account lockout a livello di dominio",
+          "interpretation": "Disabilitare lockout policy",
+          "why_wrong": "Disattivare la policy di lockout comprometterebbe la sicurezza dell'intero dominio e non risolve il problema di fondo delle credenziali cached."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_03_GestioneUtenti_easy_003",
+      "BERNABEI_03_GestioneUtenti_hard_003"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  },
+  {
+    "id": "FORONI_4b_CertSSL_medium_001",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Procedura di rilascio certificati DV vs OV vs EV",
+    "clusters": [
+      "DV",
+      "OV",
+      "EV",
+      "procedura rilascio",
+      "Certification Authority",
+      "controlli"
+    ],
+    "cognitive_level": "analyze",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4certificatissl-commerciale register.pdf",
+      "source_file_page_number": 4,
+      "topics": [
+        "procedura rilascio",
+        "DV",
+        "OV",
+        "EV",
+        "controllo dominio",
+        "controllo azienda"
+      ]
+    },
+    "question_prompt": "Quale sequenza di controlli effettua la Certification Authority per il rilascio di un certificato EV (Extended Validation) rispetto a un certificato DV?",
+    "choices": [
+      {
+        "text": "EV e' rilasciato automaticamente in pochi minuti; DV richiede una verifica manuale di diversi giorni",
+        "is_correct": false
+      },
+      {
+        "text": "EV richiede: controllo corrispondenza richiedente-titolare dominio, controllo azienda su registri pubblici, verifica indirizzo, verifica attivita', verifica diritto uso dominio, controllo numero telefonico e documenti societari; DV richiede solo il controllo sul dominio",
+        "is_correct": true
+      },
+      {
+        "text": "EV ed DV seguono la stessa procedura, ma EV usa una cifratura a 256 bit e DV a 128 bit",
+        "is_correct": false
+      },
+      {
+        "text": "EV richiede solo la verifica dell'indirizzo email del richiedente; DV richiede anche la verifica dell'azienda",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "EV richiede: controllo corrispondenza richiedente-titolare dominio, controllo azienda su registri pubblici, verifica indirizzo, verifica attivita', verifica diritto uso dominio, controllo numero telefonico e documenti societari; DV richiede solo il controllo sul dominio",
+        "rationale": "La slide 4 mostra la procedura dettagliata. Per SSL DV: 'Controllo di corrispondenza tra richiedente SSL e titolare del dominio. Email per conferma successiva.' Per SSL EV (Certificazione Azienda Estesa): aggiunge 'Controllo dell'azienda su registri pubblici, dell'indirizzo dell'azienda, se l'azienda e' attiva. Controllo sul diritto di utilizzo del dominio. Controllo corrispondenza tra numero telefonico e indirizzo fornito. Controllo documenti con informazioni societarie.'",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4certificatissl-commerciale register.pdf",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "EV ed DV seguono la stessa procedura, ma EV usa una cifratura a 256 bit e DV a 128 bit",
+          "interpretation": "Confonde il livello di validazione con la forza della cifratura",
+          "why_wrong": "Entrambi i tipi di certificato supportano la stessa crittografia (128-256 bit). La differenza e' nel processo di verifica dell'identita' del richiedente, non nella forza crittografica."
+        },
+        {
+          "answer_text": "EV richiede solo la verifica dell'indirizzo email del richiedente; DV richiede anche la verifica dell'azienda",
+          "interpretation": "Inverte le caratteristiche dei due tipi di certificato",
+          "why_wrong": "E' il contrario: DV richiede solo la verifica del dominio (email), mentre EV e' molto piu' approfondito con verifiche sull'azienda, registri pubblici, documenti, etc."
+        },
+        {
+          "answer_text": "EV e' rilasciato automaticamente in pochi minuti; DV richiede una verifica manuale di diversi giorni",
+          "interpretation": "Inverte i tempi di rilascio",
+          "why_wrong": "E' il contrario: il DV puo' essere rilasciato in pochi minuti/ore (verifica automatica via email), mentre l'EV richiede verifiche approfondite e tempi piu' lunghi."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_4b_CertSSL_easy_003"
+    ],
+    "distractor_strategy": "opposite_meaning"
+  },
+  {
+    "id": "FORONI_3_Crittografia_medium_004",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Comandi OpenSSL per RSA",
+    "clusters": [
+      "OpenSSL",
+      "genrsa",
+      "rsa",
+      "rsautl",
+      "RSA commands"
+    ],
+    "cognitive_level": "apply",
+    "question_type": "practical",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/3.CRITTOGRAFIA.pdf",
+      "source_file_page_number": 35,
+      "topics": [
+        "OpenSSL",
+        "genrsa",
+        "rsa",
+        "rsautl",
+        "cifratura"
+      ]
+    },
+    "question_prompt": "In OpenSSL, quali comandi vengono utilizzati rispettivamente per generare una coppia di chiavi RSA, estrarre la chiave pubblica e cifrare dati con RSA?",
+    "choices": [
+      {
+        "text": "openssl-gen per generare, openssl-pub per estrarre, openssl-enc per cifrare con RSA",
+        "is_correct": false
+      },
+      {
+        "text": "genrsa per generare le chiavi, rsa per esaminare/estrarre, rsautl per cifrare e decifrare",
+        "is_correct": true
+      },
+      {
+        "text": "rsa-keygen per generare, rsa-export per estrarre, rsa-encrypt per cifrare",
+        "is_correct": false
+      },
+      {
+        "text": "genkey per generare, pubout per estrarre, encrypt per cifrare",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "genrsa per generare le chiavi, rsa per esaminare/estrarre, rsautl per cifrare e decifrare",
+        "rationale": "La slide 35 indica: 'I comandi genrsa ed rsa per generare, esaminare, manipolare ed usare chiavi RSA. Il comando rsautl per cifrare mediante RSA'. Il comando genrsa genera la coppia, rsa permette di esaminarla e estrarre la chiave pubblica, rsautl cifra/decifra.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/3.CRITTOGRAFIA.pdf",
+          "page": 35
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "rsa-keygen per generare, rsa-export per estrarre, rsa-encrypt per cifrare",
+          "interpretation": "Inventa nomi di comandi plausibili ma inesistenti in OpenSSL",
+          "why_wrong": "Questi nomi di comandi non esistono in OpenSSL. I comandi corretti sono genrsa, rsa e rsautl."
+        },
+        {
+          "answer_text": "openssl-gen per generare, openssl-pub per estrarre, openssl-enc per cifrare con RSA",
+          "interpretation": "Confonde con una sintassi generica o con il comando enc che e' per cifratura simmetrica",
+          "why_wrong": "Il comando enc di OpenSSL e' per la cifratura simmetrica, non per RSA. Per RSA si usa specificamente rsautl."
+        },
+        {
+          "answer_text": "genkey per generare, pubout per estrarre, encrypt per cifrare",
+          "interpretation": "Confonde le opzioni dei comandi con i comandi stessi",
+          "why_wrong": "-pubout e' un'opzione del comando rsa (non un comando a se'). I comandi corretti sono genrsa, rsa e rsautl."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_3_Crittografia_hard_004"
+    ],
+    "distractor_strategy": "plausible_but_wrong"
+  },
+  {
+    "id": "ANZALONE_2a_introVmware_easy_004",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "NTP - sincronizzazione tempo",
+    "clusters": [
+      "Infrastruttura VMware vSphere"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2a_introVmware.pdf",
+      "source_file_page_number": 27,
+      "topics": [
+        "NTP",
+        "time synchronization",
+        "ESXi"
+      ]
+    },
+    "question_prompt": "Perché la sincronizzazione NTP è importante sugli host ESXi in un'infrastruttura vSphere?",
+    "choices": [
+      {
+        "text": "Perché NTP aumenta la velocità della CPU del server fisico",
+        "is_correct": false
+      },
+      {
+        "text": "Perché senza NTP le VM non possono avviarsi correttamente",
+        "is_correct": false
+      },
+      {
+        "text": "Perché NTP è necessario esclusivamente per la navigazione web dalle VM",
+        "is_correct": false
+      },
+      {
+        "text": "Perché un orario errato può impattare performance charting, SSH key, accesso NFS, backup e autenticazione",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Perché un orario errato può impattare performance charting, SSH key, accesso NFS, backup e autenticazione",
+        "rationale": "Come descritto nel materiale, problemi di sincronizzazione temporale possono influenzare performance charting, scadenza delle SSH key, accesso NFS, job di backup, autenticazione e molte altre funzionalità.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2a_introVmware.pdf",
+          "page": 27
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Perché senza NTP le VM non possono avviarsi correttamente",
+          "interpretation": "NTP come prerequisito per l'avvio VM",
+          "why_wrong": "Le VM possono avviarsi anche senza NTP configurato. I problemi di sincronizzazione temporale causano malfunzionamenti operativi, non impediscono l'avvio delle VM."
+        },
+        {
+          "answer_text": "Perché NTP aumenta la velocità della CPU del server fisico",
+          "interpretation": "NTP come ottimizzatore di prestazioni CPU",
+          "why_wrong": "NTP non ha alcun effetto sulle prestazioni della CPU. Serve esclusivamente per mantenere gli orologi dei sistemi sincronizzati."
+        },
+        {
+          "answer_text": "Perché NTP è necessario esclusivamente per la navigazione web dalle VM",
+          "interpretation": "NTP limitato al browsing web",
+          "why_wrong": "NTP non è legato alla navigazione web. Impatta molti servizi critici dell'infrastruttura come autenticazione, backup, accesso NFS e gestione certificati."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "ANZALONE_1a_virtualIntro_medium_001",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "OS-level virtualization e ambiente omogeneo",
+    "clusters": [
+      "Virtualizzazione e Hypervisor",
+      "Container e Microservizi"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+      "source_file_page_number": 38,
+      "topics": [
+        "OS-level virtualization",
+        "ambiente omogeneo",
+        "container",
+        "hypervisor"
+      ]
+    },
+    "question_prompt": "Qual e' la principale limitazione della virtualizzazione a livello di sistema operativo (OS-level) rispetto alla full virtualization?",
+    "choices": [
+      {
+        "text": "Non e' possibile eseguire piu' di due guest server contemporaneamente",
+        "is_correct": false
+      },
+      {
+        "text": "Tutti i guest server devono eseguire lo stesso sistema operativo (ambiente omogeneo)",
+        "is_correct": true
+      },
+      {
+        "text": "E' compatibile solo con processori AMD e non con Intel",
+        "is_correct": false
+      },
+      {
+        "text": "Richiede hardware con almeno 64 GB di RAM per funzionare",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Tutti i guest server devono eseguire lo stesso sistema operativo (ambiente omogeneo)",
+        "rationale": "La virtualizzazione OS-level non usa un hypervisor: la capacita' di virtualizzazione e' parte del sistema operativo host. La limitazione principale e' che tutti i guest devono eseguire lo stesso OS, creando un ambiente omogeneo. Non e' possibile mescolare OS diversi (es. Linux e Windows).",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+          "page": 38
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Non e' possibile eseguire piu' di due guest server contemporaneamente",
+          "interpretation": "Questa risposta inventa un limite numerico",
+          "why_wrong": "Non esiste un limite di due guest server. La virtualizzazione OS-level puo' gestire molti container/guest, il limite e' l'obbligo di OS omogeneo."
+        },
+        {
+          "answer_text": "Richiede hardware con almeno 64 GB di RAM per funzionare",
+          "interpretation": "Questa risposta inventa un requisito hardware minimo",
+          "why_wrong": "Non esiste un requisito minimo di 64 GB di RAM. La virtualizzazione OS-level e' anzi molto leggera rispetto alla full virtualization."
+        },
+        {
+          "answer_text": "E' compatibile solo con processori AMD e non con Intel",
+          "interpretation": "Questa risposta limita la compatibilita' a un solo produttore CPU",
+          "why_wrong": "La virtualizzazione OS-level funziona su qualsiasi processore supportato dal sistema operativo host, sia Intel che AMD."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "FORONI_1_CIA_easy_001",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Riservatezza (Confidentiality)",
+    "clusters": [
+      "confidentiality",
+      "riservatezza",
+      "accesso autorizzato"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "conceptual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/1.CIA.pdf",
+      "source_file_page_number": 4,
+      "topics": [
+        "riservatezza",
+        "confidentiality",
+        "livelli di confidenzialita'"
+      ]
+    },
+    "question_prompt": "Per garantire la riservatezza (Confidentiality) di un sistema informativo, quale azione NON e' necessaria?",
+    "choices": [
+      {
+        "text": "Definire i livelli di confidenzialita' delle informazioni",
+        "is_correct": false
+      },
+      {
+        "text": "Garantire che ogni utente abbia accesso completo a tutti i dati del sistema",
+        "is_correct": true
+      },
+      {
+        "text": "Proteggere le informazioni contro letture non autorizzate, accidentali o dolose",
+        "is_correct": false
+      },
+      {
+        "text": "Definire i profili degli utilizzatori che possono accedere alle informazioni",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Garantire che ogni utente abbia accesso completo a tutti i dati del sistema",
+        "rationale": "La riservatezza richiede l'opposto: l'informazione e' rilasciata soltanto a soggetti autorizzati. Dare accesso completo a tutti contraddirebbe il principio di riservatezza. Il materiale indica che bisogna definire livelli di confidenzialita', profili utente coerenti e modalita' di accesso.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/1.CIA.pdf",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Definire i livelli di confidenzialita' delle informazioni",
+          "interpretation": "Questa e' una delle misure necessarie per la riservatezza",
+          "why_wrong": "Il materiale indica esplicitamente che definire i livelli di confidenzialita' e' una delle misure necessarie per garantire la riservatezza."
+        },
+        {
+          "answer_text": "Definire i profili degli utilizzatori che possono accedere alle informazioni",
+          "interpretation": "Questa e' una delle misure necessarie per la riservatezza",
+          "why_wrong": "Il materiale specifica che bisogna definire i profili degli utilizzatori in maniera coerente alla definizione dei livelli di confidenzialita'."
+        },
+        {
+          "answer_text": "Proteggere le informazioni contro letture non autorizzate, accidentali o dolose",
+          "interpretation": "Questa e' una delle misure necessarie per la riservatezza",
+          "why_wrong": "Il materiale indica che proteggere le informazioni contenute nei sistemi contro letture non autorizzate e' un requisito per la riservatezza."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_1_CIA_very_easy_001"
+    ],
+    "distractor_strategy": "opposite_concept"
+  },
+  {
+    "id": "BERNABEI_06_GroupPolicy_easy_006",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Storage delle GPO",
+    "clusters": [
+      "Group Policy",
+      "Active Directory",
+      "SYSVOL"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "difficulty_doc": "values: very_easy / easy / medium / hard",
+      "cognitive_level": "remember",
+      "cognitive_level_doc": "values: remember | understand | apply | analyze",
+      "question_type": "concept",
+      "question_type_doc": "values: definition | concept | scenario | comparison | troubleshooting | best_practice",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/06.Implementare le Group Policy.pptx",
+      "source_file_doc": "relative path to original document",
+      "source_file_page_number": 15,
+      "source_file_page_number_doc": "page number of content used; 0 if holistic",
+      "topics": [
+        "GPC",
+        "GPT",
+        "SYSVOL",
+        "AD DS",
+        "storage"
+      ],
+      "topics_doc": "list of topics"
+    },
+    "question_prompt": "Dove viene memorizzato il Group Policy Template (GPT) di una GPO?",
+    "question_prompt_doc": "10-25 words, Italian, English tech terms",
+    "choices": [
+      {
+        "text": "Nella cartella SYSVOL sui domain controller",
+        "is_correct": true
+      },
+      {
+        "text": "Nel database di Active Directory (AD DS)",
+        "is_correct": false
+      },
+      {
+        "text": "In una cartella locale sul client",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Nella cartella SYSVOL sui domain controller",
+        "rationale": "Le slide 15-16 specificano che il Group Policy Template (GPT) e memorizzato nella SYSVOL sui domain controllers, contenendo i files con le impostazioni definite.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/06.Implementare le Group Policy.pptx",
+          "page": 15
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Nel database di Active Directory (AD DS)",
+          "interpretation": "Confusione tra GPC e GPT",
+          "why_wrong": "Nel database di AD DS viene memorizzato il Group Policy Container (GPC), non il GPT. Il GPT si trova nella SYSVOL."
+        },
+        {
+          "answer_text": "In una cartella locale sul client",
+          "interpretation": "Lo storage della GPO come file locale",
+          "why_wrong": "Le GPO risiedono sui domain controller, non sui client. I client scaricano e salvano in cache le GPO, ma lo storage originale e su SYSVOL."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_06_GroupPolicy_medium_004",
+      "BERNABEI_06_GroupPolicy_hard_003"
+    ],
+    "distractor_strategy": "partial_knowledge"
+  },
+  {
+    "id": "BERNABEI_01_IntrodAD_easy_004",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Data Store di Active Directory",
+    "clusters": [
+      "Active Directory Domain Services",
+      "Componenti AD"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+      "source_file_page_number": 21,
+      "topics": [
+        "ntds.dit",
+        "data store",
+        "SYSVOL",
+        "partizioni"
+      ]
+    },
+    "question_prompt": "Qual e il percorso predefinito del file ntds.dit e quale contenuto ospita?",
+    "choices": [
+      {
+        "text": "%systemroot%\\System32\\ntds.dit — contiene solo le Group Policy",
+        "is_correct": false
+      },
+      {
+        "text": "C:\\Program Files\\AD\\ntds.dit — contiene solo i certificati PKI",
+        "is_correct": false
+      },
+      {
+        "text": "%systemroot%\\SYSVOL\\ntds.dit — contiene gli script di logon",
+        "is_correct": false
+      },
+      {
+        "text": "%systemroot%\\NTDS\\ntds.dit — e il database principale di Active Directory",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "%systemroot%\\NTDS\\ntds.dit — e il database principale di Active Directory",
+        "rationale": "La slide 21 indica il percorso %systemroot%\\NTDS\\ntds.dit come database principale che alimenta Active Directory, contenendo credenziali utente, criteri di gruppo, impostazioni di sicurezza e configurazioni di dominio.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+          "page": 21
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "%systemroot%\\System32\\ntds.dit — contiene solo le Group Policy",
+          "interpretation": "Percorso errato e contenuto riduttivo",
+          "why_wrong": "Il percorso corretto e %systemroot%\\NTDS, non System32, e il database contiene molte piu informazioni delle sole Group Policy."
+        },
+        {
+          "answer_text": "%systemroot%\\SYSVOL\\ntds.dit — contiene gli script di logon",
+          "interpretation": "Confusione tra SYSVOL e NTDS",
+          "why_wrong": "La cartella SYSVOL contiene script di logon e policies, ma il file ntds.dit risiede nella cartella NTDS, non in SYSVOL."
+        },
+        {
+          "answer_text": "C:\\Program Files\\AD\\ntds.dit — contiene solo i certificati PKI",
+          "interpretation": "Percorso e contenuto inventati",
+          "why_wrong": "Il percorso predefinito non e in Program Files e il database contiene l'intero directory service, non solo certificati."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_01_IntrodAD_very_easy_003",
+      "BERNABEI_01_IntrodAD_medium_002"
+    ],
+    "distractor_strategy": "partial_truth"
+  },
+  {
+    "id": "BONONI_NetworkSecurity_very_easy_003",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Firewall - definizione base",
+    "clusters": [
+      "Firewall e controllo accessi"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+      "source_file_page_number": 52,
+      "topics": [
+        "firewall",
+        "definizione",
+        "packet filtering"
+      ]
+    },
+    "question_prompt": "Qual e' la funzione principale di un firewall?",
+    "choices": [
+      {
+        "text": "Tradurre i nomi di dominio in indirizzi IP",
+        "is_correct": false
+      },
+      {
+        "text": "Isolare la rete interna da Internet, permettendo il passaggio di alcuni pacchetti e bloccandone altri",
+        "is_correct": true
+      },
+      {
+        "text": "Velocizzare la connessione Internet comprimendo i dati",
+        "is_correct": false
+      },
+      {
+        "text": "Creare copie di backup dei dati su un server remoto",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Isolare la rete interna da Internet, permettendo il passaggio di alcuni pacchetti e bloccandone altri",
+        "rationale": "Un firewall isola la rete interna di un'organizzazione dalla rete Internet pubblica, consentendo il passaggio di alcuni pacchetti e bloccandone altri secondo regole predefinite.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+          "page": 52
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Velocizzare la connessione Internet comprimendo i dati",
+          "interpretation": "Lo studente confonde il firewall con un acceleratore di rete",
+          "why_wrong": "Il firewall non ha funzione di compressione o accelerazione: il suo scopo e' il filtraggio e il controllo degli accessi."
+        },
+        {
+          "answer_text": "Creare copie di backup dei dati su un server remoto",
+          "interpretation": "Lo studente confonde il firewall con un sistema di backup",
+          "why_wrong": "Il backup e' una funzionalita' completamente diversa. Il firewall controlla il traffico di rete."
+        },
+        {
+          "answer_text": "Tradurre i nomi di dominio in indirizzi IP",
+          "interpretation": "Lo studente confonde il firewall con il DNS",
+          "why_wrong": "La traduzione nomi-indirizzi e' compito del DNS, non del firewall."
+        }
+      ]
+    },
+    "related_questions": [
+      "BONONI_NetworkSecurity_easy_006",
+      "BONONI_NetworkSecurity_medium_005"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BONONI_intro_reti2025B_medium_004",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Tunnelling IPv6 in IPv4",
+    "clusters": [
+      "Indirizzamento IP"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "conceptual",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_RdC_intro_reti2025Bnew.pdf",
+      "source_file_page_number": 28,
+      "topics": [
+        "IPv6",
+        "tunnelling",
+        "IPv4",
+        "incapsulamento"
+      ]
+    },
+    "question_prompt": "In cosa consiste la tecnica di tunnelling IPv6 in IPv4?",
+    "choices": [
+      {
+        "text": "Gli indirizzi IPv6 vengono ridotti a 32 bit per renderli compatibili con IPv4",
+        "is_correct": false
+      },
+      {
+        "text": "I router IPv4 vengono fisicamente sostituiti con router IPv6 uno alla volta",
+        "is_correct": false
+      },
+      {
+        "text": "I pacchetti IPv6 vengono incapsulati dentro pacchetti IPv4 per attraversare reti con router IPv4",
+        "is_correct": true
+      },
+      {
+        "text": "Due reti IPv4 vengono collegate attraverso un tunnel fisico di cavi dedicati",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "I pacchetti IPv6 vengono incapsulati dentro pacchetti IPv4 per attraversare reti con router IPv4",
+        "rationale": "La tecnica di tunnelling consiste nello spedire pacchetti IPv6 in buste IPv4. Il pacchetto IPv6 viene incapsulato in un pacchetto IPv4 da un router IPv4, instradato lungo la rete IPv4, e all'uscita del tunnel prosegue come pacchetto IPv6.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_RdC_intro_reti2025Bnew.pdf",
+          "page": 28
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "I router IPv4 vengono fisicamente sostituiti con router IPv6 uno alla volta",
+          "interpretation": "Descrive una migrazione hardware, non il tunnelling",
+          "why_wrong": "La sostituzione dei router e' una possibile strategia di migrazione, ma non e' il tunnelling. Il tunnelling permette la coesistenza senza sostituire i router."
+        },
+        {
+          "answer_text": "Gli indirizzi IPv6 vengono ridotti a 32 bit per renderli compatibili con IPv4",
+          "interpretation": "Suggerisce una conversione di indirizzi inesistente",
+          "why_wrong": "Gli indirizzi IPv6 a 128 bit non possono essere ridotti a 32 bit. Il tunnelling incapsula l'intero pacchetto IPv6, non converte gli indirizzi."
+        },
+        {
+          "answer_text": "Due reti IPv4 vengono collegate attraverso un tunnel fisico di cavi dedicati",
+          "interpretation": "Confonde tunnel logico con tunnel fisico",
+          "why_wrong": "Il tunnelling e' una tecnica logica di incapsulamento dei pacchetti, non richiede cavi fisici dedicati."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "BERNABEI_02_SicurezzaAdmin_easy_003",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Riduzione privilegi - strategia due account",
+    "clusters": [
+      "Sicurezza Active Directory",
+      "Best practice amministrative"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+      "source_file_page_number": 9,
+      "topics": [
+        "Run As",
+        "riduzione privilegi",
+        "due account",
+        "sicurezza"
+      ]
+    },
+    "question_prompt": "Quale best practice di sicurezza viene consigliata per l'amministrazione quotidiana di Active Directory?",
+    "choices": [
+      {
+        "text": "Utilizzare un unico account condiviso tra tutti gli amministratori del dominio",
+        "is_correct": false
+      },
+      {
+        "text": "Disabilitare tutti gli account amministrativi e usare solo l'account Administrator predefinito",
+        "is_correct": false
+      },
+      {
+        "text": "Accedere sempre con l'account Domain Admin per evitare problemi di permessi",
+        "is_correct": false
+      },
+      {
+        "text": "Prevedere due account separati: uno standard per il lavoro quotidiano e uno con privilegi amministrativi, utilizzando 'Run As' per avviare le console con diritti elevati",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Prevedere due account separati: uno standard per il lavoro quotidiano e uno con privilegi amministrativi, utilizzando 'Run As' per avviare le console con diritti elevati",
+        "rationale": "La best practice prevede di avere due account: uno standard e uno con privilegi amministrativi. L'amministratore effettua il logon con l'account standard e avvia le console MMC con diritti amministrativi tramite Shift + Tasto destro > 'Run As', specificando le credenziali dell'account amministrativo.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+          "page": 9
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Accedere sempre con l'account Domain Admin per evitare problemi di permessi",
+          "interpretation": "Logon diretto come admin",
+          "why_wrong": "Loggarsi sempre come Domain Admin viola il principio di riduzione dei privilegi. Si espone il sistema a rischi di sicurezza perché tutte le attività, anche quelle non amministrative, vengono eseguite con diritti massimi."
+        },
+        {
+          "answer_text": "Utilizzare un unico account condiviso tra tutti gli amministratori del dominio",
+          "interpretation": "Account condiviso",
+          "why_wrong": "Un account condiviso tra più amministratori impedisce l'auditing e la tracciabilità delle azioni. Ogni amministratore deve avere i propri account personali (standard e amministrativo)."
+        },
+        {
+          "answer_text": "Disabilitare tutti gli account amministrativi e usare solo l'account Administrator predefinito",
+          "interpretation": "Uso esclusivo dell'account built-in",
+          "why_wrong": "L'account Administrator predefinito è un bersaglio comune per gli attacchi. La best practice è utilizzare account amministrativi nominativi e personali, non l'account built-in Administrator."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "common_misconception"
+  },
+  {
+    "id": "BERNABEI_10_SitiRepliche_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Subnet e siti",
+    "clusters": [
+      "Siti AD",
+      "Subnet",
+      "Configurazione"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "cognitive_level": "understand",
+      "question_type": "conceptual",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/10.Gestire i siti e le repliche.pptx",
+      "source_file_page_number": 6,
+      "topics": [
+        "subnet",
+        "sito",
+        "associazione"
+      ]
+    },
+    "question_prompt": "Quale relazione esiste tra subnet e siti in Active Directory?",
+    "choices": [
+      {
+        "text": "I siti e le subnet sono indipendenti e non hanno alcuna relazione diretta",
+        "is_correct": false
+      },
+      {
+        "text": "Una subnet può essere associata a più siti contemporaneamente",
+        "is_correct": false
+      },
+      {
+        "text": "Una subnet può essere associata a un solo sito, ma un sito può avere più subnet",
+        "is_correct": true
+      },
+      {
+        "text": "Ogni subnet deve essere associata esattamente a un sito e ogni sito ha esattamente una subnet",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Una subnet può essere associata a un solo sito, ma un sito può avere più subnet",
+        "rationale": "La slide 6 specifica chiaramente che ogni sito può corrispondere a più di una subnet, ma una subnet può essere associata a un solo sito.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/10.Gestire i siti e le repliche.pptx",
+          "page": 6
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Ogni subnet deve essere associata esattamente a un sito e ogni sito ha esattamente una subnet",
+          "interpretation": "Relazione 1:1 tra subnet e siti",
+          "why_wrong": "La relazione non è 1:1. Un sito può avere più subnet associate, anche se ogni subnet appartiene a un solo sito."
+        },
+        {
+          "answer_text": "Una subnet può essere associata a più siti contemporaneamente",
+          "interpretation": "Relazione many-to-many",
+          "why_wrong": "Errato: una subnet può essere associata a un solo sito. È il sito che può avere più subnet, non viceversa."
+        },
+        {
+          "answer_text": "I siti e le subnet sono indipendenti e non hanno alcuna relazione diretta",
+          "interpretation": "Nessuna relazione tra i due concetti",
+          "why_wrong": "Siti e subnet sono strettamente correlati. Le subnet devono essere associate ai siti per permettere ai client di individuare il DC del sito corretto."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_10_SitiRepliche_very_easy_002",
+      "BERNABEI_10_SitiRepliche_easy_003"
+    ],
+    "distractor_strategy": "partial_knowledge"
+  },
+  {
+    "id": "BERNABEI_05_AccountComputer_medium_003",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Gestione profili Windows e SID",
+    "clusters": [
+      "Account Computer",
+      "Profili Windows",
+      "Domain Join"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/05.Gestire gli account computer.pptx",
+      "source_file_page_number": 13,
+      "topics": [
+        "profilo Windows",
+        "SID",
+        "NTUSER.DAT",
+        "registro"
+      ]
+    },
+    "question_prompt": "Durante il logon, cosa accade se Windows trova una chiave di registro corrispondente al SID dell'utente ma il SID nel file NTUSER.DAT non corrisponde?",
+    "choices": [
+      {
+        "text": "Il logon viene rifiutato e l'utente deve contattare l'amministratore",
+        "is_correct": false
+      },
+      {
+        "text": "Il file NTUSER.DAT viene automaticamente aggiornato con il nuovo SID",
+        "is_correct": false
+      },
+      {
+        "text": "Viene caricato il profilo esistente ignorando la discrepanza",
+        "is_correct": false
+      },
+      {
+        "text": "Viene creata una nuova cartella profilo (tipicamente nomeutente.dominio)",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Viene creata una nuova cartella profilo (tipicamente nomeutente.dominio)",
+        "rationale": "La slide 13 specifica che se la chiave esiste ma il SID di ntuser.dat non corrisponde, Windows crea una nuova cartella (nomeutente.dominio, solitamente).",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/05.Gestire gli account computer.pptx",
+          "page": 13
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Viene caricato il profilo esistente ignorando la discrepanza",
+          "interpretation": "Ignorare la mismatch del SID",
+          "why_wrong": "Windows non ignora la discrepanza di SID nel file NTUSER.DAT. Crea invece una nuova cartella profilo per risolvere il conflitto."
+        },
+        {
+          "answer_text": "Il logon viene rifiutato e l'utente deve contattare l'amministratore",
+          "interpretation": "SID mismatch come blocco del logon",
+          "why_wrong": "Il mismatch del SID in NTUSER.DAT non impedisce il logon. Windows gestisce la situazione creando una nuova cartella profilo."
+        },
+        {
+          "answer_text": "Il file NTUSER.DAT viene automaticamente aggiornato con il nuovo SID",
+          "interpretation": "Aggiornamento automatico di NTUSER.DAT",
+          "why_wrong": "Windows non modifica il file NTUSER.DAT esistente. Crea invece una nuova cartella profilo con un nuovo file NTUSER.DAT."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_05_AccountComputer_easy_002",
+      "BERNABEI_05_AccountComputer_hard_003"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  }
+]

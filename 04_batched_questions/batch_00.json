@@ -1,0 +1,1439 @@
+[
+  {
+    "id": "GUIDAZZOLI_introduzione_very_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Ottica HOME vs BUSINESS",
+    "clusters": [
+      "Infrastruttura client",
+      "IT aziendale"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/1 -Introduzione.ppt",
+      "source_file_page_number": 5,
+      "topics": [
+        "ottica HOME",
+        "ottica BUSINESS",
+        "infrastruttura client",
+        "IT aziendale"
+      ]
+    },
+    "question_prompt": "Secondo il corso, cosa deve fare un tecnico IT per lavorare in ambito professionale?",
+    "choices": [
+      {
+        "text": "Installare esclusivamente sistemi operativi Linux su tutti i computer",
+        "is_correct": false
+      },
+      {
+        "text": "Imparare a programmare in linguaggio Assembly per i microprocessori",
+        "is_correct": false
+      },
+      {
+        "text": "Passare dall'ottica HOME all'ottica BUSINESS nella gestione dei sistemi",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Passare dall'ottica HOME all'ottica BUSINESS nella gestione dei sistemi",
+        "rationale": "Il materiale sottolinea che bisogna passare dall'ottica HOME all'ottica BUSINESS: un tecnico IT aziendale deve gestire i sistemi con criteri professionali diversi da quelli domestici.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/1 -Introduzione.ppt",
+          "page": 5
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Imparare a programmare in linguaggio Assembly per i microprocessori",
+          "interpretation": "Confonde il ruolo del tecnico di sistema con quello dello sviluppatore a basso livello",
+          "why_wrong": "Il corso non tratta programmazione Assembly. Il focus e' sulla gestione dell'infrastruttura client in ambiente aziendale."
+        },
+        {
+          "answer_text": "Installare esclusivamente sistemi operativi Linux su tutti i computer",
+          "interpretation": "Confonde il modulo Microsoft con un modulo su sistemi open-source",
+          "why_wrong": "Il modulo riguarda tecnologie Microsoft, non Linux. Il passaggio richiesto e' dall'ottica HOME a quella BUSINESS."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_introduzione_very_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "ANZALONE_2b_ft_bc_very_easy_003",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "vSphere Fault Tolerance - Tecnologia vLockstep",
+    "clusters": [
+      "Infrastruttura VMware vSphere",
+      "Virtualizzazione e Hypervisor"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2b_ft_bc.pdf",
+      "source_file_page_number": 36,
+      "topics": [
+        "vSphere FT",
+        "vLockstep",
+        "primary VM",
+        "secondary VM"
+      ]
+    },
+    "question_prompt": "In vSphere Fault Tolerance, come si chiama la tecnologia che mantiene sincronizzate primary e secondary VM?",
+    "choices": [
+      {
+        "text": "SMTP Relay",
+        "is_correct": false
+      },
+      {
+        "text": "DNS Round Robin",
+        "is_correct": false
+      },
+      {
+        "text": "Bluetooth Pairing",
+        "is_correct": false
+      },
+      {
+        "text": "vLockstep Technology",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "vLockstep Technology",
+        "rationale": "VMware FT utilizza la tecnologia vLockstep per mantenere la primary VM e la secondary VM in perfetta sincronizzazione, processando gli stessi dati, modificando le stesse locazioni di memoria e scrivendo gli stessi dati su disco.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2b_ft_bc.pdf",
+          "page": 36
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Bluetooth Pairing",
+          "interpretation": "Tecnologia wireless per dispositivi personali",
+          "why_wrong": "Il Bluetooth Pairing è una tecnologia wireless per il collegamento di dispositivi personali, completamente estranea alla virtualizzazione."
+        },
+        {
+          "answer_text": "DNS Round Robin",
+          "interpretation": "Meccanismo di distribuzione DNS",
+          "why_wrong": "Il DNS Round Robin è un metodo di distribuzione del carico a livello DNS, non ha alcuna relazione con la sincronizzazione delle VM in Fault Tolerance."
+        },
+        {
+          "answer_text": "SMTP Relay",
+          "interpretation": "Protocollo di posta elettronica",
+          "why_wrong": "SMTP Relay è un concetto legato all'invio di posta elettronica, completamente estraneo alla Fault Tolerance."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_2b_ft_bc_hard_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_06_GroupPolicy_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Scope delle GPO",
+    "clusters": [
+      "Group Policy",
+      "Scope"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "difficulty_doc": "values: very_easy / easy / medium / hard",
+      "cognitive_level": "understand",
+      "cognitive_level_doc": "values: remember | understand | apply | analyze",
+      "question_type": "concept",
+      "question_type_doc": "values: definition | concept | scenario | comparison | troubleshooting | best_practice",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/06.Implementare le Group Policy.pptx",
+      "source_file_doc": "relative path to original document",
+      "source_file_page_number": 8,
+      "source_file_page_number_doc": "page number of content used; 0 if holistic",
+      "topics": [
+        "GPO link",
+        "site",
+        "dominio",
+        "OU",
+        "SDOU"
+      ],
+      "topics_doc": "list of topics"
+    },
+    "question_prompt": "A quali container di Active Directory e possibile linkare una GPO?",
+    "question_prompt_doc": "10-25 words, Italian, English tech terms",
+    "choices": [
+      {
+        "text": "Solo alle Organizational Unit",
+        "is_correct": false
+      },
+      {
+        "text": "A qualsiasi oggetto di Active Directory, inclusi utenti e gruppi",
+        "is_correct": false
+      },
+      {
+        "text": "Site, Dominio, Organizational Unit (SDOU)",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Site, Dominio, Organizational Unit (SDOU)",
+        "rationale": "La slide 8 indica che una GPO puo essere collegata ad un sito, a un dominio, o a una OU (SDOU), definendo cosi lo scope massimo della GPO.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/06.Implementare le Group Policy.pptx",
+          "page": 8
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Solo alle Organizational Unit",
+          "interpretation": "Scope limitato alle OU",
+          "why_wrong": "Le GPO possono essere linkate non solo alle OU, ma anche ai siti e ai domini. L'acronimo SDOU indica tutti e tre i livelli possibili."
+        },
+        {
+          "answer_text": "A qualsiasi oggetto di Active Directory, inclusi utenti e gruppi",
+          "interpretation": "Link GPO a singoli oggetti",
+          "why_wrong": "Le GPO non possono essere linkate direttamente a singoli utenti o gruppi. Si linkano solo a siti, domini e OU."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_06_GroupPolicy_very_easy_001",
+      "BERNABEI_06_GroupPolicy_medium_002"
+    ],
+    "distractor_strategy": "partial_knowledge"
+  },
+  {
+    "id": "BONONI_2b_netmask_easy_002",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Netmask per 8 sottoreti di classe B",
+    "clusters": [
+      "Netmask e subnetting"
+    ],
+    "cognitive_level": "apply",
+    "question_type": "calculation",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_2b_esempio_netmask.pdf",
+      "source_file_page_number": 1,
+      "topics": [
+        "netmask",
+        "classe B",
+        "8 sottoreti",
+        "255.255.224.0"
+      ]
+    },
+    "question_prompt": "Per dividere la rete di classe B 130.136.x.y in 8 sottoreti, quale netmask bisogna utilizzare?",
+    "choices": [
+      {
+        "text": "255.255.224.0",
+        "is_correct": true
+      },
+      {
+        "text": "255.255.255.0",
+        "is_correct": false
+      },
+      {
+        "text": "255.255.248.0",
+        "is_correct": false
+      },
+      {
+        "text": "255.255.0.0",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "255.255.224.0",
+        "rationale": "Per 8 sottoreti servono 3 bit aggiuntivi rispetto alla netmask di classe B. I 3 bit piu' significativi del terzo byte vengono impostati a 1: 11100000 in binario = 128+64+32 = 224. Quindi la netmask e' 255.255.224.0.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_2b_esempio_netmask.pdf",
+          "page": 1
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "255.255.255.0",
+          "interpretation": "Usa la netmask per 256 sottoreti anziche' 8",
+          "why_wrong": "Questa netmask usa 8 bit aggiuntivi per le sottoreti, creando 256 sottoreti, non 8. Per 8 sottoreti servono solo 3 bit aggiuntivi."
+        },
+        {
+          "answer_text": "255.255.248.0",
+          "interpretation": "Usa 5 bit aggiuntivi anziche' 3",
+          "why_wrong": "248 in binario e' 11111000, cioe' 5 bit aggiuntivi che creerebbero 32 sottoreti, non 8."
+        },
+        {
+          "answer_text": "255.255.0.0",
+          "interpretation": "Usa la netmask di classe B senza subnetting",
+          "why_wrong": "Questa e' la netmask base della classe B, senza alcuna suddivisione in sottoreti. Non aggiunge bit per il subnetting."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "calculation_error"
+  },
+  {
+    "id": "FORONI_4_CertificatiPKI_very_easy_003",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Distribuzione chiavi pubbliche - metodi",
+    "clusters": [
+      "distribuzione chiavi pubbliche",
+      "annuncio",
+      "directory",
+      "autorita'",
+      "certificati"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+      "source_file_page_number": 4,
+      "topics": [
+        "distribuzione chiavi",
+        "annuncio pubblico",
+        "directory",
+        "autorita'",
+        "certificati"
+      ]
+    },
+    "question_prompt": "Quali sono le quattro tecniche per la distribuzione delle chiavi pubbliche presentate nella lezione?",
+    "choices": [
+      {
+        "text": "Blockchain, DNS, LDAP, smart card",
+        "is_correct": false
+      },
+      {
+        "text": "Annuncio pubblico, directory pubblica, autorita' per le chiavi pubbliche, certificati per le chiavi pubbliche",
+        "is_correct": true
+      },
+      {
+        "text": "Email, SMS, posta raccomandata, fax certificato",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Annuncio pubblico, directory pubblica, autorita' per le chiavi pubbliche, certificati per le chiavi pubbliche",
+        "rationale": "La slide 4 elenca esplicitamente: 'Alcune tecniche: Annuncio pubblico, Directory pubblica, Autorita' per le chiavi pubbliche, Certificati per le chiavi pubbliche'.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Email, SMS, posta raccomandata, fax certificato",
+          "interpretation": "Confonde le tecniche crittografiche con canali di comunicazione fisici",
+          "why_wrong": "Questi sono mezzi di comunicazione generici, non le tecniche specifiche per la distribuzione di chiavi pubbliche trattate nella lezione."
+        },
+        {
+          "answer_text": "Blockchain, DNS, LDAP, smart card",
+          "interpretation": "Elenca tecnologie reali ma non quelle presentate nel corso",
+          "why_wrong": "Pur essendo tecnologie utilizzabili in contesti di sicurezza, non corrispondono alle quattro tecniche specifiche elencate nella lezione."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_4_CertificatiPKI_easy_002"
+    ],
+    "distractor_strategy": "related_concept"
+  },
+  {
+    "id": "FORONI_2_Fondamenti_easy_003",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Tre reti del firewall",
+    "clusters": [
+      "firewall",
+      "rete interna",
+      "DMZ",
+      "rete esterna"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/2.Fondamenti Cybersecurity .pdf",
+      "source_file_page_number": 14,
+      "topics": [
+        "firewall",
+        "rete interna",
+        "DMZ",
+        "Demilitarized Zone",
+        "rete esterna"
+      ]
+    },
+    "question_prompt": "Quali sono le tre reti distinte che un firewall collega generalmente?",
+    "choices": [
+      {
+        "text": "Rete pubblica, Rete privata e Rete ibrida",
+        "is_correct": false
+      },
+      {
+        "text": "Rete LAN, Rete MAN e Rete WAN",
+        "is_correct": false
+      },
+      {
+        "text": "Rete interna, Rete DMZ (Demilitarized Zone) e Rete esterna",
+        "is_correct": true
+      },
+      {
+        "text": "Rete Wi-Fi, Rete cablata e Rete virtuale (VPN)",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Rete interna, Rete DMZ (Demilitarized Zone) e Rete esterna",
+        "rationale": "Il materiale indica esplicitamente che il firewall collega generalmente 3 reti distinte: Rete interna, Rete DMZ (Demilitarized Zone) e Rete esterna.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/2.Fondamenti Cybersecurity .pdf",
+          "page": 14
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Rete Wi-Fi, Rete cablata e Rete virtuale (VPN)",
+          "interpretation": "Confonde le reti del firewall con tipi di connessione fisica o logica",
+          "why_wrong": "La distinzione Wi-Fi/cablata/VPN riguarda il mezzo fisico o la tecnologia, non la segmentazione di sicurezza operata dal firewall."
+        },
+        {
+          "answer_text": "Rete pubblica, Rete privata e Rete ibrida",
+          "interpretation": "Usa una terminologia cloud/generica non pertinente",
+          "why_wrong": "Questa terminologia e' usata in ambito cloud computing. Il firewall distingue rete interna, DMZ e rete esterna secondo il materiale."
+        },
+        {
+          "answer_text": "Rete LAN, Rete MAN e Rete WAN",
+          "interpretation": "Confonde le zone di sicurezza del firewall con le classificazioni geografiche delle reti",
+          "why_wrong": "LAN, MAN e WAN sono classificazioni basate sull'estensione geografica della rete, non sulla segmentazione di sicurezza operata dal firewall."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_2_Fondamenti_very_easy_002",
+      "FORONI_2_Fondamenti_medium_002"
+    ],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "BONONI_intro_reti2025B_very_easy_001",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Definizione di router",
+    "clusters": [
+      "Internetworking e routing"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_RdC_intro_reti2025Bnew.pdf",
+      "source_file_page_number": 2,
+      "topics": [
+        "router",
+        "internetworking",
+        "reti locali"
+      ]
+    },
+    "question_prompt": "Nelle reti di calcolatori, qual e' il ruolo del router?",
+    "choices": [
+      {
+        "text": "E' un cavo di rete che collega fisicamente due computer tra loro",
+        "is_correct": false
+      },
+      {
+        "text": "E' il rappresentante di una rete locale, incaricato di ricevere e inoltrare i pacchetti destinati ad altre reti",
+        "is_correct": true
+      },
+      {
+        "text": "E' un tipo di memoria RAM usata esclusivamente nei server",
+        "is_correct": false
+      },
+      {
+        "text": "E' un programma che visualizza le pagine web sul browser",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "E' il rappresentante di una rete locale, incaricato di ricevere e inoltrare i pacchetti destinati ad altre reti",
+        "rationale": "Il router e' il rappresentante della rete locale, incaricato di ricevere tutti i pacchetti destinati ai calcolatori della propria LAN e di inoltrare i pacchetti uscenti verso i router delle reti di destinazione, operando al livello 3 (Rete) della gerarchia ISO/OSI.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_RdC_intro_reti2025Bnew.pdf",
+          "page": 2
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "E' un cavo di rete che collega fisicamente due computer tra loro",
+          "interpretation": "Confonde il router con il mezzo trasmissivo fisico",
+          "why_wrong": "Il router e' un dispositivo di rete attivo, non un cavo. I cavi sono mezzi trasmissivi di livello fisico."
+        },
+        {
+          "answer_text": "E' un programma che visualizza le pagine web sul browser",
+          "interpretation": "Confonde il router con un browser web",
+          "why_wrong": "Il browser e' un'applicazione software di livello applicazione, non un dispositivo di rete."
+        },
+        {
+          "answer_text": "E' un tipo di memoria RAM usata esclusivamente nei server",
+          "interpretation": "Confonde il router con un componente hardware interno",
+          "why_wrong": "La RAM e' una memoria interna al calcolatore, mentre il router e' un dispositivo di rete indipendente."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BONONI_NAT_very_easy_002",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Vantaggio di sicurezza del NAT",
+    "clusters": [
+      "NAT",
+      "sicurezza di rete"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/NAT-IPv4.pdf",
+      "source_file_page_number": 2,
+      "topics": [
+        "NAT",
+        "sicurezza",
+        "visibilita' host"
+      ]
+    },
+    "question_prompt": "Quale vantaggio di sicurezza offre il NAT rispetto ai dispositivi della rete locale?",
+    "choices": [
+      {
+        "text": "Viene attivato un firewall stateful su ogni porta aperta",
+        "is_correct": false
+      },
+      {
+        "text": "I dispositivi interni ricevono indirizzi IP pubblici dinamici",
+        "is_correct": false
+      },
+      {
+        "text": "I dispositivi interni non sono direttamente indirizzabili dall'esterno",
+        "is_correct": true
+      },
+      {
+        "text": "Tutto il traffico in transito viene cifrato automaticamente",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "I dispositivi interni non sono direttamente indirizzabili dall'esterno",
+        "rationale": "Il materiale indica esplicitamente che i dispositivi all'interno della rete locale non sono esplicitamente indirizzabili e visibili dal mondo esterno, e questo e' definito 'a security plus'.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/NAT-IPv4.pdf",
+          "page": 2
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Tutto il traffico in transito viene cifrato automaticamente",
+          "interpretation": "Attribuisce al NAT funzionalita' di cifratura",
+          "why_wrong": "Il NAT non cifra il traffico. La cifratura e' compito di protocolli come TLS o IPsec, non del meccanismo di traduzione degli indirizzi."
+        },
+        {
+          "answer_text": "Viene attivato un firewall stateful su ogni porta aperta",
+          "interpretation": "Confonde NAT con un firewall",
+          "why_wrong": "Il NAT non e' un firewall, sebbene possa avere effetti simili. Non ispeziona il traffico ne' applica regole di filtraggio esplicite."
+        },
+        {
+          "answer_text": "I dispositivi interni ricevono indirizzi IP pubblici dinamici",
+          "interpretation": "Inverte il concetto: crede che NAT assegni IP pubblici ai dispositivi interni",
+          "why_wrong": "Il NAT fa l'opposto: i dispositivi interni mantengono indirizzi privati e condividono un unico IP pubblico sul router NAT."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "ANZALONE_4a_storage_easy_006",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Local storage vs shared storage",
+    "clusters": [
+      "Storage",
+      "VMware vSphere",
+      "Architettura storage"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/4a_storage.pdf",
+      "source_file_page_number": 5,
+      "topics": [
+        "local storage",
+        "shared storage",
+        "vMotion",
+        "HA",
+        "DRS"
+      ]
+    },
+    "question_prompt": "Quali funzionalita' VMware NON sono disponibili quando si utilizza solo storage locale?",
+    "choices": [
+      {
+        "text": "Accesso alla console della VM e modifica delle impostazioni hardware virtuali",
+        "is_correct": false
+      },
+      {
+        "text": "Creazione di macchine virtuali e installazione di guest OS",
+        "is_correct": false
+      },
+      {
+        "text": "vMotion, vSphere HA e vSphere DRS",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "vMotion, vSphere HA e vSphere DRS",
+        "rationale": "Con storage locale non si possono utilizzare vMotion (migrazione live delle VM), vSphere HA (alta disponibilita') e vSphere DRS (bilanciamento automatico del carico) perche' queste funzionalita' richiedono storage condiviso accessibile da piu' host.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/4a_storage.pdf",
+          "page": 5
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Creazione di macchine virtuali e installazione di guest OS",
+          "interpretation": "Suggerisce che lo storage locale non permetta di creare VM",
+          "why_wrong": "E' possibile creare VM e installare guest OS anche su storage locale. Sono le funzionalita' di clustering e migrazione che richiedono storage condiviso."
+        },
+        {
+          "answer_text": "Accesso alla console della VM e modifica delle impostazioni hardware virtuali",
+          "interpretation": "Suggerisce che lo storage locale limiti la gestione base delle VM",
+          "why_wrong": "L'accesso alla console e la modifica delle impostazioni hardware virtuali funzionano indipendentemente dal tipo di storage utilizzato."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "GUIDAZZOLI_network_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Configurazione IP statica con NETSH",
+    "clusters": [
+      "IPv4",
+      "NETSH",
+      "Configurazione rete"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Network Connectivity.ppt",
+      "source_file_page_number": 10,
+      "topics": [
+        "netsh",
+        "IP statico",
+        "IP dinamico",
+        "configurazione rete",
+        "riga di comando"
+      ]
+    },
+    "question_prompt": "Quale comando si usa in Windows per configurare un indirizzo IP statico da riga di comando?",
+    "choices": [
+      {
+        "text": "tracert www.google.com",
+        "is_correct": false
+      },
+      {
+        "text": "ping -t 192.168.0.1",
+        "is_correct": false
+      },
+      {
+        "text": "nslookup dns.server.com",
+        "is_correct": false
+      },
+      {
+        "text": "netsh interface ip set address ... source=static",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "netsh interface ip set address ... source=static",
+        "rationale": "Il materiale mostra il comando completo: 'netsh interface ip set address name=\"Connessione alla rete locale (LAN)\" source=static addr=192.168.0.1 mask=255.255.255.0 gateway=192.168.0.253 gwmetric=0'.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Network Connectivity.ppt",
+          "page": 10
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "ping -t 192.168.0.1",
+          "interpretation": "Confonde la configurazione IP con il test di connettivita'",
+          "why_wrong": "Ping e' un comando per verificare la connettivita', non per configurare indirizzi IP."
+        },
+        {
+          "answer_text": "tracert www.google.com",
+          "interpretation": "Confonde la configurazione IP con il tracciamento di rotta",
+          "why_wrong": "Tracert traccia il percorso dei pacchetti verso una destinazione, non configura indirizzi IP."
+        },
+        {
+          "answer_text": "nslookup dns.server.com",
+          "interpretation": "Confonde la configurazione IP con la risoluzione dei nomi",
+          "why_wrong": "Nslookup e' uno strumento per la risoluzione dei nomi DNS, non per la configurazione IP."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_network_very_easy_001",
+      "GUIDAZZOLI_network_medium_001"
+    ],
+    "distractor_strategy": "related_domain"
+  },
+  {
+    "id": "GUIDAZZOLI_file_access_very_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Permessi NTFS standard",
+    "clusters": [
+      "NTFS",
+      "Permessi file",
+      "Sicurezza accessi"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/File Access and Printers.ppt",
+      "source_file_page_number": 9,
+      "topics": [
+        "permessi NTFS",
+        "Read",
+        "Write",
+        "Full Control",
+        "Modify"
+      ]
+    },
+    "question_prompt": "Quale tra i seguenti e' un permesso NTFS standard in Windows?",
+    "choices": [
+      {
+        "text": "Format Disk",
+        "is_correct": false
+      },
+      {
+        "text": "Install Software",
+        "is_correct": false
+      },
+      {
+        "text": "Full Control",
+        "is_correct": true
+      },
+      {
+        "text": "Shutdown System",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Full Control",
+        "rationale": "Il materiale elenca i permessi NTFS standard: Read, Read and Execute, List Folder Content, Write, Modify e Full Control.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/File Access and Printers.ppt",
+          "page": 9
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Format Disk",
+          "interpretation": "Confonde un permesso NTFS con un'operazione di gestione disco",
+          "why_wrong": "Formattare un disco non e' un permesso NTFS. I permessi NTFS riguardano l'accesso a file e cartelle."
+        },
+        {
+          "answer_text": "Install Software",
+          "interpretation": "Confonde i permessi NTFS con i privilegi di sistema",
+          "why_wrong": "L'installazione di software non e' un permesso NTFS ma richiede privilegi amministrativi di sistema."
+        },
+        {
+          "answer_text": "Shutdown System",
+          "interpretation": "Confonde i permessi NTFS con i diritti utente del sistema",
+          "why_wrong": "L'arresto del sistema e' un diritto utente, non un permesso NTFS su file e cartelle."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_file_access_easy_002",
+      "GUIDAZZOLI_file_access_easy_003"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_02_SicurezzaAdmin_easy_005",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Attribute Editor - attributi principali",
+    "clusters": [
+      "Active Directory",
+      "Attributi oggetti AD"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+      "source_file_page_number": 15,
+      "topics": [
+        "userPrincipalName",
+        "objectGUID",
+        "sAMAccountName",
+        "objectSid",
+        "Attribute Editor"
+      ]
+    },
+    "question_prompt": "Quale attributo di Active Directory rappresenta l'identificatore univoco globale (GUID) di un oggetto utente?",
+    "choices": [
+      {
+        "text": "sAMAccountName",
+        "is_correct": false
+      },
+      {
+        "text": "objectSid",
+        "is_correct": false
+      },
+      {
+        "text": "userPrincipalName",
+        "is_correct": false
+      },
+      {
+        "text": "objectGUID",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "objectGUID",
+        "rationale": "L'attributo objectGUID è l'identificatore univoco globale di un oggetto in Active Directory. È un GUID assegnato alla creazione dell'oggetto e non cambia mai, neppure in caso di spostamento o rinomina.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+          "page": 15
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "sAMAccountName",
+          "interpretation": "Nome di accesso legacy",
+          "why_wrong": "sAMAccountName è il nome di accesso che supporta le versioni precedenti di Windows (formato pre-Windows 2000). Non è un identificatore univoco globale ma un nome utente compatibile con sistemi legacy."
+        },
+        {
+          "answer_text": "userPrincipalName",
+          "interpretation": "Nome di accesso utente",
+          "why_wrong": "userPrincipalName (UPN) è il nome di accesso per l'utente in formato email (es. utente@dominio.local). È un nome di logon, non un identificatore univoco globale."
+        },
+        {
+          "answer_text": "objectSid",
+          "interpretation": "SID dell'oggetto",
+          "why_wrong": "objectSid è l'identificatore di sicurezza (SID) dell'utente, usato per il controllo degli accessi. È diverso dall'objectGUID: il SID può cambiare in scenari di migrazione, mentre il GUID è immutabile."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_02_SicurezzaAdmin_medium_002"
+    ],
+    "distractor_strategy": "same_category"
+  },
+  {
+    "id": "GUIDAZZOLI_devices_drivers_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "GUIDAZZOLI",
+    "topic": "Vantaggi del disco GPT rispetto al MBR",
+    "clusters": [
+      "Partizionamento dischi",
+      "MBR",
+      "GPT",
+      "UEFI"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Devices and Drivers.ppt",
+      "source_file_page_number": 5,
+      "topics": [
+        "GPT",
+        "MBR",
+        "partizioni",
+        "UEFI",
+        "affidabilita'"
+      ]
+    },
+    "question_prompt": "Quale vantaggio offre un disco GPT rispetto a un disco MBR?",
+    "choices": [
+      {
+        "text": "Consuma meno energia elettrica rispetto al formato MBR",
+        "is_correct": false
+      },
+      {
+        "text": "Non richiede alcun tipo di partizionamento del disco",
+        "is_correct": false
+      },
+      {
+        "text": "Supporta piu' partizioni e partizioni di dimensioni maggiori",
+        "is_correct": true
+      },
+      {
+        "text": "E' l'unico formato compatibile con i sistemi operativi Linux",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Supporta piu' partizioni e partizioni di dimensioni maggiori",
+        "rationale": "Il materiale elenca i vantaggi di GPT: 'Supports more partitions, Supports larger partitions, Enhances reliability, Supports boot disks on UEFI System'.",
+        "original_reference": {
+          "path": "materiale/GUIDAZZOLI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Devices and Drivers.ppt",
+          "page": 5
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "E' l'unico formato compatibile con i sistemi operativi Linux",
+          "interpretation": "Confonde GPT con un requisito esclusivo di Linux",
+          "why_wrong": "Linux supporta sia GPT che MBR. GPT non e' esclusivo di alcun sistema operativo."
+        },
+        {
+          "answer_text": "Consuma meno energia elettrica rispetto al formato MBR",
+          "interpretation": "Confonde lo schema di partizionamento con il consumo energetico",
+          "why_wrong": "Lo schema di partizionamento non influenza il consumo energetico del disco."
+        },
+        {
+          "answer_text": "Non richiede alcun tipo di partizionamento del disco",
+          "interpretation": "Contraddice la natura stessa di GPT come schema di partizionamento",
+          "why_wrong": "GPT e' esso stesso uno schema di partizionamento (GUID Partition Table). Il disco deve comunque essere partizionato."
+        }
+      ]
+    },
+    "related_questions": [
+      "GUIDAZZOLI_devices_drivers_very_easy_002",
+      "GUIDAZZOLI_devices_drivers_medium_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "FORONI_09_DeepWeb_easy_005",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Utenti del deep web",
+    "clusters": [
+      "deep web",
+      "utenti",
+      "attivisti",
+      "dark user"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/9. il_deep_web.pdf",
+      "source_file_page_number": 4,
+      "topics": [
+        "utenti deep web",
+        "attivisti",
+        "intelligence",
+        "data mining",
+        "dark user"
+      ]
+    },
+    "question_prompt": "Quale delle seguenti categorie NON e' elencata tra gli utenti tipici del deep web?",
+    "choices": [
+      {
+        "text": "Studenti universitari che cercano materiale didattico gratuito",
+        "is_correct": true
+      },
+      {
+        "text": "Attivisti informatici, politici e religiosi",
+        "is_correct": false
+      },
+      {
+        "text": "Servizi di prevenzione e intelligence internazionale",
+        "is_correct": false
+      },
+      {
+        "text": "Professionisti delle informazioni (data mining e information brokering)",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Studenti universitari che cercano materiale didattico gratuito",
+        "rationale": "Il materiale elenca a pagina 4 quattro categorie di utenti: attivisti, servizi di prevenzione/intelligence, professionisti delle informazioni e dark user. Gli studenti universitari non sono menzionati.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/9. il_deep_web.pdf",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Attivisti informatici, politici e religiosi",
+          "interpretation": "Ritiene erroneamente che gli attivisti non siano utenti del deep web",
+          "why_wrong": "Gli attivisti informatici, politici e religiosi sono esplicitamente elencati come utenti del deep web, che lo utilizzano per proteggere informazioni sensibili."
+        },
+        {
+          "answer_text": "Servizi di prevenzione e intelligence internazionale",
+          "interpretation": "Ritiene erroneamente che i servizi di intelligence non usino il deep web",
+          "why_wrong": "I servizi di prevenzione sono esplicitamente citati come utenti che usano il deep web 'per sondare pericoli internazionali e per catturare tendenze in anteprima'."
+        },
+        {
+          "answer_text": "Professionisti delle informazioni (data mining e information brokering)",
+          "interpretation": "Ritiene erroneamente che i data miner non usino il deep web",
+          "why_wrong": "I professionisti delle informazioni (data mining o information brokering) sono esplicitamente elencati tra gli utenti del deep web."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "out_of_scope"
+  },
+  {
+    "id": "BERNABEI_10_SitiRepliche_very_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Default-First-Site-Name",
+    "clusters": [
+      "Siti AD",
+      "Configurazione iniziale"
+    ],
+    "metadata": {
+      "difficulty": "very_easy",
+      "cognitive_level": "remember",
+      "question_type": "definition",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/10.Gestire i siti e le repliche.pptx",
+      "source_file_page_number": 6,
+      "topics": [
+        "Default-First-Site-Name",
+        "creazione siti",
+        "Enterprise Admin"
+      ]
+    },
+    "question_prompt": "Come si chiama il sito creato automaticamente durante l'installazione di Active Directory?",
+    "choices": [
+      {
+        "text": "Root-Forest-Site",
+        "is_correct": false
+      },
+      {
+        "text": "Default-First-Site-Name",
+        "is_correct": true
+      },
+      {
+        "text": "Primary-AD-Site",
+        "is_correct": false
+      },
+      {
+        "text": "Main-Domain-Site",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Default-First-Site-Name",
+        "rationale": "La slide 6 indica che Default-First-Site-Name viene creato di default. È preferibile rinominarlo e l'account deve essere membro del gruppo Enterprise Admin per farlo.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/10.Gestire i siti e le repliche.pptx",
+          "page": 6
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Primary-AD-Site",
+          "interpretation": "Nome inventato plausibile per un sito predefinito",
+          "why_wrong": "Questo nome non esiste in Active Directory. Il sito predefinito si chiama Default-First-Site-Name."
+        },
+        {
+          "answer_text": "Main-Domain-Site",
+          "interpretation": "Nome inventato che associa sito a dominio",
+          "why_wrong": "Questo nome non esiste. Il sito predefinito è Default-First-Site-Name, e il nome non fa riferimento a un dominio specifico."
+        },
+        {
+          "answer_text": "Root-Forest-Site",
+          "interpretation": "Nome inventato che associa sito alla foresta",
+          "why_wrong": "Questo nome non esiste in Active Directory. Il sito predefinito è sempre Default-First-Site-Name."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_10_SitiRepliche_very_easy_001",
+      "BERNABEI_10_SitiRepliche_easy_002"
+    ],
+    "distractor_strategy": "plausible_but_fabricated"
+  },
+  {
+    "id": "BERNABEI_05_AccountComputer_very_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Workgroups vs Domains",
+    "clusters": [
+      "Account Computer",
+      "Active Directory"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/05.Gestire gli account computer.pptx",
+      "source_file_page_number": 5,
+      "topics": [
+        "workgroup",
+        "domain",
+        "SAM",
+        "Active Directory"
+      ]
+    },
+    "question_prompt": "In un Workgroup, quale componente funge da authority per le identita locali di ciascun computer?",
+    "choices": [
+      {
+        "text": "Active Directory",
+        "is_correct": false
+      },
+      {
+        "text": "Il Domain Controller",
+        "is_correct": false
+      },
+      {
+        "text": "Il Security Accounts Manager (SAM)",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Il Security Accounts Manager (SAM)",
+        "rationale": "La slide 5 indica che in un Workgroup l'authority e il Security Accounts Manager (SAM) e le identita sono locali a ciascun computer.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/05.Gestire gli account computer.pptx",
+          "page": 5
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Active Directory",
+          "interpretation": "AD come authority in un Workgroup",
+          "why_wrong": "Active Directory e l'authority nei domini, non nei Workgroup. Nei Workgroup non esiste un servizio di directory centralizzato."
+        },
+        {
+          "answer_text": "Il Domain Controller",
+          "interpretation": "DC come gestore delle identita Workgroup",
+          "why_wrong": "I Domain Controller esistono solo in ambienti di dominio. In un Workgroup non sono presenti DC."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_05_AccountComputer_very_easy_002",
+      "BERNABEI_05_AccountComputer_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "ANZALONE_1a_virtualIntro_easy_005",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Popek-Goldberg requirements",
+    "clusters": [
+      "Virtualizzazione e Hypervisor",
+      "Architettura x86 e Hardware"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+      "source_file_page_number": 19,
+      "topics": [
+        "Popek",
+        "Goldberg",
+        "requisiti virtualizzazione",
+        "efficienza",
+        "resource control",
+        "equivalenza"
+      ]
+    },
+    "question_prompt": "Quali sono i tre requisiti formali per la virtualizzazione definiti da Popek e Goldberg nel 1974?",
+    "choices": [
+      {
+        "text": "Crittografia, Autenticazione, Autorizzazione",
+        "is_correct": false
+      },
+      {
+        "text": "Velocita', Capacita', Affidabilita'",
+        "is_correct": false
+      },
+      {
+        "text": "Efficienza, Resource Control, Equivalenza",
+        "is_correct": true
+      },
+      {
+        "text": "Input, Processing, Output",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Efficienza, Resource Control, Equivalenza",
+        "rationale": "Popek e Goldberg nel 1974 formalizzarono tre requisiti: Efficiency (le istruzioni innocue vengono eseguite direttamente dall'hardware), Resource Control (impossibilita' per un programma di alterare le risorse di sistema non assegnate), Equivalence (un programma si comporta allo stesso modo con o senza il control program residente).",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+          "page": 19
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Velocita', Capacita', Affidabilita'",
+          "interpretation": "Questa risposta elenca metriche generiche di performance",
+          "why_wrong": "Sono metriche generiche di prestazione dei sistemi, non i requisiti formali di Popek-Goldberg per la virtualizzazione."
+        },
+        {
+          "answer_text": "Crittografia, Autenticazione, Autorizzazione",
+          "interpretation": "Questa risposta descrive concetti di sicurezza informatica (AAA)",
+          "why_wrong": "Sono concetti della sicurezza informatica (AAA framework), non i requisiti della virtualizzazione."
+        },
+        {
+          "answer_text": "Input, Processing, Output",
+          "interpretation": "Questa risposta descrive il modello IPO",
+          "why_wrong": "Il modello IPO e' un concetto base dell'informatica, non ha relazione con i requisiti di virtualizzazione di Popek-Goldberg."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "ANZALONE_3a_vnet_easy_005",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Trunk link e access link",
+    "clusters": [
+      "Networking Virtuale",
+      "Sicurezza delle Reti"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3a_vnet.pdf",
+      "source_file_page_number": 95,
+      "topics": [
+        "trunk link",
+        "access link",
+        "tagged",
+        "untagged",
+        "VLAN"
+      ]
+    },
+    "question_prompt": "Qual è la differenza principale tra un trunk link e un access link nelle VLAN?",
+    "choices": [
+      {
+        "text": "Il trunk link collega router a Internet; l'access link collega gli switch tra loro nel datacenter",
+        "is_correct": false
+      },
+      {
+        "text": "Il trunk link usa cavi in fibra ottica; l'access link usa esclusivamente cavi in rame UTP",
+        "is_correct": false
+      },
+      {
+        "text": "Il trunk link trasporta solo traffico di management; l'access link trasporta tutto il traffico dati",
+        "is_correct": false
+      },
+      {
+        "text": "Il trunk link trasporta frame tagged per più VLAN; l'access link trasporta frame untagged per una sola VLAN",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Il trunk link trasporta frame tagged per più VLAN; l'access link trasporta frame untagged per una sola VLAN",
+        "rationale": "Un trunk link collega dispositivi VLAN-aware e tutti i frame sono tagged con l'identificativo VLAN. Un access link collega un dispositivo VLAN-unaware ad uno switch VLAN-aware, e i frame sono untagged (implicitly tagged).",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3a_vnet.pdf",
+          "page": 95
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Il trunk link trasporta solo traffico di management; l'access link trasporta tutto il traffico dati",
+          "interpretation": "Confonde trunk con link di gestione",
+          "why_wrong": "Il trunk link trasporta traffico di tutte le VLAN, non solo management. L'access link è per una singola VLAN, non per 'tutto il traffico dati'."
+        },
+        {
+          "answer_text": "Il trunk link usa cavi in fibra ottica; l'access link usa esclusivamente cavi in rame UTP",
+          "interpretation": "Confonde il tipo logico di link con il mezzo fisico",
+          "why_wrong": "Trunk e access sono distinzioni logiche, non fisiche. Entrambi possono usare qualsiasi tipo di cablaggio."
+        },
+        {
+          "answer_text": "Il trunk link collega router a Internet; l'access link collega gli switch tra loro nel datacenter",
+          "interpretation": "Inverte i ruoli e confonde con connettività Internet",
+          "why_wrong": "Il trunk link collega tipicamente switch tra loro (inter-switch link), non router a Internet. L'access link collega host finali allo switch."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_3a_vnet_easy_002"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BONONI_NetworkSecurity_easy_003",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "AES - caratteristiche",
+    "clusters": [
+      "Crittografia simmetrica"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+      "source_file_page_number": 14,
+      "topics": [
+        "AES",
+        "128-bit",
+        "192-bit",
+        "256-bit"
+      ]
+    },
+    "question_prompt": "Quale delle seguenti affermazioni sull'AES (Advanced Encryption Standard) e' corretta?",
+    "choices": [
+      {
+        "text": "Opera su blocchi di 128 bit e supporta chiavi di 128, 192 o 256 bit",
+        "is_correct": true
+      },
+      {
+        "text": "Opera su blocchi di 64 bit con chiave fissa di 56 bit",
+        "is_correct": false
+      },
+      {
+        "text": "E' un algoritmo a chiave pubblica basato sulla fattorizzazione di numeri primi",
+        "is_correct": false
+      },
+      {
+        "text": "Produce un digest di lunghezza fissa di 160 bit",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Opera su blocchi di 128 bit e supporta chiavi di 128, 192 o 256 bit",
+        "rationale": "L'AES, introdotto nel 2001 come sostituto del DES, e' un algoritmo a chiave simmetrica che processa dati in blocchi da 128 bit e supporta chiavi di tre lunghezze: 128, 192 o 256 bit.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+          "page": 14
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Opera su blocchi di 64 bit con chiave fissa di 56 bit",
+          "interpretation": "Lo studente confonde AES con DES",
+          "why_wrong": "Blocchi di 64 bit e chiave di 56 bit sono le caratteristiche del DES, non dell'AES."
+        },
+        {
+          "answer_text": "E' un algoritmo a chiave pubblica basato sulla fattorizzazione di numeri primi",
+          "interpretation": "Lo studente confonde AES con RSA",
+          "why_wrong": "AES e' un algoritmo a chiave simmetrica. L'algoritmo basato sulla fattorizzazione e' RSA."
+        },
+        {
+          "answer_text": "Produce un digest di lunghezza fissa di 160 bit",
+          "interpretation": "Lo studente confonde AES con SHA-1",
+          "why_wrong": "Un digest di 160 bit e' prodotto dalla funzione hash SHA-1. AES e' un algoritmo di cifratura, non di hashing."
+        }
+      ]
+    },
+    "related_questions": [
+      "BONONI_NetworkSecurity_easy_002"
+    ],
+    "distractor_strategy": "algorithm_confusion"
+  },
+  {
+    "id": "FORONI_06_EthicalHacking_easy_005",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Le cinque fasi dell'hacking etico",
+    "clusters": [
+      "fasi hacking",
+      "reconnaissance",
+      "scanning",
+      "gaining access"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "sequence",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/6.Introduction to Ethical Hacking, Ethics, and Legality.pdf",
+      "source_file_page_number": 26,
+      "topics": [
+        "fasi hacking",
+        "reconnaissance",
+        "scanning",
+        "gaining access",
+        "maintaining access",
+        "covering tracks"
+      ]
+    },
+    "question_prompt": "Qual e' la sequenza corretta delle cinque fasi dell'hacking etico?",
+    "choices": [
+      {
+        "text": "Scanning, Reconnaissance, Covering Tracks, Gaining Access, Maintaining Access",
+        "is_correct": false
+      },
+      {
+        "text": "Reconnaissance, Scanning, Gaining Access, Maintaining Access, Covering Tracks",
+        "is_correct": true
+      },
+      {
+        "text": "Reconnaissance, Gaining Access, Scanning, Covering Tracks, Maintaining Access",
+        "is_correct": false
+      },
+      {
+        "text": "Gaining Access, Scanning, Reconnaissance, Covering Tracks, Maintaining Access",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Reconnaissance, Scanning, Gaining Access, Maintaining Access, Covering Tracks",
+        "rationale": "Il materiale elenca esplicitamente le cinque fasi nell'ordine: Reconnaissance, Scanning, Gaining Access, Maintaining Access, Covering Tracks (pagine 26-31).",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/6.Introduction to Ethical Hacking, Ethics, and Legality.pdf",
+          "page": 26
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Scanning, Reconnaissance, Covering Tracks, Gaining Access, Maintaining Access",
+          "interpretation": "Inverte le prime due fasi e posiziona erroneamente covering tracks",
+          "why_wrong": "La reconnaissance precede sempre la scanning: prima si raccolgono informazioni generali, poi si esaminano la rete e i servizi in modo approfondito."
+        },
+        {
+          "answer_text": "Gaining Access, Scanning, Reconnaissance, Covering Tracks, Maintaining Access",
+          "interpretation": "Inizia dalla fase 3 invertendo completamente l'ordine logico",
+          "why_wrong": "Non si puo' ottenere l'accesso prima di aver raccolto informazioni (reconnaissance) e scansionato la rete (scanning)."
+        },
+        {
+          "answer_text": "Reconnaissance, Gaining Access, Scanning, Covering Tracks, Maintaining Access",
+          "interpretation": "Salta la scanning prima di ottenere l'accesso",
+          "why_wrong": "Dopo la reconnaissance si deve effettuare la scanning per individuare le vulnerabilita' specifiche prima di tentare l'accesso."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "order_scramble"
+  }
+]

@@ -1,0 +1,733 @@
+[
+  {
+    "id": "BERNABEI_04_GestireGruppi_medium_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Gruppi Universal - replica e membership",
+    "clusters": [
+      "Gestione Gruppi",
+      "Group Scopes",
+      "Active Directory"
+    ],
+    "metadata": {
+      "difficulty": "medium",
+      "difficulty_doc": "values: very_easy / easy / medium / hard",
+      "cognitive_level": "understand",
+      "cognitive_level_doc": "values: remember | understand | apply | analyze",
+      "question_type": "concept",
+      "question_type_doc": "values: definition | concept | scenario | comparison | troubleshooting | best_practice",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+      "source_file_doc": "relative path to original document",
+      "source_file_page_number": 16,
+      "source_file_page_number_doc": "page number of content used; 0 if holistic",
+      "topics": [
+        "Universal Groups",
+        "Global Catalog",
+        "replica",
+        "membership"
+      ],
+      "topics_doc": "list of topics"
+    },
+    "question_prompt": "Quale caratteristica distingue i gruppi Universal dagli altri scope in termini di replica?",
+    "question_prompt_doc": "10-25 words, Italian, English tech terms",
+    "choices": [
+      {
+        "text": "Sono replicati solo sui DC del dominio in cui sono stati creati",
+        "is_correct": false
+      },
+      {
+        "text": "Sono replicati su tutti i Global Catalog della foresta",
+        "is_correct": true
+      },
+      {
+        "text": "Sono replicati esclusivamente sul PDC Emulator del dominio",
+        "is_correct": false
+      },
+      {
+        "text": "Non vengono mai replicati e restano solo nel SAM locale",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Sono replicati su tutti i Global Catalog della foresta",
+        "rationale": "La slide 16 specifica che i gruppi Universal sono definiti in un singolo dominio ma replicati anche su tutti i Global Catalog della foresta.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+          "page": 16
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Sono replicati solo sui DC del dominio in cui sono stati creati",
+          "interpretation": "Replica limitata al dominio locale",
+          "why_wrong": "Questa e la caratteristica dei gruppi Global e Domain Local, non dei Universal. I gruppi Universal sono replicati su tutti i GC della foresta."
+        },
+        {
+          "answer_text": "Non vengono mai replicati e restano solo nel SAM locale",
+          "interpretation": "Confusione con i gruppi Local",
+          "why_wrong": "I gruppi che restano nel SAM locale sono i gruppi Local. I gruppi Universal hanno la replica piu estesa: su tutti i Global Catalog."
+        },
+        {
+          "answer_text": "Sono replicati esclusivamente sul PDC Emulator del dominio",
+          "interpretation": "Replica sul PDC Emulator",
+          "why_wrong": "Il PDC Emulator e un FSMO role, non una destinazione specifica di replica per i gruppi. I Universal Groups sono replicati su tutti i GC della foresta."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_04_GestireGruppi_easy_002",
+      "BERNABEI_04_GestireGruppi_hard_002"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  },
+  {
+    "id": "BERNABEI_01_IntrodAD_very_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Active Directory come database",
+    "clusters": [
+      "Active Directory Domain Services",
+      "Concetti fondamentali"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+      "source_file_page_number": 2,
+      "topics": [
+        "Active Directory",
+        "database",
+        "dominio"
+      ]
+    },
+    "question_prompt": "Che cos'e Active Directory nei sistemi operativi Microsoft?",
+    "choices": [
+      {
+        "text": "Un programma di videoscrittura per ambienti aziendali",
+        "is_correct": false
+      },
+      {
+        "text": "Un protocollo di comunicazione per reti wireless",
+        "is_correct": false
+      },
+      {
+        "text": "Un database che contiene dati dell'infrastruttura relativi ai servizi di autenticazione in rete",
+        "is_correct": true
+      },
+      {
+        "text": "Un firewall integrato nel sistema operativo Windows",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Un database che contiene dati dell'infrastruttura relativi ai servizi di autenticazione in rete",
+        "rationale": "La slide 2 definisce Active Directory come un database che racchiude tutti i dati dell'infrastruttura relativi ai servizi di autenticazione in rete, quali account utente, computer, cartelle condivise, stampanti ecc.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+          "page": 2
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Un firewall integrato nel sistema operativo Windows",
+          "interpretation": "Confusione tra AD e componenti di sicurezza di rete",
+          "why_wrong": "Active Directory non e un firewall; e un servizio di directory basato su database per gestire identita e accessi."
+        },
+        {
+          "answer_text": "Un programma di videoscrittura per ambienti aziendali",
+          "interpretation": "Confusione totale con software di produttivita",
+          "why_wrong": "Active Directory non ha nulla a che fare con la produttivita documentale; e un servizio di directory e autenticazione."
+        },
+        {
+          "answer_text": "Un protocollo di comunicazione per reti wireless",
+          "interpretation": "Confusione tra servizio di directory e protocollo di rete",
+          "why_wrong": "AD non e un protocollo di comunicazione; e un servizio di directory. Il protocollo utilizzato per accedere ai dati di AD e LDAP."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_01_IntrodAD_very_easy_002",
+      "BERNABEI_01_IntrodAD_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_01_IntrodAD_medium_004",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Relazioni di Trust",
+    "clusters": [
+      "Active Directory Domain Services",
+      "Struttura logica AD",
+      "Sicurezza e controllo accessi"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+      "source_file_page_number": 35,
+      "topics": [
+        "trust",
+        "trusting domain",
+        "trusted domain",
+        "foresta"
+      ]
+    },
+    "question_prompt": "In una relazione di Trust, qual e il ruolo del dominio 'Trusting' rispetto al dominio 'Trusted'?",
+    "choices": [
+      {
+        "text": "Il Trusting mette a disposizione le risorse e riconosce l'identity store del dominio Trusted",
+        "is_correct": true
+      },
+      {
+        "text": "Trusting e Trusted sono sinonimi e indicano entrambi lo stesso dominio",
+        "is_correct": false
+      },
+      {
+        "text": "Il Trusting fornisce le credenziali degli utenti al dominio Trusted per la validazione",
+        "is_correct": false
+      },
+      {
+        "text": "Il Trusting replica il proprio database ntds.dit nel dominio Trusted",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Il Trusting mette a disposizione le risorse e riconosce l'identity store del dominio Trusted",
+        "rationale": "La slide 35 spiega che il dominio Trusting e quello che mette a disposizione la risorsa e riconosce (trusts) l'identity store e i servizi di autenticazione del dominio Trusted, consentendo agli utenti Trusted di accedere alle risorse del Trusting.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+          "page": 35
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Il Trusting fornisce le credenziali degli utenti al dominio Trusted per la validazione",
+          "interpretation": "Inversione del flusso di autenticazione",
+          "why_wrong": "Non e il Trusting a fornire credenziali; e il Trusted che autentica i propri utenti, e il Trusting riconosce tale autenticazione."
+        },
+        {
+          "answer_text": "Trusting e Trusted sono sinonimi e indicano entrambi lo stesso dominio",
+          "interpretation": "Mancata distinzione tra i due ruoli",
+          "why_wrong": "Trusting e Trusted sono ruoli distinti: il Trusting offre risorse, il Trusted fornisce identita e servizi di autenticazione."
+        },
+        {
+          "answer_text": "Il Trusting replica il proprio database ntds.dit nel dominio Trusted",
+          "interpretation": "Confusione tra trust e replica del database",
+          "why_wrong": "Le relazioni di trust non comportano la replica del database tra domini; la replica avviene tra DC dello stesso dominio."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_01_IntrodAD_easy_006",
+      "BERNABEI_01_IntrodAD_hard_003"
+    ],
+    "distractor_strategy": "common_misconception"
+  },
+  {
+    "id": "BERNABEI_04_GestireGruppi_very_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Vantaggi dei gruppi",
+    "clusters": [
+      "Gestione Gruppi",
+      "Identity Access Management"
+    ],
+    "metadata": {
+      "difficulty": "very_easy",
+      "difficulty_doc": "values: very_easy / easy / medium / hard",
+      "cognitive_level": "remember",
+      "cognitive_level_doc": "values: remember | understand | apply | analyze",
+      "question_type": "concept",
+      "question_type_doc": "values: definition | concept | scenario | comparison | troubleshooting | best_practice",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+      "source_file_doc": "relative path to original document",
+      "source_file_page_number": 6,
+      "source_file_page_number_doc": "page number of content used; 0 if holistic",
+      "topics": [
+        "IAM",
+        "gruppi",
+        "scalabilita"
+      ],
+      "topics_doc": "list of topics"
+    },
+    "question_prompt": "Qual e il principale vantaggio dell'utilizzo dei gruppi nella gestione degli accessi (IAM)?",
+    "question_prompt_doc": "10-25 words, Italian, English tech terms",
+    "choices": [
+      {
+        "text": "Sostituiscono il ruolo dei Domain Controller nella gestione delle identita",
+        "is_correct": false
+      },
+      {
+        "text": "Eliminano completamente la necessita di autenticazione degli utenti",
+        "is_correct": false
+      },
+      {
+        "text": "Permettono di gestire gli accessi in modo scalabile, assegnando permessi al gruppo anziche ai singoli utenti",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Permettono di gestire gli accessi in modo scalabile, assegnando permessi al gruppo anziche ai singoli utenti",
+        "rationale": "Le slide 5-7 mostrano come il passaggio da una gestione senza gruppi a una con gruppi migliori la scalabilita, evitando di assegnare permessi individualmente a ciascun utente.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+          "page": 6
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Eliminano completamente la necessita di autenticazione degli utenti",
+          "interpretation": "I gruppi come sostituto dell'autenticazione",
+          "why_wrong": "I gruppi gestiscono l'autorizzazione (accesso alle risorse), non l'autenticazione. Gli utenti devono comunque autenticarsi."
+        },
+        {
+          "answer_text": "Sostituiscono il ruolo dei Domain Controller nella gestione delle identita",
+          "interpretation": "I gruppi come rimpiazzo dei DC",
+          "why_wrong": "I gruppi sono oggetti gestiti dai Domain Controller, non li sostituiscono. I DC rimangono essenziali per l'infrastruttura AD."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_04_GestireGruppi_very_easy_001",
+      "BERNABEI_04_GestireGruppi_easy_002"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_03_GestioneUtenti_very_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Account utente - definizione base",
+    "clusters": [
+      "Active Directory",
+      "Gestione Utenti"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+      "source_file_page_number": 4,
+      "topics": [
+        "account utente",
+        "autenticazione",
+        "security principal"
+      ]
+    },
+    "question_prompt": "Che cos'è un account utente in Active Directory?",
+    "choices": [
+      {
+        "text": "Un file di testo con le preferenze grafiche del desktop",
+        "is_correct": false
+      },
+      {
+        "text": "Un oggetto che permette l'autenticazione di un utente ed è un security principal con un SID",
+        "is_correct": true
+      },
+      {
+        "text": "Un componente hardware installato nel Domain Controller",
+        "is_correct": false
+      },
+      {
+        "text": "Un programma antivirus integrato in Windows Server",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Un oggetto che permette l'autenticazione di un utente ed è un security principal con un SID",
+        "rationale": "Come indicato nel materiale, un account utente è un oggetto che permette l'autenticazione tramite attributi come user logon name e password, ed è un security principal dotato di un security identifier (SID) al quale possono essere assegnati permessi.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Un file di testo con le preferenze grafiche del desktop",
+          "interpretation": "File di configurazione grafica",
+          "why_wrong": "Un account utente non è un file di testo. È un oggetto di Active Directory che consente autenticazione e autorizzazione."
+        },
+        {
+          "answer_text": "Un componente hardware installato nel Domain Controller",
+          "interpretation": "Hardware fisico",
+          "why_wrong": "Un account utente è un oggetto logico memorizzato nel database di Active Directory, non un componente hardware."
+        },
+        {
+          "answer_text": "Un programma antivirus integrato in Windows Server",
+          "interpretation": "Software di sicurezza",
+          "why_wrong": "Un account utente non è un software antivirus. È un'entità di sicurezza (security principal) utilizzata per autenticazione e autorizzazione."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_03_GestioneUtenti_very_easy_002",
+      "BERNABEI_03_GestioneUtenti_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_01_IntrodAD_easy_006",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Foresta e Forest Root Domain",
+    "clusters": [
+      "Active Directory Domain Services",
+      "Struttura logica AD"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+      "source_file_page_number": 34,
+      "topics": [
+        "foresta",
+        "albero",
+        "forest root domain"
+      ]
+    },
+    "question_prompt": "In Active Directory, come viene definito il primo dominio creato in una foresta?",
+    "choices": [
+      {
+        "text": "Forest Root Domain (FRD)",
+        "is_correct": true
+      },
+      {
+        "text": "Schema Master Domain (SMD)",
+        "is_correct": false
+      },
+      {
+        "text": "Primary Domain Controller (PDC)",
+        "is_correct": false
+      },
+      {
+        "text": "Global Catalog Root (GCR)",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Forest Root Domain (FRD)",
+        "rationale": "La slide 34 afferma che il primo dominio di una foresta viene definito Forest Root Domain (FRD).",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+          "page": 34
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Primary Domain Controller (PDC)",
+          "interpretation": "Confusione con il ruolo pre-AD di Windows NT",
+          "why_wrong": "Il PDC era un concetto di Windows NT; in AD il primo dominio della foresta si chiama Forest Root Domain, non PDC."
+        },
+        {
+          "answer_text": "Global Catalog Root (GCR)",
+          "interpretation": "Confusione tra Global Catalog e Forest Root Domain",
+          "why_wrong": "Il Global Catalog e una replica parziale degli oggetti della foresta, non il nome del primo dominio."
+        },
+        {
+          "answer_text": "Schema Master Domain (SMD)",
+          "interpretation": "Confusione tra ruolo FSMO e dominio radice",
+          "why_wrong": "Lo Schema Master e un ruolo FSMO, non il nome attribuito al primo dominio della foresta."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_01_IntrodAD_medium_004",
+      "BERNABEI_01_IntrodAD_hard_003"
+    ],
+    "distractor_strategy": "related_domain"
+  },
+  {
+    "id": "BERNABEI_04_GestireGruppi_very_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Tipi di gruppi in Active Directory",
+    "clusters": [
+      "Gestione Gruppi",
+      "Active Directory"
+    ],
+    "metadata": {
+      "difficulty": "very_easy",
+      "difficulty_doc": "values: very_easy / easy / medium / hard",
+      "cognitive_level": "remember",
+      "cognitive_level_doc": "values: remember | understand | apply | analyze",
+      "question_type": "definition",
+      "question_type_doc": "values: definition | concept | scenario | comparison | troubleshooting | best_practice",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+      "source_file_doc": "relative path to original document",
+      "source_file_page_number": 11,
+      "source_file_page_number_doc": "page number of content used; 0 if holistic",
+      "topics": [
+        "distribution groups",
+        "security groups",
+        "SID"
+      ],
+      "topics_doc": "list of topics"
+    },
+    "question_prompt": "Quale tipo di gruppo in Active Directory possiede un SID e puo ricevere permessi sulle risorse?",
+    "question_prompt_doc": "10-25 words, Italian, English tech terms",
+    "choices": [
+      {
+        "text": "Security group",
+        "is_correct": true
+      },
+      {
+        "text": "Organizational Unit",
+        "is_correct": false
+      },
+      {
+        "text": "Distribution group",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Security group",
+        "rationale": "Il materiale indica che i Security groups sono security principal dotati di SID, ai quali e possibile assegnare permessi sulle risorse.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+          "page": 11
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Distribution group",
+          "interpretation": "I Distribution group come contenitori di permessi",
+          "why_wrong": "I Distribution groups non possiedono un SID e sono utilizzati solo da applicazioni email; non possono ricevere permessi."
+        },
+        {
+          "answer_text": "Organizational Unit",
+          "interpretation": "Le OU come oggetti con permessi diretti",
+          "why_wrong": "Le Organizational Unit sono contenitori organizzativi in AD, non gruppi di sicurezza con SID."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_04_GestireGruppi_easy_001",
+      "BERNABEI_04_GestireGruppi_medium_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_03_GestioneUtenti_easy_002",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Creazione utenti con New-ADUser",
+    "clusters": [
+      "Active Directory",
+      "PowerShell",
+      "Gestione Utenti"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+      "source_file_page_number": 7,
+      "topics": [
+        "New-ADUser",
+        "PowerShell",
+        "creazione utente"
+      ]
+    },
+    "question_prompt": "Quale cmdlet PowerShell si utilizza per creare un nuovo account utente in Active Directory?",
+    "choices": [
+      {
+        "text": "Remove-ADUser",
+        "is_correct": false
+      },
+      {
+        "text": "Add-ADGroupMember",
+        "is_correct": false
+      },
+      {
+        "text": "Set-ADAccountPassword",
+        "is_correct": false
+      },
+      {
+        "text": "New-ADUser",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "New-ADUser",
+        "rationale": "Il materiale mostra il cmdlet New-ADUser come il comando PowerShell per creare un nuovo utente in Active Directory, specificando parametri come -Name, -GivenName, -SamAccountName, -UserPrincipalName ecc.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+          "page": 7
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Add-ADGroupMember",
+          "interpretation": "Aggiunta a gruppo",
+          "why_wrong": "Add-ADGroupMember serve per aggiungere un membro a un gruppo AD, non per creare un nuovo account utente."
+        },
+        {
+          "answer_text": "Set-ADAccountPassword",
+          "interpretation": "Reset password",
+          "why_wrong": "Set-ADAccountPassword serve per resettare o modificare la password di un account esistente, non per crearne uno nuovo."
+        },
+        {
+          "answer_text": "Remove-ADUser",
+          "interpretation": "Rimozione utente",
+          "why_wrong": "Remove-ADUser serve per eliminare un account utente da Active Directory, non per crearne uno."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_03_GestioneUtenti_easy_003",
+      "BERNABEI_03_GestioneUtenti_medium_001"
+    ],
+    "distractor_strategy": "related_command"
+  },
+  {
+    "id": "BERNABEI_09_AdminDC_very_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Numero ruoli FSMO",
+    "clusters": [
+      "Domain Controller",
+      "FSMO",
+      "Active Directory"
+    ],
+    "metadata": {
+      "difficulty": "very_easy",
+      "cognitive_level": "remember",
+      "question_type": "definition",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/09.Amministrazione dei Domain Controller.pptx",
+      "source_file_page_number": 9,
+      "topics": [
+        "FSMO",
+        "Operations Master Roles",
+        "Active Directory"
+      ]
+    },
+    "question_prompt": "Quanti ruoli FSMO (Flexible Single Master Operations) esistono in Active Directory?",
+    "choices": [
+      {
+        "text": "5",
+        "is_correct": true
+      },
+      {
+        "text": "7",
+        "is_correct": false
+      },
+      {
+        "text": "3",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "5",
+        "rationale": "La slide 9 elenca i 5 ruoli FSMO: 2 a livello di foresta (Domain Naming e Schema) e 3 a livello di dominio (RID, Infrastructure, PDC Emulator).",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/09.Amministrazione dei Domain Controller.pptx",
+          "page": 9
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "3",
+          "interpretation": "Solo i ruoli a livello di dominio",
+          "why_wrong": "3 e il numero dei ruoli domain-wide (RID, Infrastructure, PDC Emulator), ma esistono anche 2 ruoli forest-wide (Schema e Domain Naming), per un totale di 5."
+        },
+        {
+          "answer_text": "7",
+          "interpretation": "Numero sovrastimato di ruoli FSMO",
+          "why_wrong": "Non esistono 7 ruoli FSMO. I ruoli sono esattamente 5, suddivisi tra forest-wide e domain-wide."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_09_AdminDC_very_easy_002",
+      "BERNABEI_09_AdminDC_easy_001"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BERNABEI_01_IntrodAD_easy_005",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Access Token",
+    "clusters": [
+      "Sicurezza e controllo accessi",
+      "Autenticazione e autorizzazione"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+      "source_file_page_number": 9,
+      "topics": [
+        "Access Token",
+        "SID",
+        "logon",
+        "autenticazione"
+      ]
+    },
+    "question_prompt": "Cosa contiene principalmente l'Access Token rilasciato al client durante il logon?",
+    "choices": [
+      {
+        "text": "Il SID dell'utente e i SID dei gruppi di appartenenza",
+        "is_correct": true
+      },
+      {
+        "text": "L'elenco completo di tutte le cartelle condivise del dominio",
+        "is_correct": false
+      },
+      {
+        "text": "L'indirizzo IP del client e la subnet mask della rete",
+        "is_correct": false
+      },
+      {
+        "text": "La password dell'utente in chiaro e il nome del Domain Controller",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Il SID dell'utente e i SID dei gruppi di appartenenza",
+        "rationale": "La slide 9 specifica che l'Access Token rilasciato al momento del logon comprende principalmente il SID dell'utente e i SID dei gruppi di appartenenza.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+          "page": 9
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "La password dell'utente in chiaro e il nome del Domain Controller",
+          "interpretation": "Errata idea che il token contenga credenziali in chiaro",
+          "why_wrong": "L'Access Token non contiene la password; rappresenta l'identita dell'utente tramite SID dopo l'autenticazione avvenuta."
+        },
+        {
+          "answer_text": "L'indirizzo IP del client e la subnet mask della rete",
+          "interpretation": "Confusione tra token di sicurezza e informazioni di rete",
+          "why_wrong": "L'Access Token contiene informazioni di identita (SID), non parametri di configurazione di rete."
+        },
+        {
+          "answer_text": "L'elenco completo di tutte le cartelle condivise del dominio",
+          "interpretation": "Confusione tra token e directory delle risorse",
+          "why_wrong": "Il token rappresenta l'identita dell'utente, non contiene un inventario delle risorse disponibili nel dominio."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_01_IntrodAD_easy_001",
+      "BERNABEI_01_IntrodAD_medium_001"
+    ],
+    "distractor_strategy": "common_misconception"
+  }
+]

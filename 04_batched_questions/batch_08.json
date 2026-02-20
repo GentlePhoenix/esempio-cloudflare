@@ -1,0 +1,1472 @@
+[
+  {
+    "id": "FORONI_3_Crittografia_easy_003",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Gestione chiavi nella crittografia simmetrica",
+    "clusters": [
+      "crittografia simmetrica",
+      "key management",
+      "gestione chiavi"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "conceptual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/3.CRITTOGRAFIA.pdf",
+      "source_file_page_number": 9,
+      "topics": [
+        "gestione chiavi",
+        "crittografia simmetrica",
+        "n(n-1)/2"
+      ]
+    },
+    "question_prompt": "In una rete con n utenti che utilizza crittografia simmetrica, quante chiavi segrete sono necessarie in totale affinche' ogni coppia possa comunicare in modo sicuro?",
+    "choices": [
+      {
+        "text": "2n",
+        "is_correct": false
+      },
+      {
+        "text": "n",
+        "is_correct": false
+      },
+      {
+        "text": "n(n-1)/2",
+        "is_correct": true
+      },
+      {
+        "text": "n^2",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "n(n-1)/2",
+        "rationale": "La slide 9 spiega che in una rete con n utenti ogni coppia deve condividere una chiave. L'esempio mostra 5 utenti (a,b,c,d,e) con 10 chiavi segrete, che corrisponde a 5*4/2 = 10. La formula generale e' n(n-1)/2.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/3.CRITTOGRAFIA.pdf",
+          "page": 9
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "n",
+          "interpretation": "Pensa che ogni utente abbia bisogno di una sola chiave",
+          "why_wrong": "Nella crittografia simmetrica ogni coppia di utenti necessita di una chiave diversa. Con 5 utenti servono 10 chiavi, non 5."
+        },
+        {
+          "answer_text": "2n",
+          "interpretation": "Confonde con il numero di chiavi nella crittografia asimmetrica",
+          "why_wrong": "2n si avvicina al caso asimmetrico dove ogni utente ha una coppia di chiavi (pubblica + privata). Nel caso simmetrico servono molte piu' chiavi."
+        },
+        {
+          "answer_text": "n^2",
+          "interpretation": "Conta le chiavi in entrambe le direzioni senza dimezzare",
+          "why_wrong": "La chiave e' condivisa tra due utenti, quindi la coppia (a,b) usa la stessa chiave di (b,a). Il numero corretto e' la meta' di n*(n-1)."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_3_Crittografia_very_easy_002"
+    ],
+    "distractor_strategy": "calculation_error"
+  },
+  {
+    "id": "ANZALONE_3a_vnet_medium_006",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Native VLAN e traffico untagged",
+    "clusters": [
+      "Networking Virtuale",
+      "Sicurezza delle Reti"
+    ],
+    "cognitive_level": "apply",
+    "question_type": "scenario",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3a_vnet.pdf",
+      "source_file_page_number": 97,
+      "topics": [
+        "native VLAN",
+        "trunk port",
+        "untagged traffic",
+        "802.1Q"
+      ]
+    },
+    "question_prompt": "Un trunk port 802.1Q riceve frame senza tag VLAN. Come viene gestito questo traffico?",
+    "choices": [
+      {
+        "text": "Viene incapsulato automaticamente in un tunnel GRE verso il default gateway",
+        "is_correct": false
+      },
+      {
+        "text": "Viene associato alla Native VLAN configurata sul trunk port",
+        "is_correct": true
+      },
+      {
+        "text": "Viene scartato immediatamente perché i trunk port accettano solo frame tagged",
+        "is_correct": false
+      },
+      {
+        "text": "Viene inoltrato in broadcast a tutte le VLAN configurate sullo switch",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Viene associato alla Native VLAN configurata sul trunk port",
+        "rationale": "Lo standard 802.1Q prevede che il traffico ricevuto su un trunk port senza tag VLAN venga associato alla Native VLAN configurata su quel port. Questo consente la coesistenza di dispositivi VLAN-aware e VLAN-unaware.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3a_vnet.pdf",
+          "page": 97
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Viene scartato immediatamente perché i trunk port accettano solo frame tagged",
+          "interpretation": "Non considera il meccanismo della Native VLAN",
+          "why_wrong": "802.1Q prevede specificamente il concetto di Native VLAN per gestire il traffico untagged sui trunk port. I frame non vengono scartati."
+        },
+        {
+          "answer_text": "Viene inoltrato in broadcast a tutte le VLAN configurate sullo switch",
+          "interpretation": "Confonde l'assenza di tag con flooding globale",
+          "why_wrong": "Il traffico untagged non viene inoltrato a tutte le VLAN; viene associato alla specifica Native VLAN configurata, mantenendo l'isolamento tra VLAN."
+        },
+        {
+          "answer_text": "Viene incapsulato automaticamente in un tunnel GRE verso il default gateway",
+          "interpretation": "Introduce un meccanismo di tunneling inesistente",
+          "why_wrong": "Non esiste alcun meccanismo automatico di incapsulamento GRE per il traffico untagged. 802.1Q usa semplicemente la Native VLAN."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_3a_vnet_easy_005"
+    ],
+    "distractor_strategy": "common_misconception"
+  },
+  {
+    "id": "FORONI_07_GatheringInfo_very_easy_001",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Definizione di reconnaissance",
+    "clusters": [
+      "reconnaissance",
+      "information gathering",
+      "hacking etico"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/7.Gathering Target Information.pdf",
+      "source_file_page_number": 2,
+      "topics": [
+        "reconnaissance",
+        "raccolta informazioni",
+        "pattern"
+      ]
+    },
+    "question_prompt": "A cosa si riferisce il termine 'reconnaissance' nel contesto dell'ethical hacking?",
+    "choices": [
+      {
+        "text": "All'installazione di malware sui sistemi bersaglio",
+        "is_correct": false
+      },
+      {
+        "text": "Al processo di raccolta di informazioni e identificazione di pattern di comportamento",
+        "is_correct": true
+      },
+      {
+        "text": "Alla configurazione dei firewall aziendali",
+        "is_correct": false
+      },
+      {
+        "text": "Alla creazione di report per il cliente dopo il test",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Al processo di raccolta di informazioni e identificazione di pattern di comportamento",
+        "rationale": "Il materiale spiega a pagina 2 che 'reconnaissance applies to the process of information gathering. By identifying patterns of behavior, of people or systems, an enemy could find and exploit a loophole'.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/7.Gathering Target Information.pdf",
+          "page": 2
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "All'installazione di malware sui sistemi bersaglio",
+          "interpretation": "Confonde la fase di raccolta informazioni con la fase di attacco",
+          "why_wrong": "L'installazione di malware avviene nelle fasi successive (gaining access/maintaining access). La reconnaissance e' la fase iniziale di raccolta informazioni."
+        },
+        {
+          "answer_text": "Alla creazione di report per il cliente dopo il test",
+          "interpretation": "Confonde la reconnaissance con la fase di reporting",
+          "why_wrong": "La creazione del report avviene al termine del penetration test. La reconnaissance e' la prima fase, dedicata alla raccolta di informazioni."
+        },
+        {
+          "answer_text": "Alla configurazione dei firewall aziendali",
+          "interpretation": "Confonde la reconnaissance con un'attivita' difensiva",
+          "why_wrong": "La configurazione dei firewall e' un'attivita' di difesa. La reconnaissance e' un'attivita' offensiva di raccolta informazioni sul bersaglio."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "category_confusion"
+  },
+  {
+    "id": "ANZALONE_3c_iscsi-fc_easy_002",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Vantaggio di iSCSI su Fibre Channel",
+    "clusters": [
+      "Protocolli di Storage",
+      "SAN",
+      "Costi infrastruttura"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3c_iscsi-fc.pdf",
+      "source_file_page_number": 10,
+      "topics": [
+        "iSCSI",
+        "Fibre Channel",
+        "Ethernet",
+        "costi"
+      ]
+    },
+    "question_prompt": "Qual e' il principale vantaggio di iSCSI rispetto a Fibre Channel in termini di infrastruttura?",
+    "choices": [
+      {
+        "text": "Funziona esclusivamente con connessioni wireless Wi-Fi",
+        "is_correct": false
+      },
+      {
+        "text": "Offre sempre velocita' di trasferimento superiori a Fibre Channel",
+        "is_correct": false
+      },
+      {
+        "text": "Puo' funzionare su componenti di rete Ethernet standard gia' esistenti",
+        "is_correct": true
+      },
+      {
+        "text": "Non richiede alcun software per essere configurato",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Puo' funzionare su componenti di rete Ethernet standard gia' esistenti",
+        "rationale": "Un vantaggio fondamentale di iSCSI e' che puo' funzionare su componenti di rete standard (switch, router, cablaggio Ethernet), senza richiedere un'infrastruttura dedicata come Fibre Channel.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/3c_iscsi-fc.pdf",
+          "page": 10
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Offre sempre velocita' di trasferimento superiori a Fibre Channel",
+          "interpretation": "Inverte il rapporto di prestazioni tra i due protocolli",
+          "why_wrong": "Nella maggior parte dei casi Fibre Channel supera iSCSI in velocita' di trasferimento dati. Il vantaggio di iSCSI e' il costo, non la velocita'."
+        },
+        {
+          "answer_text": "Non richiede alcun software per essere configurato",
+          "interpretation": "Suggerisce che iSCSI sia plug-and-play senza configurazione",
+          "why_wrong": "iSCSI richiede comunque software (driver, initiator) per essere configurato, anche se puo' essere implementato interamente via software."
+        },
+        {
+          "answer_text": "Funziona esclusivamente con connessioni wireless Wi-Fi",
+          "interpretation": "Associa erroneamente iSCSI al wireless",
+          "why_wrong": "iSCSI funziona su reti Ethernet cablate (rame o fibra), non su Wi-Fi. Le SAN richiedono connessioni affidabili e ad alta velocita'."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_3c_iscsi-fc_easy_001"
+    ],
+    "distractor_strategy": "common_misconception"
+  },
+  {
+    "id": "FORONI_09_DeepWeb_easy_001",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Dimensione del deep web",
+    "clusters": [
+      "deep web",
+      "dimensione",
+      "web visibile"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "factual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/9. il_deep_web.pdf",
+      "source_file_page_number": 2,
+      "topics": [
+        "deep web",
+        "dimensione stimata",
+        "surface web"
+      ]
+    },
+    "question_prompt": "Quanto e' grande il deep web rispetto al web visibile (surface web)?",
+    "choices": [
+      {
+        "text": "Circa 500 volte il web visibile",
+        "is_correct": true
+      },
+      {
+        "text": "Circa la meta' del web visibile",
+        "is_correct": false
+      },
+      {
+        "text": "Circa la stessa dimensione del web visibile",
+        "is_correct": false
+      },
+      {
+        "text": "Circa 10 volte il web visibile",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Circa 500 volte il web visibile",
+        "rationale": "Il materiale afferma a pagina 2 che 'il deep web stimato e' circa 500 volte il web visibile'.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/9. il_deep_web.pdf",
+          "page": 2
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Circa 10 volte il web visibile",
+          "interpretation": "Sottostima significativamente la dimensione del deep web",
+          "why_wrong": "La stima e' di 500 volte, non 10. Il deep web e' enormemente piu' grande del web indicizzato dai motori di ricerca."
+        },
+        {
+          "answer_text": "Circa la stessa dimensione del web visibile",
+          "interpretation": "Non coglie la sproporzione tra deep web e surface web",
+          "why_wrong": "Il deep web e' stimato circa 500 volte piu' grande del web visibile, non della stessa dimensione."
+        },
+        {
+          "answer_text": "Circa la meta' del web visibile",
+          "interpretation": "Inverte il rapporto di grandezza",
+          "why_wrong": "E' il contrario: il deep web e' molto piu' grande del surface web (500 volte), non piu' piccolo."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "magnitude_error"
+  },
+  {
+    "id": "ANZALONE_4a_storage_easy_001",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Differenza tra SAN e NAS",
+    "clusters": [
+      "Storage",
+      "SAN",
+      "NAS"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/4a_storage.pdf",
+      "source_file_page_number": 24,
+      "topics": [
+        "SAN",
+        "NAS",
+        "block-level",
+        "file-level"
+      ]
+    },
+    "question_prompt": "Qual e' la differenza fondamentale tra una SAN e un NAS in termini di tipo di accesso ai dati?",
+    "choices": [
+      {
+        "text": "La SAN usa solo cavi in rame, il NAS solo cavi in fibra ottica",
+        "is_correct": false
+      },
+      {
+        "text": "La SAN funziona solo con Linux, il NAS solo con Windows",
+        "is_correct": false
+      },
+      {
+        "text": "La SAN fornisce accesso block-level per i server, il NAS fornisce accesso file-level per gli utenti",
+        "is_correct": true
+      },
+      {
+        "text": "Non c'e' differenza: SAN e NAS sono sinonimi dello stesso dispositivo",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "La SAN fornisce accesso block-level per i server, il NAS fornisce accesso file-level per gli utenti",
+        "rationale": "La SAN fornisce storage block-level ai server (come se fosse un disco locale), mentre il NAS fornisce tipicamente storage file-level agli utenti finali tramite protocolli come NFS e CIFS/SMB.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/4a_storage.pdf",
+          "page": 24
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "La SAN usa solo cavi in rame, il NAS solo cavi in fibra ottica",
+          "interpretation": "Associa erroneamente un tipo di cablaggio specifico a ciascuna tecnologia",
+          "why_wrong": "Entrambe le tecnologie possono utilizzare sia cavi in rame che in fibra ottica. Il tipo di cablaggio non definisce la differenza tra SAN e NAS."
+        },
+        {
+          "answer_text": "La SAN funziona solo con Linux, il NAS solo con Windows",
+          "interpretation": "Limita erroneamente ciascuna tecnologia a un OS specifico",
+          "why_wrong": "Sia SAN che NAS sono indipendenti dal sistema operativo. Entrambe funzionano con Linux, Windows e altri OS."
+        },
+        {
+          "answer_text": "Non c'e' differenza: SAN e NAS sono sinonimi dello stesso dispositivo",
+          "interpretation": "Nega l'esistenza di differenze tra le due tecnologie",
+          "why_wrong": "SAN e NAS sono tecnologie fondamentalmente diverse: la SAN e' una rete di storage, il NAS e' un dispositivo di storage collegato alla rete."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_4a_storage_easy_002"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BONONI_NetworkSecurity_easy_005",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Firma digitale - concetto base",
+    "clusters": [
+      "Firma digitale e integrita'"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "conceptual",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+      "source_file_page_number": 37,
+      "topics": [
+        "firma digitale",
+        "chiave privata",
+        "verifica"
+      ]
+    },
+    "question_prompt": "Come si crea una firma digitale semplice di un messaggio m?",
+    "choices": [
+      {
+        "text": "Il mittente cifra il messaggio con la chiave pubblica del destinatario",
+        "is_correct": false
+      },
+      {
+        "text": "Il mittente cifra il messaggio con la propria chiave privata",
+        "is_correct": true
+      },
+      {
+        "text": "Il destinatario cifra il messaggio con la propria chiave privata",
+        "is_correct": false
+      },
+      {
+        "text": "Il mittente calcola il checksum del messaggio e lo allega in chiaro",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Il mittente cifra il messaggio con la propria chiave privata",
+        "rationale": "La firma digitale semplice si crea cifrando il messaggio m con la chiave privata del mittente (K_B^-). Chiunque puo' verificare la firma usando la chiave pubblica del mittente, confermando autenticita' e non ripudio.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/LBononi_IFTS_FAV_3_ NetworkSecurity_Bononi_IFTS2015.pdf",
+          "page": 38
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Il mittente cifra il messaggio con la chiave pubblica del destinatario",
+          "interpretation": "Lo studente confonde firma con cifratura per confidenzialita'",
+          "why_wrong": "Cifrare con la chiave pubblica del destinatario garantisce confidenzialita', non firma. Per la firma si usa la propria chiave privata."
+        },
+        {
+          "answer_text": "Il destinatario cifra il messaggio con la propria chiave privata",
+          "interpretation": "Lo studente confonde chi firma con chi riceve",
+          "why_wrong": "E' il mittente che firma, non il destinatario. La firma dimostra l'identita' di chi invia."
+        },
+        {
+          "answer_text": "Il mittente calcola il checksum del messaggio e lo allega in chiaro",
+          "interpretation": "Lo studente confonde la firma con un semplice checksum",
+          "why_wrong": "Un checksum in chiaro non garantisce autenticita' ne' non ripudio: chiunque potrebbe modificare messaggio e checksum."
+        }
+      ]
+    },
+    "related_questions": [
+      "BONONI_NetworkSecurity_medium_003"
+    ],
+    "distractor_strategy": "operation_confusion"
+  },
+  {
+    "id": "BERNABEI_02_SicurezzaAdmin_medium_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Distinguished Name - formato e sintassi",
+    "clusters": [
+      "Active Directory",
+      "Distinguished Name"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+      "source_file_page_number": 18,
+      "topics": [
+        "Distinguished Name",
+        "DN",
+        "cn",
+        "ou",
+        "dc"
+      ]
+    },
+    "question_prompt": "Dato il Distinguished Name: cn=Mario Rossi,ou=Amministrazione,ou=Users,ou=IFTS,dc=ifts,dc=local — quale componente identifica direttamente l'oggetto utente?",
+    "choices": [
+      {
+        "text": "dc=ifts",
+        "is_correct": false
+      },
+      {
+        "text": "ou=IFTS",
+        "is_correct": false
+      },
+      {
+        "text": "cn=Mario Rossi",
+        "is_correct": true
+      },
+      {
+        "text": "ou=Amministrazione",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "cn=Mario Rossi",
+        "rationale": "Nel formato Distinguished Name, 'cn' (Common Name) identifica direttamente l'oggetto specifico. In questo caso cn=Mario Rossi è il nome comune dell'utente all'interno della gerarchia di OU e dominio.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/02.Sicurezza amministrazione Active Directory.pptx",
+          "page": 18
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "ou=Amministrazione",
+          "interpretation": "Organizational Unit di primo livello",
+          "why_wrong": "ou=Amministrazione è una Organizational Unit che rappresenta un contenitore nella gerarchia AD, non l'oggetto utente stesso. Le OU definiscono il percorso, non l'oggetto finale."
+        },
+        {
+          "answer_text": "dc=ifts",
+          "interpretation": "Componente del dominio",
+          "why_wrong": "dc=ifts è un componente del nome di dominio (domain component). Identifica parte del dominio DNS (ifts.local), non l'oggetto utente."
+        },
+        {
+          "answer_text": "ou=IFTS",
+          "interpretation": "Organizational Unit radice",
+          "why_wrong": "ou=IFTS è un'Organizational Unit più in alto nella gerarchia. Rappresenta un contenitore organizzativo, non l'oggetto utente che è identificato dal cn (Common Name)."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_02_SicurezzaAdmin_hard_001"
+    ],
+    "distractor_strategy": "same_category"
+  },
+  {
+    "id": "FORONI_4_CertificatiPKI_medium_003",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "DV vs OV vs EV certificates",
+    "clusters": [
+      "DV",
+      "OV",
+      "EV",
+      "Domain Validation",
+      "Organization Validation",
+      "Extended Validation"
+    ],
+    "cognitive_level": "analyze",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+      "source_file_page_number": 71,
+      "topics": [
+        "certificati DV",
+        "certificati OV",
+        "certificati EV",
+        "livello validazione"
+      ]
+    },
+    "question_prompt": "Qual e' la differenza principale tra i certificati DV (Domain Validation), OV (Organization Validation) ed EV (Extended Validation) in termini di processo di verifica?",
+    "choices": [
+      {
+        "text": "DV verifica solo la titolarita' del dominio; OV verifica anche dettagli dell'organizzazione (nome, indirizzo); EV verifica l'esistenza legale, fisica e funzionale dell'entita'",
+        "is_correct": true
+      },
+      {
+        "text": "DV e' gratuito, OV costa moderatamente, EV e' il piu' costoso: la differenza e' solo nel prezzo",
+        "is_correct": false
+      },
+      {
+        "text": "DV usa crittografia a 128 bit, OV a 256 bit, EV a 512 bit: la differenza e' solo nella forza della cifratura",
+        "is_correct": false
+      },
+      {
+        "text": "DV protegge un solo dominio, OV protegge i sottodomini, EV protegge tutti i domini dell'organizzazione",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "DV verifica solo la titolarita' del dominio; OV verifica anche dettagli dell'organizzazione (nome, indirizzo); EV verifica l'esistenza legale, fisica e funzionale dell'entita'",
+        "rationale": "Le slide 72-74 descrivono: DV 'riguarda le operazioni crittografiche di base e la verifica della titolarita' della registrazione del nome di dominio'; OV 'vengono anche autenticati alcuni dettagli riguardanti il proprietario (ad es., nome e indirizzo)'; EV 'verifica l'esistenza legale, fisica e funzionale di tale entita'' con 'le approfondite verifiche effettuate'.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/4Certificati e PKI_2017.pdf",
+          "page": 71
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "DV usa crittografia a 128 bit, OV a 256 bit, EV a 512 bit: la differenza e' solo nella forza della cifratura",
+          "interpretation": "Confonde il livello di validazione con la forza della cifratura",
+          "why_wrong": "La differenza tra DV, OV ed EV non riguarda la forza della cifratura (che dipende dal certificato specifico, non dal tipo di validazione) ma il livello di verifica dell'identita' del richiedente."
+        },
+        {
+          "answer_text": "DV e' gratuito, OV costa moderatamente, EV e' il piu' costoso: la differenza e' solo nel prezzo",
+          "interpretation": "Riduce la differenza al solo aspetto economico",
+          "why_wrong": "Anche se i costi differiscono, la distinzione fondamentale e' nel livello di verifica dell'identita', non nel prezzo. Il prezzo maggiore riflette i controlli piu' approfonditi."
+        },
+        {
+          "answer_text": "DV protegge un solo dominio, OV protegge i sottodomini, EV protegge tutti i domini dell'organizzazione",
+          "interpretation": "Confonde il livello di validazione con la copertura dei domini",
+          "why_wrong": "La distinzione DV/OV/EV riguarda il livello di verifica dell'identita', non il numero di domini. La copertura dei domini dipende dal tipo di certificato (singolo, wildcard, multi-dominio)."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_4_CertificatiPKI_hard_001"
+    ],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "BERNABEI_10_SitiRepliche_medium_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Processo di localizzazione DC lato client",
+    "clusters": [
+      "Localizzazione DC",
+      "DNS",
+      "LDAP",
+      "Affinità"
+    ],
+    "metadata": {
+      "difficulty": "medium",
+      "cognitive_level": "understand",
+      "question_type": "process",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/10.Gestire i siti e le repliche.pptx",
+      "source_file_page_number": 9,
+      "topics": [
+        "localizzazione DC",
+        "DNS query",
+        "LDAP bind",
+        "affinità"
+      ]
+    },
+    "question_prompt": "Quando un nuovo client si connette ad Active Directory, qual è la sequenza corretta del processo di localizzazione del DC?",
+    "choices": [
+      {
+        "text": "Il client invia un broadcast sulla rete locale → il primo DC che risponde lo autentica → l'affinità viene creata nel DNS",
+        "is_correct": false
+      },
+      {
+        "text": "Query DNS per record SRV → LDAP bind → il DC assegna il client al sito corretto → il client memorizza l'informazione e crea un'affinità",
+        "is_correct": true
+      },
+      {
+        "text": "Query DNS per record A → connessione Kerberos diretta → il DC assegna il client a un dominio → l'affinità è memorizzata nel GC",
+        "is_correct": false
+      },
+      {
+        "text": "Il client legge la configurazione IP locale → contatta direttamente il DC del sito → viene autenticato immediatamente",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Query DNS per record SRV → LDAP bind → il DC assegna il client al sito corretto → il client memorizza l'informazione e crea un'affinità",
+        "rationale": "La slide 9 descrive il processo: il client interroga il DNS per ottenere i record SRV da _tcp.domain, tenta il bind LDAP, il primo DC che risponde esamina la configurazione IP del client e le subnet per assegnarlo al sito corretto. Il client memorizza l'informazione nel registro e successivamente crea un'affinità con il DC del proprio sito.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/10.Gestire i siti e le repliche.pptx",
+          "page": 9
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Il client legge la configurazione IP locale → contatta direttamente il DC del sito → viene autenticato immediatamente",
+          "interpretation": "Processo semplificato senza DNS",
+          "why_wrong": "Il client non può contattare direttamente il DC del proprio sito al primo accesso: deve prima interrogare il DNS per ottenere i record SRV, poi il DC gli assegna il sito corretto."
+        },
+        {
+          "answer_text": "Il client invia un broadcast sulla rete locale → il primo DC che risponde lo autentica → l'affinità viene creata nel DNS",
+          "interpretation": "Confusione con NetBIOS/broadcast",
+          "why_wrong": "Active Directory non usa broadcast per localizzare i DC: utilizza query DNS per i record SRV. Inoltre l'affinità viene memorizzata nel registro del client, non nel DNS."
+        },
+        {
+          "answer_text": "Query DNS per record A → connessione Kerberos diretta → il DC assegna il client a un dominio → l'affinità è memorizzata nel GC",
+          "interpretation": "Tipo di record DNS e protocollo errati",
+          "why_wrong": "La localizzazione usa record SRV (non A) e LDAP bind (non Kerberos diretto). Inoltre l'affinità è memorizzata nel registro del client, non nel Global Catalog."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_10_SitiRepliche_easy_003",
+      "BERNABEI_10_SitiRepliche_medium_002"
+    ],
+    "distractor_strategy": "plausible_process"
+  },
+  {
+    "id": "ANZALONE_2a_introVmware_medium_006",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "vCenter Server - deployment in VM",
+    "clusters": [
+      "Infrastruttura VMware vSphere",
+      "Business Continuity e Disaster Recovery"
+    ],
+    "cognitive_level": "apply",
+    "question_type": "best_practice",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2a_introVmware.pdf",
+      "source_file_page_number": 34,
+      "topics": [
+        "vCenter Server",
+        "VM deployment",
+        "business continuity",
+        "single point of failure"
+      ]
+    },
+    "question_prompt": "Quali vantaggi e limitazioni comporta l'installazione di vCenter Server come macchina virtuale?",
+    "choices": [
+      {
+        "text": "Vantaggi: nessuno; limitazione: vCenter in VM non supporta vMotion per nessuna altra VM del cluster",
+        "is_correct": false
+      },
+      {
+        "text": "Vantaggi: portabilità, snapshot e cloning; limitazione: cold migration e modifica hardware non disponibili per quella VM",
+        "is_correct": true
+      },
+      {
+        "text": "Vantaggi: eliminazione totale dei single point of failure; limitazione: non è possibile usare shared storage",
+        "is_correct": false
+      },
+      {
+        "text": "Vantaggi: prestazioni doppie rispetto all'installazione fisica; limitazione: richiede licenza aggiuntiva separata",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Vantaggi: portabilità, snapshot e cloning; limitazione: cold migration e modifica hardware non disponibili per quella VM",
+        "rationale": "Installare vCenter Server in una VM offre portabilità, funzionalità di snapshot e cloning, e facilità nell'aumentare le risorse allocate. Le limitazioni includono l'impossibilità di eseguire cold migration e di modificare l'hardware della VM che ospita vCenter.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/2a_introVmware.pdf",
+          "page": 34
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Vantaggi: nessuno; limitazione: vCenter in VM non supporta vMotion per nessuna altra VM del cluster",
+          "interpretation": "Nessun vantaggio e blocco di vMotion",
+          "why_wrong": "Il materiale elenca esplicitamente vantaggi come portabilità, snapshot e cloning. Inoltre, vCenter in VM non blocca vMotion per le altre VM del cluster."
+        },
+        {
+          "answer_text": "Vantaggi: prestazioni doppie rispetto all'installazione fisica; limitazione: richiede licenza aggiuntiva separata",
+          "interpretation": "Miglioramento prestazioni e costo licenze",
+          "why_wrong": "Le prestazioni non raddoppiano in una VM. I vantaggi sono di gestione operativa (snapshot, cloning, portabilità), non prestazionali. Non è richiesta una licenza aggiuntiva separata."
+        },
+        {
+          "answer_text": "Vantaggi: eliminazione totale dei single point of failure; limitazione: non è possibile usare shared storage",
+          "interpretation": "Eliminazione SPOF e vincoli storage",
+          "why_wrong": "vCenter in VM non elimina i single point of failure; anzi, il materiale sottolinea il rischio di SPOF se vCenter e database sono sullo stesso server. Inoltre non esistono limitazioni sull'uso di shared storage."
+        }
+      ]
+    },
+    "related_questions": [
+      "ANZALONE_2a_introVmware_very_easy_003"
+    ],
+    "distractor_strategy": "partial_truth"
+  },
+  {
+    "id": "BERNABEI_01_IntrodAD_easy_007",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Organizational Units e Group Policies",
+    "clusters": [
+      "Active Directory Domain Services",
+      "Gestione e amministrazione"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "concept",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+      "source_file_page_number": 37,
+      "topics": [
+        "Organizational Units",
+        "OU",
+        "Group Policy",
+        "delega"
+      ]
+    },
+    "question_prompt": "A cosa servono le Organizational Units (OU) in Active Directory?",
+    "choices": [
+      {
+        "text": "Partizioni logiche del data store che sostituiscono Schema e Configuration",
+        "is_correct": false
+      },
+      {
+        "text": "Protocolli di autenticazione alternativi a Kerberos per reti legacy",
+        "is_correct": false
+      },
+      {
+        "text": "Container per organizzare oggetti, applicare Group Policies e delegare permessi amministrativi",
+        "is_correct": true
+      },
+      {
+        "text": "Server fisici dedicati esclusivamente alla replica del database ntds.dit",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Container per organizzare oggetti, applicare Group Policies e delegare permessi amministrativi",
+        "rationale": "La slide 37 descrive le Organizational Units come container che supportano la gestione e configurazione degli oggetti tramite Group Policies e la definizione dei permessi, utili per delegare permessi amministrativi e applicare le Group Policies.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/01.Introduzione ad Active Directory DS.pptx",
+          "page": 37
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Server fisici dedicati esclusivamente alla replica del database ntds.dit",
+          "interpretation": "Confusione tra OU e Domain Controller",
+          "why_wrong": "Le OU sono contenitori logici all'interno del database AD, non server fisici; i server che replicano ntds.dit sono i Domain Controller."
+        },
+        {
+          "answer_text": "Partizioni logiche del data store che sostituiscono Schema e Configuration",
+          "interpretation": "Confusione tra OU e partizioni del database",
+          "why_wrong": "Le OU sono oggetti contenuti nella partizione Domain NC; non sostituiscono ne sono equivalenti alle partizioni Schema e Configuration."
+        },
+        {
+          "answer_text": "Protocolli di autenticazione alternativi a Kerberos per reti legacy",
+          "interpretation": "Confusione tra OU e protocolli",
+          "why_wrong": "Le OU sono container organizzativi, non protocolli; Kerberos e il protocollo di autenticazione utilizzato da AD."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_01_IntrodAD_medium_005",
+      "BERNABEI_01_IntrodAD_easy_006"
+    ],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "BONONI_NAT_medium_002",
+    "curriculum_area": "MOD. 2 - Sicurezza delle reti e dei sistemi",
+    "lecturer": "BONONI",
+    "topic": "Processo completo di traduzione NAT",
+    "clusters": [
+      "NAT",
+      "datagramma",
+      "traduzione indirizzo"
+    ],
+    "cognitive_level": "apply",
+    "question_type": "scenario",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/BONONI - Sicurezza delle reti e dei sistemi/NAT-IPv4.pdf",
+      "source_file_page_number": 4,
+      "topics": [
+        "NAT",
+        "datagramma in ingresso",
+        "rimappatura",
+        "indirizzo destinazione"
+      ]
+    },
+    "question_prompt": "Un server risponde a 138.76.29.7:5001. Cosa fa il router NAT al datagramma in arrivo secondo la translation table?",
+    "choices": [
+      {
+        "text": "Inoltra il datagramma senza modifiche a tutti gli host della rete 10.0.0/24",
+        "is_correct": false
+      },
+      {
+        "text": "Scarta il datagramma perche' la porta 5001 non corrisponde a nessun servizio noto",
+        "is_correct": false
+      },
+      {
+        "text": "Sostituisce l'indirizzo destinazione da 138.76.29.7:5001 a 10.0.0.1:3345 e inoltra nella LAN",
+        "is_correct": true
+      },
+      {
+        "text": "Sostituisce l'indirizzo sorgente del server con 10.0.0.1:3345 e inoltra nella LAN",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Sostituisce l'indirizzo destinazione da 138.76.29.7:5001 a 10.0.0.1:3345 e inoltra nella LAN",
+        "rationale": "Il materiale descrive il passo 4: 'NAT router changes datagram dest addr from 138.76.29.7, 5001 to 10.0.0.1, 3345'. Il router consulta la NAT translation table e rimappa i campi di destinazione.",
+        "original_reference": {
+          "path": "materiale/BONONI - Sicurezza delle reti e dei sistemi/NAT-IPv4.pdf",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Sostituisce l'indirizzo sorgente del server con 10.0.0.1:3345 e inoltra nella LAN",
+          "interpretation": "Confonde la modifica del campo destinazione con quella del campo sorgente",
+          "why_wrong": "Il NAT in ingresso modifica il campo destinazione, non quello sorgente. L'indirizzo sorgente del server (128.119.40.186:80) deve restare invariato affinche' l'host interno sappia chi ha risposto."
+        },
+        {
+          "answer_text": "Scarta il datagramma perche' la porta 5001 non corrisponde a nessun servizio noto",
+          "interpretation": "Confonde il ruolo del NAT con quello di un firewall che filtra porte",
+          "why_wrong": "La porta 5001 e' mappata nella NAT translation table ed e' una porta valida per il NAT. Il NAT non filtra in base a servizi noti, usa la tabella per la rimappatura."
+        },
+        {
+          "answer_text": "Inoltra il datagramma senza modifiche a tutti gli host della rete 10.0.0/24",
+          "interpretation": "Confonde il NAT con un broadcast sulla rete locale",
+          "why_wrong": "Il NAT non fa broadcast. Consulta la translation table per identificare esattamente l'host interno destinatario (10.0.0.1:3345) e modifica i campi di destinazione prima dell'inoltro."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "process_confusion"
+  },
+  {
+    "id": "ANZALONE_1a_virtualIntro_very_easy_002",
+    "curriculum_area": "MOD. 5 - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery",
+    "lecturer": "ANZALONE",
+    "topic": "Hypervisor - definizione base",
+    "clusters": [
+      "Virtualizzazione e Hypervisor"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+      "source_file_page_number": 87,
+      "topics": [
+        "hypervisor",
+        "virtual machine manager",
+        "definizione"
+      ]
+    },
+    "question_prompt": "Cos'e' un hypervisor (detto anche virtual machine manager)?",
+    "choices": [
+      {
+        "text": "Un tipo di cavo di rete usato nei data center",
+        "is_correct": false
+      },
+      {
+        "text": "Un linguaggio di programmazione per creare siti web",
+        "is_correct": false
+      },
+      {
+        "text": "Un dispositivo hardware esterno che aumenta la velocita' della RAM",
+        "is_correct": false
+      },
+      {
+        "text": "Un programma che permette a piu' sistemi operativi di condividere un singolo hardware host",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Un programma che permette a piu' sistemi operativi di condividere un singolo hardware host",
+        "rationale": "L'hypervisor e' un programma che consente a piu' sistemi operativi di condividere un singolo hardware host. Ogni OS sembra avere processore, memoria e risorse tutte per se', ma e' l'hypervisor che controlla e alloca le risorse.",
+        "original_reference": {
+          "path": "materiale/ANZALONE - Cloud privato e cloud pubblico al servizio della business continuity e disaster recovery/1a_virtualIntro.pdf",
+          "page": 87
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Un dispositivo hardware esterno che aumenta la velocita' della RAM",
+          "interpretation": "Questa risposta confonde l'hypervisor con un componente hardware",
+          "why_wrong": "L'hypervisor e' software, non hardware. Non e' un dispositivo esterno ma un programma che gestisce le virtual machine."
+        },
+        {
+          "answer_text": "Un tipo di cavo di rete usato nei data center",
+          "interpretation": "Questa risposta confonde con componenti di networking fisico",
+          "why_wrong": "L'hypervisor non e' un componente fisico di rete, ma un software di virtualizzazione."
+        },
+        {
+          "answer_text": "Un linguaggio di programmazione per creare siti web",
+          "interpretation": "Questa risposta confonde con lo sviluppo software",
+          "why_wrong": "L'hypervisor non e' un linguaggio di programmazione. E' un software che gestisce macchine virtuali."
+        }
+      ]
+    },
+    "related_questions": [],
+    "distractor_strategy": "obviously_wrong"
+  },
+  {
+    "id": "FORONI_2_Fondamenti_very_easy_002",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Firewall - definizione base",
+    "clusters": [
+      "firewall",
+      "sicurezza perimetrale",
+      "rete"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "very_easy",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/2.Fondamenti Cybersecurity .pdf",
+      "source_file_page_number": 14,
+      "topics": [
+        "firewall",
+        "sicurezza perimetrale",
+        "rete interna",
+        "DMZ",
+        "rete esterna"
+      ]
+    },
+    "question_prompt": "Qual e' il ruolo principale del firewall nella sicurezza perimetrale?",
+    "choices": [
+      {
+        "text": "E' un sistema di backup che replica i dati su server remoti",
+        "is_correct": false
+      },
+      {
+        "text": "E' un protocollo di crittografia per proteggere le e-mail aziendali",
+        "is_correct": false
+      },
+      {
+        "text": "E' un software antivirus che analizza i file scaricati dalla rete",
+        "is_correct": false
+      },
+      {
+        "text": "E' il principale strumento di sicurezza perimetrale che collega e filtra il traffico tra reti distinte",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "E' il principale strumento di sicurezza perimetrale che collega e filtra il traffico tra reti distinte",
+        "rationale": "Il materiale definisce il firewall come il principale strumento di sicurezza perimetrale che collega generalmente 3 reti distinte (interna, DMZ, esterna) e gestisce il traffico tra esse.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/2.Fondamenti Cybersecurity .pdf",
+          "page": 14
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "E' un software antivirus che analizza i file scaricati dalla rete",
+          "interpretation": "Confonde il firewall con un sistema antivirus",
+          "why_wrong": "L'antivirus e' uno strumento di sicurezza degli endpoint, non di sicurezza perimetrale. Il firewall opera a livello di rete, non analizza il contenuto dei file."
+        },
+        {
+          "answer_text": "E' un sistema di backup che replica i dati su server remoti",
+          "interpretation": "Confonde il firewall con un sistema di disaster recovery",
+          "why_wrong": "Il backup e la replica dei dati fanno parte della business continuity e disaster recovery, non della sicurezza perimetrale."
+        },
+        {
+          "answer_text": "E' un protocollo di crittografia per proteggere le e-mail aziendali",
+          "interpretation": "Confonde il firewall con protocolli di cifratura",
+          "why_wrong": "Il firewall non e' un protocollo di crittografia. Opera a livello di rete valutando direzione del traffico, indirizzi IP e porte TCP/UDP."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_2_Fondamenti_easy_003",
+      "FORONI_2_Fondamenti_medium_002"
+    ],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "BERNABEI_09_AdminDC_easy_004",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "PDC Emulator - sorgente oraria",
+    "clusters": [
+      "FSMO",
+      "PDC Emulator",
+      "Active Directory"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "cognitive_level": "understand",
+      "question_type": "factual",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/09.Amministrazione dei Domain Controller.pptx",
+      "source_file_page_number": 10,
+      "topics": [
+        "PDC Emulator",
+        "password",
+        "Group Policy",
+        "time source"
+      ]
+    },
+    "question_prompt": "Quale ruolo FSMO funge da sorgente oraria (time source) per il dominio?",
+    "choices": [
+      {
+        "text": "PDC Emulator",
+        "is_correct": true
+      },
+      {
+        "text": "Schema Master",
+        "is_correct": false
+      },
+      {
+        "text": "Infrastructure Master",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "PDC Emulator",
+        "rationale": "La slide 10 elenca tra le funzioni del PDC Emulator: gestione delle password, target predefinito per le modifiche alle Group Policy e sorgente oraria per il dominio.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/09.Amministrazione dei Domain Controller.pptx",
+          "page": 10
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Infrastructure Master",
+          "interpretation": "Confusione tra ruoli domain-wide",
+          "why_wrong": "L'Infrastructure Master si occupa di mantenere aggiornate le membership dei gruppi cross-domain, non della sincronizzazione oraria."
+        },
+        {
+          "answer_text": "Schema Master",
+          "interpretation": "Confusione con un ruolo forest-wide",
+          "why_wrong": "Lo Schema Master gestisce le modifiche allo schema di Active Directory. La funzione di time source appartiene esclusivamente al PDC Emulator."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_09_AdminDC_easy_001",
+      "BERNABEI_09_AdminDC_medium_002"
+    ],
+    "distractor_strategy": "plausible_wrong"
+  },
+  {
+    "id": "FORONI_1_CIA_medium_002",
+    "curriculum_area": "MOD. 4 - Implementazione e verifica della sicurezza delle reti e dei sistemi",
+    "lecturer": "FORONI",
+    "topic": "Accountability vs Auditing",
+    "clusters": [
+      "accountability",
+      "responsabilizzazione",
+      "auditing",
+      "conformita'"
+    ],
+    "cognitive_level": "analyze",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "medium",
+      "source_file": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/1.CIA.pdf",
+      "source_file_page_number": 7,
+      "topics": [
+        "accountability",
+        "responsabilizzazione",
+        "auditing",
+        "violazione policy"
+      ]
+    },
+    "question_prompt": "Qual e' la differenza principale tra auditing e accountability (responsabilizzazione) nella sicurezza informatica?",
+    "choices": [
+      {
+        "text": "L'auditing registra gli eventi, l'accountability permette di ritenere i soggetti responsabili delle loro azioni e verificare la conformita'",
+        "is_correct": true
+      },
+      {
+        "text": "L'auditing e' un processo automatico, l'accountability e' sempre un processo manuale",
+        "is_correct": false
+      },
+      {
+        "text": "L'auditing e l'accountability sono sinonimi che indicano la stessa attivita'",
+        "is_correct": false
+      },
+      {
+        "text": "L'auditing si occupa solo della rete, l'accountability si occupa solo degli utenti",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "L'auditing registra gli eventi, l'accountability permette di ritenere i soggetti responsabili delle loro azioni e verificare la conformita'",
+        "rationale": "Il materiale distingue chiaramente: l'auditing e' la registrazione di un registro degli eventi; l'accountability consiste nell'adozione di comportamenti proattivi e nella capacita' di verificare la conformita' e le violazioni per ritenere i soggetti responsabili delle loro azioni.",
+        "original_reference": {
+          "path": "materiale/FORONI/Lezioni - Implementazione e verifica della sicurezza delle reti e dei sistemi/1.CIA.pdf",
+          "page": 7
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "L'auditing si occupa solo della rete, l'accountability si occupa solo degli utenti",
+          "interpretation": "Restringe erroneamente l'ambito di applicazione di entrambi i concetti",
+          "why_wrong": "L'auditing registra eventi relativi al sistema e ai soggetti (non solo alla rete), e l'accountability riguarda le azioni di tutti i soggetti, non solo degli utenti."
+        },
+        {
+          "answer_text": "L'auditing e' un processo automatico, l'accountability e' sempre un processo manuale",
+          "interpretation": "Attribuisce erroneamente una distinzione automatico/manuale",
+          "why_wrong": "Il materiale non fa questa distinzione. L'accountability include comportamenti proattivi e dimostrazione di conformita', ma non e' definita come esclusivamente manuale."
+        },
+        {
+          "answer_text": "L'auditing e l'accountability sono sinonimi che indicano la stessa attivita'",
+          "interpretation": "Considera i due concetti come identici",
+          "why_wrong": "Il materiale li elenca come aspetti distinti della sicurezza: l'auditing e' la registrazione, l'accountability e' la responsabilizzazione e la verifica della conformita'."
+        }
+      ]
+    },
+    "related_questions": [
+      "FORONI_1_CIA_easy_004"
+    ],
+    "distractor_strategy": "common_confusion"
+  },
+  {
+    "id": "BERNABEI_05_AccountComputer_easy_004",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Prerequisiti per il pre-stage",
+    "clusters": [
+      "Account Computer",
+      "Domain Join",
+      "Pre-stage"
+    ],
+    "cognitive_level": "remember",
+    "question_type": "definition",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/05.Gestire gli account computer.pptx",
+      "source_file_page_number": 9,
+      "topics": [
+        "pre-stage",
+        "permessi",
+        "local admin",
+        "oggetto computer"
+      ]
+    },
+    "question_prompt": "Quali sono i requisiti per effettuare la join a dominio di un computer tramite pre-stage?",
+    "choices": [
+      {
+        "text": "E necessario solo avere accesso fisico al Domain Controller",
+        "is_correct": false
+      },
+      {
+        "text": "E sufficiente essere membri del gruppo Domain Users per completare la join",
+        "is_correct": false
+      },
+      {
+        "text": "L'oggetto computer viene creato automaticamente e non servono permessi specifici",
+        "is_correct": false
+      },
+      {
+        "text": "L'oggetto computer deve gia esistere in AD, servono permessi sull'oggetto e diritti di local admin",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "L'oggetto computer deve gia esistere in AD, servono permessi sull'oggetto e diritti di local admin",
+        "rationale": "La slide 9 elenca tre requisiti: l'oggetto computer deve esistere nella directory, servono permessi sull'oggetto computer, e sono necessari diritti amministrativi locali (membro del gruppo Administrators).",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/05.Gestire gli account computer.pptx",
+          "page": 9
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "E sufficiente essere membri del gruppo Domain Users per completare la join",
+          "interpretation": "Domain Users come unico requisito",
+          "why_wrong": "Domain Users e sufficiente per la join senza pre-stage (fino a 10 macchine di default), ma per il pre-stage servono permessi specifici sull'oggetto computer e diritti di local admin."
+        },
+        {
+          "answer_text": "L'oggetto computer viene creato automaticamente e non servono permessi specifici",
+          "interpretation": "Creazione automatica durante pre-stage",
+          "why_wrong": "Il concetto di pre-stage implica proprio la pre-creazione dell'oggetto computer. Inoltre, sono richiesti permessi specifici sia sull'oggetto AD che sul computer locale."
+        },
+        {
+          "answer_text": "E necessario solo avere accesso fisico al Domain Controller",
+          "interpretation": "Accesso fisico come unico requisito",
+          "why_wrong": "L'accesso fisico al DC non e un requisito. Servono permessi logici: l'oggetto deve esistere in AD, servono permessi sull'oggetto e diritti di amministratore locale."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_05_AccountComputer_easy_005",
+      "BERNABEI_05_AccountComputer_medium_001"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  },
+  {
+    "id": "BERNABEI_04_GestireGruppi_easy_005",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Default Groups",
+    "clusters": [
+      "Gestione Gruppi",
+      "Active Directory",
+      "Sicurezza"
+    ],
+    "metadata": {
+      "difficulty": "easy",
+      "difficulty_doc": "values: very_easy / easy / medium / hard",
+      "cognitive_level": "remember",
+      "cognitive_level_doc": "values: remember | understand | apply | analyze",
+      "question_type": "definition",
+      "question_type_doc": "values: definition | concept | scenario | comparison | troubleshooting | best_practice",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+      "source_file_doc": "relative path to original document",
+      "source_file_page_number": 37,
+      "source_file_page_number_doc": "page number of content used; 0 if holistic",
+      "topics": [
+        "Enterprise Admins",
+        "Forest Root Domain",
+        "default groups"
+      ],
+      "topics_doc": "list of topics"
+    },
+    "question_prompt": "In quale dominio viene creato il gruppo Enterprise Admins e quale e il suo ambito?",
+    "question_prompt_doc": "10-25 words, Italian, English tech terms",
+    "choices": [
+      {
+        "text": "Viene creato in ogni dominio della foresta con accesso limitato al proprio dominio",
+        "is_correct": false
+      },
+      {
+        "text": "Viene creato automaticamente su ogni Domain Controller come gruppo Local",
+        "is_correct": false
+      },
+      {
+        "text": "Viene creato nel dominio child con permessi solo sullo schema AD",
+        "is_correct": false
+      },
+      {
+        "text": "Viene creato nel Forest Root Domain e ha accesso alla configurazione dei DC in tutta la foresta",
+        "is_correct": true
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Viene creato nel Forest Root Domain e ha accesso alla configurazione dei DC in tutta la foresta",
+        "rationale": "La slide 37 indica che Enterprise Admins viene creato sotto Users solo nel Forest Root Domain e ha accesso alla configurazione dei DC in tutta la foresta.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/04.Gestire i gruppi.pptx",
+          "page": 37
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Viene creato in ogni dominio della foresta con accesso limitato al proprio dominio",
+          "interpretation": "Enterprise Admins come gruppo per-dominio",
+          "why_wrong": "Enterprise Admins esiste solo nel Forest Root Domain. Il gruppo con diritti completi sul singolo dominio e Administrators."
+        },
+        {
+          "answer_text": "Viene creato nel dominio child con permessi solo sullo schema AD",
+          "interpretation": "Confusione con Schema Admins",
+          "why_wrong": "Enterprise Admins non risiede in un dominio child e non e limitato allo schema. Schema Admins e il gruppo dedicato alla gestione dello schema."
+        },
+        {
+          "answer_text": "Viene creato automaticamente su ogni Domain Controller come gruppo Local",
+          "interpretation": "Enterprise Admins come gruppo locale",
+          "why_wrong": "Enterprise Admins e un gruppo di dominio nel Forest Root Domain, non un gruppo locale su ogni DC."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_04_GestireGruppi_easy_006",
+      "BERNABEI_04_GestireGruppi_hard_003"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  },
+  {
+    "id": "BERNABEI_03_GestioneUtenti_easy_001",
+    "curriculum_area": "MOD. 3 - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft",
+    "lecturer": "BERNABEI",
+    "topic": "Account di dominio vs account locali",
+    "clusters": [
+      "Active Directory",
+      "Gestione Utenti",
+      "SAM Database"
+    ],
+    "cognitive_level": "understand",
+    "question_type": "comparison",
+    "metadata": {
+      "difficulty": "easy",
+      "source_file": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+      "source_file_page_number": 4,
+      "topics": [
+        "account dominio",
+        "account locale",
+        "SAM database",
+        "Active Directory"
+      ]
+    },
+    "question_prompt": "Dove vengono memorizzati gli account utente locali rispetto a quelli di dominio in un ambiente Windows?",
+    "choices": [
+      {
+        "text": "Gli account locali nel SAM database del PC/server, quelli di dominio in Active Directory",
+        "is_correct": true
+      },
+      {
+        "text": "Gli account locali in Active Directory, quelli di dominio nel SAM database",
+        "is_correct": false
+      },
+      {
+        "text": "Entrambi vengono memorizzati esclusivamente in Active Directory",
+        "is_correct": false
+      },
+      {
+        "text": "Entrambi vengono memorizzati nel SAM database locale di ogni macchina",
+        "is_correct": false
+      }
+    ],
+    "explanation": {
+      "right_answer": {
+        "selected_answer": "Gli account locali nel SAM database del PC/server, quelli di dominio in Active Directory",
+        "rationale": "Il materiale spiega che gli account utente possono essere memorizzati in Active Directory (per il logon al dominio) oppure nel SAM (Security Accounts Manager) database di un PC o server per l'accesso alla macchina locale.",
+        "original_reference": {
+          "path": "materiale/BERNABEI - Sicurezza dei sistemi e delle infrastrutture basati su tecnologie Microsoft/Slide/03. Gestione utenti.pptx",
+          "page": 4
+        }
+      },
+      "wrong_answers": [
+        {
+          "answer_text": "Entrambi vengono memorizzati esclusivamente in Active Directory",
+          "interpretation": "Tutto in AD",
+          "why_wrong": "Gli account locali non sono memorizzati in Active Directory. Risiedono nel SAM database della singola macchina."
+        },
+        {
+          "answer_text": "Entrambi vengono memorizzati nel SAM database locale di ogni macchina",
+          "interpretation": "Tutto nel SAM",
+          "why_wrong": "Gli account di dominio sono memorizzati in Active Directory, non nel SAM locale. Solo gli account locali risiedono nel SAM."
+        },
+        {
+          "answer_text": "Gli account locali in Active Directory, quelli di dominio nel SAM database",
+          "interpretation": "Inversione delle posizioni",
+          "why_wrong": "È esattamente il contrario: gli account locali stanno nel SAM e quelli di dominio in Active Directory."
+        }
+      ]
+    },
+    "related_questions": [
+      "BERNABEI_03_GestioneUtenti_very_easy_001",
+      "BERNABEI_03_GestioneUtenti_easy_002"
+    ],
+    "distractor_strategy": "plausible_alternative"
+  }
+]
