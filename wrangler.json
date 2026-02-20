@@ -3,7 +3,9 @@
 	"name": "corso-tecnico-sicurezza",
 	"main": "./src/worker/index.ts",
 	"compatibility_date": "2025-10-08",
-	"compatibility_flags": ["nodejs_compat"],
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
 	"observability": {
 		"enabled": true
 	},
@@ -11,6 +13,11 @@
 	"assets": {
 		"directory": "./dist/client",
 		"not_found_handling": "single-page-application"
-	}
-	
+	},
+	"kv_namespaces": [
+		{
+			"binding": "esempio_db",
+			"id": "64b749ad354b421281e27c317407d46f"
+		}
+	]
 }
